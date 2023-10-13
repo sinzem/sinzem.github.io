@@ -1,7 +1,7 @@
 "use strict";
 
 window.addEventListener("DOMContentLoaded", () => {
-  
+    
     const slides = document.querySelectorAll(".slide"), 
           prev = document.querySelector(".key_up"),
           next = document.querySelector(".key_down"),
@@ -46,9 +46,10 @@ window.addEventListener("DOMContentLoaded", () => {
         positionEnd = event.changedTouches[0].clientY;
         window.removeEventListener('touchend', swipeEnd);
 
-        if (positionStart - positionEnd > 100 && slideIndex < 12) {
+        if (positionStart - positionEnd > 120 && slideIndex < 12) {
             nextPage();
-        } else if (positionStart - positionEnd < -100 && slideIndex > 1) {
+        } else if (positionStart - positionEnd < -120 && slideIndex > 1) {
+            event.preventDefault();
             prevPage();
         } 
     }
