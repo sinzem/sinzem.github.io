@@ -1,8 +1,7 @@
 "use strict";
 
 window.addEventListener("DOMContentLoaded", () => {
-    console.log(document.documentElement.clientWidth);
-    console.log(document.documentElement.clientHeight);
+  
     const slides = document.querySelectorAll(".slide"), 
           prev = document.querySelector(".key_up"),
           next = document.querySelector(".key_down"),
@@ -20,7 +19,8 @@ window.addEventListener("DOMContentLoaded", () => {
 
     let slideIndex = 1;
     let offset = 0;
-
+    let positionStart = 0;
+    let positionEnd = 0;
 
     slideIndex < 10 ? counter.textContent = `0${slideIndex}` : counter.textContent = slideIndex;
 
@@ -37,10 +37,28 @@ window.addEventListener("DOMContentLoaded", () => {
 
     addNextPrevStyle();
 
-    next.parentElement.addEventListener("click", (e) => {
-        if (slideIndex === 12) {
-            e.setAttribute("disabled", "true");
+    window.addEventListener('touchstart', swipeStart);
+    function swipeStart() {
+        positionStart = event.changedTouches[0].clientY;
+        window.addEventListener('touchend', swipeEnd);
+    }
+    function swipeEnd() {
+        positionEnd = event.changedTouches[0].clientY;
+        window.removeEventListener('touchend', swipeEnd);
+
+        if (positionStart - positionEnd > 100 && slideIndex < 12) {
+            nextPage();
+        } else if (positionStart - positionEnd < -100 && slideIndex > 1) {
+            prevPage();
         } 
+    }
+
+    next.parentElement.addEventListener("click", nextPage);
+
+    prev.parentElement.addEventListener("click", prevPage);
+
+    function nextPage() {
+
         if (offset === (slides.length - 1) * 100) {
             offset = offset;
         } else {
@@ -60,6 +78,9 @@ window.addEventListener("DOMContentLoaded", () => {
             slideIndex++;
         };
 
+        slideIndex === 12 ? next.parentElement.disabled = true : next.parentElement.disabled = false;
+        slideIndex !== 1 ? prev.parentElement.disabled = false : null;
+
         slideIndex == slides.length ? next.classList.add('clear') : null;
 
         prev.classList.remove('clear');
@@ -75,9 +96,11 @@ window.addEventListener("DOMContentLoaded", () => {
         designCounter();
         
         appearDescription();
-    })
+        
+    }
 
-    prev.parentElement.addEventListener("click", () => {
+    function prevPage() {
+
         if (offset === 0) {
             offset = 0;
         } else {
@@ -91,6 +114,9 @@ window.addEventListener("DOMContentLoaded", () => {
         } else {
             slideIndex--;
         };
+
+        slideIndex === 1 ? prev.parentElement.disabled = true : prev.parentElement.disabled = false;
+        slideIndex !== 12 ? next.parentElement.disabled = false : null;
 
         slideIndex == 1 ? prev.classList.add('clear') : null;
 
@@ -107,7 +133,7 @@ window.addEventListener("DOMContentLoaded", () => {
         designCounter();
 
         appearDescription();
-    })
+    }
 
     function slideActive() {
         slides.forEach((i, k) => slideIndex == k + 1 ? i.classList.add('active') : i.classList.remove('active'));
