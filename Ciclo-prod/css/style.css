@@ -95,7 +95,7 @@ body {
 }
 
 .slider_wrapper {
-  height: 100%;
+  height: 100vh;
   width: 100vw;
 }
 
