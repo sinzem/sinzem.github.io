@@ -38,18 +38,19 @@ window.addEventListener("DOMContentLoaded", () => {
     addNextPrevStyle();
 
     window.addEventListener('touchstart', swipeStart);
+
     function swipeStart() {
         positionStart = event.changedTouches[0].clientY;
         window.addEventListener('touchend', swipeEnd);
     }
+
     function swipeEnd() {
         positionEnd = event.changedTouches[0].clientY;
         window.removeEventListener('touchend', swipeEnd);
 
-        if (positionStart - positionEnd > 120 && slideIndex < 12) {
+        if (positionStart - positionEnd > 150 && slideIndex < 12) {
             nextPage();
-        } else if (positionStart - positionEnd < -120 && slideIndex > 1) {
-            event.preventDefault();
+        } else if (positionStart - positionEnd < -150 && slideIndex > 1) {
             prevPage();
         } 
     }
