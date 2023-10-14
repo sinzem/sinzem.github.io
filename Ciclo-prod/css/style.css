@@ -327,7 +327,7 @@ body {
 }
 @media (max-width: 575px) {
   .slide {
-    padding: 60px 3.75vw;
+    padding: 8.5vh 3.75vw;
   }
   .title_quarter {
     width: 265px;
@@ -379,9 +379,6 @@ body {
   }
 }
 @media (max-width: 359px) {
-  .slide {
-    padding: 55px 3.75vw;
-  }
   .title_quarter {
     width: 230px;
   }
