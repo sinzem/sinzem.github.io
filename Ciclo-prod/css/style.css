@@ -95,7 +95,7 @@ body {
 }
 
 .slider_wrapper {
-  height: 100vh;
+  height: 100%;
   width: 100vw;
 }
 
@@ -327,7 +327,7 @@ body {
 }
 @media (max-width: 575px) {
   .slide {
-    padding: 8.5vh 3.75vw;
+    padding: 16.75% 3.75vw;
   }
   .title_quarter {
     width: 265px;
