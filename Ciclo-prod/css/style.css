@@ -848,7 +848,6 @@ body {
   }
   .slide_05_img_bottom {
     top: -3vh;
-    top: calc(var(--vh, 1vh) * -3);
   }
   .title_05 {
     font-size: 34px;
