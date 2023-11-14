@@ -830,7 +830,6 @@ body {
   }
   .slide_05_img_top {
     bottom: 53vh;
-    bottom: calc(var(--vh, 1vh) * 53);
     right: 50%;
     z-index: 2;
   }
@@ -846,6 +845,10 @@ body {
   .slide_05_img_top {
     bottom: 53vh;
     bottom: calc(var(--vh, 1vh) * 53);
+  }
+  .slide_05_img_bottom {
+    top: -3vh;
+    top: calc(var(--vh, 1vh) * -3);
   }
   .title_05 {
     font-size: 34px;
