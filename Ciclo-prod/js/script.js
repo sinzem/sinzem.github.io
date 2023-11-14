@@ -16,7 +16,8 @@ window.addEventListener("DOMContentLoaded", () => {
           scaleCounter = graph.querySelectorAll('.scale_counter'),
           scaleFill = graph.querySelectorAll('.scale_fill');
 
-    let height = "100vh";
+    // let height = "100vh";
+    let height = window.innerHeight;
     let slideIndex = 1;
     let offset = 0;
     let positionStart = 0;
@@ -24,12 +25,10 @@ window.addEventListener("DOMContentLoaded", () => {
   
     if (screenWidth < 576) {
         let vh = window.innerHeight * 0.01;
-        height = vh * 100 + "vh";
         document.documentElement.style.setProperty('--vh', `${vh}px`);
 
         window.addEventListener('resize', () => {
             let vh = window.innerHeight * 0.01;
-            height = vh * 100 + "vh";
             document.documentElement.style.setProperty('--vh', `${vh}px`);
         });
     }
@@ -76,7 +75,8 @@ window.addEventListener("DOMContentLoaded", () => {
         if (offset === (slides.length - 1) * 100) {
             offset = offset;
         } else {
-            offset += +height.slice(0, height.length - 2);
+            // offset += +height.slice(0, height.length - 2);
+            offset += +height;
         };
 
         if (slideIndex > 0) {
@@ -84,7 +84,8 @@ window.addEventListener("DOMContentLoaded", () => {
             dataFirst.forEach(i => i.style.opacity = "1");
         }; 
 
-        slidesField.style.transform = `translateY(-${offset}vh)`;
+        // slidesField.style.transform = `translateY(-${offset}vh)`;
+        slidesField.style.transform = `translateY(-${offset}px)`;
 
         if (slideIndex == slides.length) {
             slideIndex = slideIndex;
@@ -118,10 +119,12 @@ window.addEventListener("DOMContentLoaded", () => {
         if (offset === 0) {
             offset = 0;
         } else {
-            offset -= +height.slice(0, height.length - 2); 
+            // offset -= +height.slice(0, height.length - 2); 
+            offset -= +height; 
         }
 
-        slidesField.style.transform = `translateY(-${offset}vh)`;
+        // slidesField.style.transform = `translateY(-${offset}vh)`;
+        slidesField.style.transform = `translateY(-${offset}px)`;
 
         if (slideIndex == 1) {
             slideIndex = slideIndex;
