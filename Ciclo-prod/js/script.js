@@ -11,25 +11,25 @@ window.addEventListener("DOMContentLoaded", () => {
           dataCounter = document.querySelectorAll("[data-count]"),
           dataDescr = document.querySelectorAll("[data-description]"),
           dataFirst = document.querySelectorAll("[data-first]");
-    const height = "100vh";
     const screenWidth = window.screen.width;
     const graph = document.querySelector('.slide_03'),
           scaleCounter = graph.querySelectorAll('.scale_counter'),
           scaleFill = graph.querySelectorAll('.scale_fill');
 
+    let height = "100vh";
     let slideIndex = 1;
     let offset = 0;
     let positionStart = 0;
     let positionEnd = 0;
-    
-
+  
     if (screenWidth < 576) {
         let vh = window.innerHeight * 0.01;
-
+        height = vh * 100 + "vh";
         document.documentElement.style.setProperty('--vh', `${vh}px`);
 
         window.addEventListener('resize', () => {
             let vh = window.innerHeight * 0.01;
+            height = vh * 100 + "vh";
             document.documentElement.style.setProperty('--vh', `${vh}px`);
         });
     }
