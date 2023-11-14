@@ -843,19 +843,20 @@ body {
     row-gap: 0px;
   }
   .slide_05_img_top {
-    bottom: 53vh;
-    bottom: calc(var(--vh, 1vh) * 53);
+    bottom: 50vh;
+    bottom: calc(var(--vh, 1vh) * 50);
   }
   .slide_05_img_bottom {
-    top: -3vh;
+    top: 0;
   }
   .title_05 {
     font-size: 34px;
-    margin-top: 0px;
+    margin-top: 15px;
     max-width: 265px;
   }
   .subtitle_05 {
     font-size: 14px;
+    margin-top: 15px;
   }
   .description_05 {
     font-size: 14px;
