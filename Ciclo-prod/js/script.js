@@ -12,7 +12,7 @@ window.addEventListener("DOMContentLoaded", () => {
           dataDescr = document.querySelectorAll("[data-description]"),
           dataFirst = document.querySelectorAll("[data-first]");
     const height = "100vh";
-
+    const screenWidth = window.screen.width;
     const graph = document.querySelector('.slide_03'),
           scaleCounter = graph.querySelectorAll('.scale_counter'),
           scaleFill = graph.querySelectorAll('.scale_fill');
@@ -21,6 +21,18 @@ window.addEventListener("DOMContentLoaded", () => {
     let offset = 0;
     let positionStart = 0;
     let positionEnd = 0;
+    
+
+    if (screenWidth < 576) {
+        let vh = window.innerHeight * 0.01;
+
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+        window.addEventListener('resize', () => {
+            let vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
+        });
+    }
 
     slideIndex < 10 ? counter.textContent = `0${slideIndex}` : counter.textContent = slideIndex;
 
@@ -135,6 +147,7 @@ window.addEventListener("DOMContentLoaded", () => {
         designCounter();
 
         appearDescription();
+
     }
 
     function slideActive() {
