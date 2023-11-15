@@ -20,14 +20,21 @@ window.addEventListener("DOMContentLoaded", () => {
     let height = window.innerHeight;
     let slideIndex = 1;
     let offset = 0;
+    // let offset = (slideIndex - 1) * +height;
     let positionStart = 0;
     let positionEnd = 0;
+
+    window.addEventListener('resize', () => {
+        height = window.innerHeight;
+        offset = (slideIndex - 1) * +height;
+    });
   
     if (screenWidth < 576) {
         let vh = window.innerHeight * 0.01;
         document.documentElement.style.setProperty('--vh', `${vh}px`);
 
         window.addEventListener('resize', () => {
+            height = window.innerHeight;
             let vh = window.innerHeight * 0.01;
             document.documentElement.style.setProperty('--vh', `${vh}px`);
         });
@@ -76,6 +83,7 @@ window.addEventListener("DOMContentLoaded", () => {
             offset = offset;
         } else {
             // offset += +height.slice(0, height.length - 2);
+            offset = (slideIndex - 1) * +height; 
             offset += +height;
         };
 
@@ -120,6 +128,7 @@ window.addEventListener("DOMContentLoaded", () => {
             offset = 0;
         } else {
             // offset -= +height.slice(0, height.length - 2); 
+            offset = (slideIndex - 1) * +height; 
             offset -= +height; 
         }
 
