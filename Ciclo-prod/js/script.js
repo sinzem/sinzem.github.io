@@ -27,7 +27,7 @@ window.addEventListener("DOMContentLoaded", () => {
     window.addEventListener('resize', () => {
         height = window.innerHeight;
         offset = (slideIndex - 1) * +height;
-        nextPage();
+        slideIndex !== 12 ? nextPage() : prevPage();
     });
   
     if (screenWidth < 576) {
