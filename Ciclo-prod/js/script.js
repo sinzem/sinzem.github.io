@@ -79,6 +79,8 @@ window.addEventListener("DOMContentLoaded", () => {
 
     function nextPage() {
 
+        height = window.innerHeight;
+
         if (offset === (slides.length - 1) * 100) {
             offset = offset;
         } else {
@@ -123,6 +125,8 @@ window.addEventListener("DOMContentLoaded", () => {
     }
 
     function prevPage() {
+
+        height = window.innerHeight;
 
         if (offset === 0) {
             offset = 0;
