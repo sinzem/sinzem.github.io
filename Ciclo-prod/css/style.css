@@ -842,11 +842,7 @@ body {
   .items_05 {
     row-gap: 0px;
   }
-  .slide_05_img_top {
-    bottom: 53vh;
-    bottom: calc(var(--vh, 1vh) * 53);
-  }
-  .slide_05_img_bottom {
+  .slide_05_img_top, .slide_05_img_bottom {
     bottom: 53vh;
     bottom: calc(var(--vh, 1vh) * 53);
   }
