@@ -1,0 +1,77 @@
+
+* {
+    font-family: 'Sofia', cursive;
+    text-align: center;
+}
+html, body {
+    position: relative;
+    background-color: #f2f2f2;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+img {
+    width: 100%;
+    max-width: 500px;
+    display: block;
+    margin: 0 auto;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    font-size: 32px;
+}
+
+button {
+    padding: 1em 1.5em;
+    font-size: 1em;
+    background-color: #d86058;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+}
+button:hover {
+    background: #a02c2a;
+}
+.yes {
+    background: #0dc972;
+}
+.yes:hover {
+    background: #099855;
+}
+
+.page_second {
+    height: 100vh;
+    max-height: 100vw;
+}
+.heart {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background: url("./img/kisspng-heart-love-red-valentines-day-hand-painted-red-heart-5a8c0dbb0df6a3.5180398315191279950572.png") center / cover no-repeat;
+    animation: love 5s linear;
+    opacity: 0;
+}
+
+@keyframes love {
+    0% {
+        transform: translateY(0vh);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-80vh);
+        opacity: 0;
+    }
+}
