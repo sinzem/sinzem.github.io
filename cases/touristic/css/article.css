@@ -1,0 +1,115 @@
+
+
+.article__content {
+    padding: 6.25rem;
+}
+.article__container {
+    display: grid;
+    align-items: start;
+    gap: 1.25rem;
+    grid-template-columns: 12.5rem 1fr 12.5rem;
+}
+.article__info {
+    display: flex;
+    gap: .4375rem;
+    align-items: center;
+    font-size: .75rem;
+    line-height: 208.333333%;
+    font-weight: 700;
+}
+.article__date {
+    display: flex;
+    gap: .4375rem;
+    align-items: center;
+}
+.article__date::after {
+    content: "";
+    height: .0625rem;
+    width: 2.1875rem;
+    background-color: #c4c4c4;
+}
+.article__body {
+    display: grid;
+    gap: 3.125rem;
+}
+.article__text {
+    display: grid;
+    gap: 1.875rem;
+    line-height: 178.571429%;
+}
+.article__text blockquote {
+    color: #d4a373;
+    font-size: 2.25rem;
+    line-height: 127.777778%;
+    font-weight: 700;
+}
+.article__tags {
+    display: flex;
+    gap: .75rem;
+    flex-wrap: wrap;
+    border-bottom: .5px solid #c4c4c4;
+    padding-bottom: 3.125rem;
+}
+.article__tag {
+    color: #6C757D;
+    border: .0625rem solid #e5e5e5;
+}
+.article__tag:hover {
+    background-color: #e5e5e5;
+}
+.author {
+    display: flex;
+    gap: 1.0625rem;
+}
+.author__avatar {
+    flex: 0 0 3.125rem;
+    height: 3.125rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.author__body {
+    display: grid;
+    align-self: center;
+    font-size: .75rem;
+    gap: .5rem;
+}
+.author__title {
+    color: #343a40;
+    font-weight: 700;
+}
+.author__skills {
+    color: #6C757D;
+}
+.article__related {
+    background: rgba(229, 229, 229, .3);
+}
+
+@media (max-width: 991.98px) {
+    .article__content {
+        padding: 4.375rem;
+    }
+    .article__container {
+        grid-template-columns: 12.5rem 1fr;
+    }
+    .article__body {
+        gap: 1.875rem;
+    }
+    .article__tags {
+        padding-bottom: 1.875rem;
+    }
+    .article__text {
+        gap: .9375rem;
+    }
+    .article__text blockquote {
+        font-size: 1.5625rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .article__content {
+        padding: 2.5rem 0;
+    }
+    .article__container {
+        grid-template-columns: auto;
+    }
+}
