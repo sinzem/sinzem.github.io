@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: kamerik-k;
+    src: url("../fonts/kamerik205-heavy.woff2");
+}
+
+:root {
+    --index: calc(1vw + 1vh);
+}
+
+body {
+    font-family: kamerik-k;
+    color: #fff;
+    overflow-x: hidden; 
+}
+
+.scene { /* (так как анимация привязана к скроллу, высота сайта определит количество пикселей, которые можно проскроллить до окончания анимации, соответственно определит скорость(чем меньше - тем быстрее)) */
+    height: 550vh;
+}
+
+.layer {
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-timeline: scroll(); /* (подвязываем анимацию к скроллу) */
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+    animation-range: 0 300vh;  /* (окончание анимации устанавливаем на максимальный скролл) */
+}
+
+/* (задаем анимацию каждому слою - при скролле увеличиваем каждый на разную величину - создается иллюзия движения вперед) */
+.layer:nth-child(1) { animation-name: animation-1; }
+@keyframes animation-1 { to { scale: 1.25; } }
+
+.layer:nth-child(2) { animation-name: animation-2; }
+@keyframes animation-2 { to { scale: 1.28; } }
+
+.layer:nth-child(3) { animation-name: animation-3; }
+@keyframes animation-3 { to { scale: 1.5; } }
+
+.layer:nth-child(4) { animation-name: animation-4; }
+@keyframes animation-4 { to { scale: 2; } }
+
+.layer:nth-child(5) { 
+    opacity: 0;
+    animation-range: 250vh 300vh;
+    animation-name: animation-5; 
+}
+@keyframes animation-5 { to { opacity: 1; } }
+
+.layer__content {
+    padding: 5vh 5vw;
+    backdrop-filter: blur(25px) brightness(.98); /* (размытие фона, отработает только если этот блок дочерний от блока с изображением) */
+    animation-timeline: scroll(); 
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+    animation-range: 0 50vh;  /* (окончание анимации) */
+    animation-name: animation-head;
+}
+@keyframes animation-head { to { opacity: 0; filter: blur(25px); } } /* (при достижении конечной точки станет прозрачным) */
+
+.layer__content h1 {
+    text-transform: uppercase;
+    font-size: calc(var(--index) * 4.5);
+    text-align: center;
+    line-height: .9em;
+    letter-spacing: -.15vw;
+}
+
+.layer__end h3 {
+    font-size: calc(var(--index) * 4);
+    text-align: center;
+    position: relative;
+}
+
+.layer__end::before {
+    content: "";
+    background-color: #01122B;
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    animation-timeline: scroll();
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+    animation-range: 300vh 450vh;
+    animation-name: animation-bg;
+}
+
+@keyframes animation-bg { to { opacity: 1;} }
+
+
