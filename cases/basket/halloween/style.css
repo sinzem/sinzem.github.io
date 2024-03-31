@@ -1,0 +1,122 @@
+* {
+    font-family: sans-serif;
+    font-size: 16px;
+}
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.site-header {
+    position: relative;
+    border: 1px solid #c0c0c0;
+    padding: 10px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.site-header > h1 {
+    font-size: 4rem;
+    position: relative;
+    color: red;
+    /* background: rgba(255, 255, 255, .8); */
+    display: inline-block;
+}
+
+.site-header-bg {
+    background: url("./img/istockphoto.jpg");
+    background-position-x: 50%;
+    background-position-y: -30%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: header-animation 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes header-animation {
+    0% {
+        background-position-y: -30%;
+    }
+    100% {
+        background-position-y: 92%
+    }
+}
+
+.spider {
+    position: absolute;
+    width: 120px;
+    height: 300px;
+    background-image: url("./img/klipartz.png");
+    background-size: cover;
+    right: 200px;
+    top: -300px;
+    cursor: pointer;
+} 
+
+.spider-animation {
+    animation-name: header-animation-spider;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    animation-delay: 3s;
+}
+
+@keyframes header-animation-spider {
+    0% {
+        top: -300px;
+    }
+    60% {
+        top: -120px;
+    }
+    70% {
+        top: -155px;
+    }
+    80% {
+        top: -135px;
+    }
+    100% {
+        top: -150px;
+    }
+}
+
+.switch {
+    position: relative;
+}
+
+.halloween-on {
+    opacity: 0;
+}
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-image: url('./img/triUp-whit.png');
+    background-size: cover; 
+    animation: uncheck 1s forwards;
+    cursor: pointer;
+}
+.halloween-on:checked+.slider {
+    animation-name: check;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes check {
+    0% {
+        transform: scale(1, 1);
+    }
+    100% {
+        transform: scale(1, -1);
+    }
+}
+
+@keyframes uncheck {
+    0% {
+        transform: scale(1, -1);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
