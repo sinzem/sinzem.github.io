@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background: black;
+}
+
+.container {
+    max-width: 1000px;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+.container > img {
+    width: 100%;
+}
+
+.knight-rider {
+    width: 80%;
+    height: 34px;
+    margin: 50px auto;
+    border: 1px solid #000;
+    font-size: 0;
+}
+
+.knight-rider > span {
+    display: inline-block;
+    width: 9.5%;
+    height: 26px;
+    margin: 3px 1.5%;
+    border-radius: 6px;
+    background-color: #ff4766;
+    filter: contrast(50%);
+}
