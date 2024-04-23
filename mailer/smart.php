@@ -29,7 +29,7 @@ $mail->isSMTP();                                      // Set mailer to use SMTP
 $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
 $mail->Username = 'sinzem@gmail.com';                 // Наш логин
-$mail->Password = "dagj{$cantle}{$part}shqr";                           // Наш пароль от ящика
+$mail->Password = "{$beg}{$cantle}{$part}{$end}";                           // Наш пароль от ящика
 $mail->SMTPSecure = 'TLS';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 587;                                    // TCP port to connect to
  
