@@ -125,7 +125,7 @@ window.addEventListener("DOMContentLoaded", () => {
         document.body.style.paddingRight = `${scroll}px`;
 
         const formData = new FormData(form);
-        const object = {begin: oneVal, ending: twoVal};
+        const object = {/* begin: oneVal, ending: twoVal */};
         formData.forEach(function(value, key) {
             object[key] = value;
         });
