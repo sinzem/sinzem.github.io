@@ -129,7 +129,7 @@ window.addEventListener("DOMContentLoaded", () => {
         formData.forEach(function(value, key) {
             object[key] = value;
         });
-        fetch("./mailer/smart.php", {
+        fetch("mailer/smart.php", {
             method: "POST",
             headers: {
                 "Content-type": "application/json"
