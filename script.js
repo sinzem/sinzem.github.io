@@ -42,6 +42,24 @@ window.addEventListener("DOMContentLoaded", () => {
         })
     })
 
+    // ---for light theme---
+
+    const theme = document.querySelector(".header__menu__item_theme");
+    const root = document.querySelector(":root");
+    
+    localStorage.getItem("theme") == "light" ? root.classList.add("light") : null;
+
+    theme.addEventListener("click", (e) => {
+        // e.preventDefault();
+        if (!root.classList.contains("light")) {
+            root.classList.add("light");
+            localStorage.setItem("theme", "light");
+        } else {
+            root.classList.remove("light");
+            localStorage.removeItem("theme");
+        }
+    })
+
     // ---for slider---
 
     const sliderWrap = document.querySelector(".skills__slider__wrap");
