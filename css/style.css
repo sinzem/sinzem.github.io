@@ -75,8 +75,22 @@ h1, h2, h3, h4, h5, h6 {
   --color-text: #fafafa;
   --hover-color: #ffa501;
   --main-color: rgb(237, 136, 5);
+  --menu-color: rgb(237, 136, 5);
   --background: url("../assets/img/main_block/main_bg.jpg");
   --header-back: linear-gradient(355deg, rgba(31,30,28,1) 0%, rgba(52,39,30,0.5) 58%, rgba(255,162,0,1) 100%);
+  color-scheme: dark;
+}
+
+.light {
+  --index: calc(1vw + 1vh);
+  --transition: cubic-bezier(.1, .7, 0, 1);
+  --color-text: #1e1f23;
+  --hover-color: rgb(237, 136, 5);
+  --main-color: #ffa501;
+  --menu-color: #9c9c9c;
+  --background: url("../assets/img/main_block/bg-gen-min.jpg");
+  --header-back: url("../assets/img/main_block/bg-top-1627169017_30-kartinkin-com-p-fon-neitralnii-delovoi-krasivo-30.jpg");
+  color-scheme: light;
 }
 
 @font-face {
@@ -215,8 +229,22 @@ body {
   --color-text: #fafafa;
   --hover-color: #ffa501;
   --main-color: rgb(237, 136, 5);
+  --menu-color: rgb(237, 136, 5);
   --background: url("../assets/img/main_block/main_bg.jpg");
   --header-back: linear-gradient(355deg, rgba(31,30,28,1) 0%, rgba(52,39,30,0.5) 58%, rgba(255,162,0,1) 100%);
+  color-scheme: dark;
+}
+
+.light {
+  --index: calc(1vw + 1vh);
+  --transition: cubic-bezier(.1, .7, 0, 1);
+  --color-text: #1e1f23;
+  --hover-color: rgb(237, 136, 5);
+  --main-color: #ffa501;
+  --menu-color: #9c9c9c;
+  --background: url("../assets/img/main_block/bg-gen-min.jpg");
+  --header-back: url("../assets/img/main_block/bg-top-1627169017_30-kartinkin-com-p-fon-neitralnii-delovoi-krasivo-30.jpg");
+  color-scheme: light;
 }
 
 .social {
@@ -232,6 +260,9 @@ body {
   background: bottom;
 }
 .social__link {
+  background: bottom;
+}
+.social__link svg {
   background: bottom;
 }
 .social__link svg path {
@@ -281,8 +312,22 @@ body {
   --color-text: #fafafa;
   --hover-color: #ffa501;
   --main-color: rgb(237, 136, 5);
+  --menu-color: rgb(237, 136, 5);
   --background: url("../assets/img/main_block/main_bg.jpg");
   --header-back: linear-gradient(355deg, rgba(31,30,28,1) 0%, rgba(52,39,30,0.5) 58%, rgba(255,162,0,1) 100%);
+  color-scheme: dark;
+}
+
+.light {
+  --index: calc(1vw + 1vh);
+  --transition: cubic-bezier(.1, .7, 0, 1);
+  --color-text: #1e1f23;
+  --hover-color: rgb(237, 136, 5);
+  --main-color: #ffa501;
+  --menu-color: #9c9c9c;
+  --background: url("../assets/img/main_block/bg-gen-min.jpg");
+  --header-back: url("../assets/img/main_block/bg-top-1627169017_30-kartinkin-com-p-fon-neitralnii-delovoi-krasivo-30.jpg");
+  color-scheme: light;
 }
 
 .basket {
@@ -363,8 +408,22 @@ body {
   --color-text: #fafafa;
   --hover-color: #ffa501;
   --main-color: rgb(237, 136, 5);
+  --menu-color: rgb(237, 136, 5);
   --background: url("../assets/img/main_block/main_bg.jpg");
   --header-back: linear-gradient(355deg, rgba(31,30,28,1) 0%, rgba(52,39,30,0.5) 58%, rgba(255,162,0,1) 100%);
+  color-scheme: dark;
+}
+
+.light {
+  --index: calc(1vw + 1vh);
+  --transition: cubic-bezier(.1, .7, 0, 1);
+  --color-text: #1e1f23;
+  --hover-color: rgb(237, 136, 5);
+  --main-color: #ffa501;
+  --menu-color: #9c9c9c;
+  --background: url("../assets/img/main_block/bg-gen-min.jpg");
+  --header-back: url("../assets/img/main_block/bg-top-1627169017_30-kartinkin-com-p-fon-neitralnii-delovoi-krasivo-30.jpg");
+  color-scheme: light;
 }
 
 .cases {
@@ -487,8 +546,22 @@ body {
   --color-text: #fafafa;
   --hover-color: #ffa501;
   --main-color: rgb(237, 136, 5);
+  --menu-color: rgb(237, 136, 5);
   --background: url("../assets/img/main_block/main_bg.jpg");
   --header-back: linear-gradient(355deg, rgba(31,30,28,1) 0%, rgba(52,39,30,0.5) 58%, rgba(255,162,0,1) 100%);
+  color-scheme: dark;
+}
+
+.light {
+  --index: calc(1vw + 1vh);
+  --transition: cubic-bezier(.1, .7, 0, 1);
+  --color-text: #1e1f23;
+  --hover-color: rgb(237, 136, 5);
+  --main-color: #ffa501;
+  --menu-color: #9c9c9c;
+  --background: url("../assets/img/main_block/bg-gen-min.jpg");
+  --header-back: url("../assets/img/main_block/bg-top-1627169017_30-kartinkin-com-p-fon-neitralnii-delovoi-krasivo-30.jpg");
+  color-scheme: light;
 }
 
 .footer {
@@ -705,8 +778,22 @@ body {
   --color-text: #fafafa;
   --hover-color: #ffa501;
   --main-color: rgb(237, 136, 5);
+  --menu-color: rgb(237, 136, 5);
   --background: url("../assets/img/main_block/main_bg.jpg");
   --header-back: linear-gradient(355deg, rgba(31,30,28,1) 0%, rgba(52,39,30,0.5) 58%, rgba(255,162,0,1) 100%);
+  color-scheme: dark;
+}
+
+.light {
+  --index: calc(1vw + 1vh);
+  --transition: cubic-bezier(.1, .7, 0, 1);
+  --color-text: #1e1f23;
+  --hover-color: rgb(237, 136, 5);
+  --main-color: #ffa501;
+  --menu-color: #9c9c9c;
+  --background: url("../assets/img/main_block/bg-gen-min.jpg");
+  --header-back: url("../assets/img/main_block/bg-top-1627169017_30-kartinkin-com-p-fon-neitralnii-delovoi-krasivo-30.jpg");
+  color-scheme: light;
 }
 
 .header {
@@ -715,6 +802,7 @@ body {
   width: 100%;
   overflow: hidden;
   background: var(--header-back);
+  background-size: cover;
 }
 .header__menu {
   position: absolute;
@@ -741,7 +829,7 @@ body {
   width: 32px;
   border-radius: 50%;
   background: #000;
-  color: #ce8407;
+  color: var(--menu-color);
   font-size: 11px;
   text-align: center;
   line-height: 34px;
@@ -884,7 +972,7 @@ body {
 }
 .lang__change__item a {
   text-decoration: none;
-  color: #ce8407;
+  color: var(--menu-color);
   line-height: 34px;
   background: bottom;
 }
@@ -1110,8 +1198,22 @@ body {
   --color-text: #fafafa;
   --hover-color: #ffa501;
   --main-color: rgb(237, 136, 5);
+  --menu-color: rgb(237, 136, 5);
   --background: url("../assets/img/main_block/main_bg.jpg");
   --header-back: linear-gradient(355deg, rgba(31,30,28,1) 0%, rgba(52,39,30,0.5) 58%, rgba(255,162,0,1) 100%);
+  color-scheme: dark;
+}
+
+.light {
+  --index: calc(1vw + 1vh);
+  --transition: cubic-bezier(.1, .7, 0, 1);
+  --color-text: #1e1f23;
+  --hover-color: rgb(237, 136, 5);
+  --main-color: #ffa501;
+  --menu-color: #9c9c9c;
+  --background: url("../assets/img/main_block/bg-gen-min.jpg");
+  --header-back: url("../assets/img/main_block/bg-top-1627169017_30-kartinkin-com-p-fon-neitralnii-delovoi-krasivo-30.jpg");
+  color-scheme: light;
 }
 
 .skills {
