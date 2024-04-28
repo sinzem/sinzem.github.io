@@ -248,19 +248,22 @@ body {
 }
 
 .social {
-  position: fixed;
-  top: 40vh;
-  left: 50px;
-  height: 340px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  z-index: 3;
+  display: grid;
+  grid-template: 1fr/auto 70px 1fr 1fr 1fr;
+  gap: 12px;
+  width: -moz-fit-content;
+  width: fit-content;
   background: bottom;
+  position: fixed;
+  top: 55vh;
+  left: -60px;
+  transform: rotate(-90deg);
+  z-index: 5;
 }
 .social__link {
   background: bottom;
+  width: 20px;
+  height: 20px;
 }
 .social__link svg {
   background: bottom;
@@ -276,29 +279,22 @@ body {
   fill: var(--main-color);
 }
 .social__divider {
-  height: 70px;
-  width: 2px;
+  align-self: center;
+  height: 2px;
+  width: 70px;
   background: var(--color-text);
 }
 .social__text {
+  align-self: center;
+  justify-self: end;
   color: var(--color-text);
-  height: 150px;
-  width: 25px;
   background: bottom;
-}
-.social__text span {
-  display: block;
-  width: -moz-max-content;
-  width: max-content;
-  transform: rotate(-90deg) translate(-48%, -228%);
   font-weight: bold;
-  background: transparent;
-  background: bottom;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1199px) {
   .social {
-    left: 25px;
+    left: -90px;
   }
 }
 @media (max-width: 767px) {
@@ -654,10 +650,9 @@ body {
 .footer__triggers {
   width: 100%;
   margin: 25px auto;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template: 1fr/auto auto;
   justify-content: space-between;
-  align-items: center;
 }
 .footer__policy {
   color: var(--color-text);
@@ -740,6 +735,18 @@ body {
   animation: message 1s ease forwards;
 }
 
+.footer__triggers_ru {
+  -moz-column-gap: 68px;
+       column-gap: 68px;
+}
+.footer__triggers_ru input {
+  margin-left: 0px;
+}
+.footer__triggers_ru a {
+  width: -moz-max-content;
+  width: max-content;
+}
+
 @keyframes message {
   0% {
     opacity: 0;
@@ -760,13 +767,12 @@ body {
     margin: 25px auto 0;
   }
   .footer__triggers {
-    flex-direction: column-reverse;
-    align-items: flex-end;
-    justify-content: center;
-    margin-top: 20px;
+    grid-template: auto auto/1fr;
+    row-gap: 10px;
+    justify-items: end;
   }
   .footer__btn {
-    margin-top: 15px;
+    grid-row: 2/3;
   }
   .footer__policy input {
     margin-bottom: 2px;
@@ -1226,6 +1232,7 @@ body {
   top: 66px;
   left: calc(50% + 248px);
   padding: 20px 10px;
+  font-weight: bold;
   line-height: 1.1;
   z-index: 5;
 }
@@ -1330,6 +1337,9 @@ body {
   font-size: 16px;
 }
 .skills__content__block_top__wrapper {
+  position: relative;
+}
+.skills__content__block_bottom__soft {
   position: relative;
 }
 .skills__content__block_bottom__soft::before {
