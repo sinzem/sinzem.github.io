@@ -75,7 +75,7 @@ h1, h2, h3, h4, h5, h6 {
   --color-text: #fafafa;
   --hover-color: #ffa501;
   --main-color: rgb(237, 136, 5);
-  --menu-color: rgb(237, 136, 5);
+  --menu-color: #ffa501;
   --background: url("../assets/img/main_block/main_bg.jpg");
   --header-back: linear-gradient(355deg, rgba(31,30,28,1) 0%, rgba(52,39,30,0.5) 58%, rgba(255,162,0,1) 100%);
   color-scheme: dark;
@@ -229,7 +229,7 @@ body {
   --color-text: #fafafa;
   --hover-color: #ffa501;
   --main-color: rgb(237, 136, 5);
-  --menu-color: rgb(237, 136, 5);
+  --menu-color: #ffa501;
   --background: url("../assets/img/main_block/main_bg.jpg");
   --header-back: linear-gradient(355deg, rgba(31,30,28,1) 0%, rgba(52,39,30,0.5) 58%, rgba(255,162,0,1) 100%);
   color-scheme: dark;
@@ -308,7 +308,7 @@ body {
   --color-text: #fafafa;
   --hover-color: #ffa501;
   --main-color: rgb(237, 136, 5);
-  --menu-color: rgb(237, 136, 5);
+  --menu-color: #ffa501;
   --background: url("../assets/img/main_block/main_bg.jpg");
   --header-back: linear-gradient(355deg, rgba(31,30,28,1) 0%, rgba(52,39,30,0.5) 58%, rgba(255,162,0,1) 100%);
   color-scheme: dark;
@@ -404,7 +404,7 @@ body {
   --color-text: #fafafa;
   --hover-color: #ffa501;
   --main-color: rgb(237, 136, 5);
-  --menu-color: rgb(237, 136, 5);
+  --menu-color: #ffa501;
   --background: url("../assets/img/main_block/main_bg.jpg");
   --header-back: linear-gradient(355deg, rgba(31,30,28,1) 0%, rgba(52,39,30,0.5) 58%, rgba(255,162,0,1) 100%);
   color-scheme: dark;
@@ -542,7 +542,7 @@ body {
   --color-text: #fafafa;
   --hover-color: #ffa501;
   --main-color: rgb(237, 136, 5);
-  --menu-color: rgb(237, 136, 5);
+  --menu-color: #ffa501;
   --background: url("../assets/img/main_block/main_bg.jpg");
   --header-back: linear-gradient(355deg, rgba(31,30,28,1) 0%, rgba(52,39,30,0.5) 58%, rgba(255,162,0,1) 100%);
   color-scheme: dark;
@@ -784,7 +784,7 @@ body {
   --color-text: #fafafa;
   --hover-color: #ffa501;
   --main-color: rgb(237, 136, 5);
-  --menu-color: rgb(237, 136, 5);
+  --menu-color: #ffa501;
   --background: url("../assets/img/main_block/main_bg.jpg");
   --header-back: linear-gradient(355deg, rgba(31,30,28,1) 0%, rgba(52,39,30,0.5) 58%, rgba(255,162,0,1) 100%);
   color-scheme: dark;
@@ -1083,7 +1083,7 @@ body {
   0% {
     opacity: 0;
     top: 0;
-    left: 0;
+    left: 25px;
   }
   100% {
     opacity: 1;
@@ -1094,7 +1094,7 @@ body {
 @keyframes lang-change-bottom {
   0% {
     opacity: 0;
-    top: 0;
+    top: 25px;
     left: 0;
   }
   100% {
@@ -1204,7 +1204,7 @@ body {
   --color-text: #fafafa;
   --hover-color: #ffa501;
   --main-color: rgb(237, 136, 5);
-  --menu-color: rgb(237, 136, 5);
+  --menu-color: #ffa501;
   --background: url("../assets/img/main_block/main_bg.jpg");
   --header-back: linear-gradient(355deg, rgba(31,30,28,1) 0%, rgba(52,39,30,0.5) 58%, rgba(255,162,0,1) 100%);
   color-scheme: dark;
@@ -1609,6 +1609,140 @@ body {
     top: -18px;
     transform: rotate(16deg);
   }
+  .skills__slider_ru {
+    height: 400px;
+  }
+  .skills__content__block_bottom__wrapper_ru::before {
+    height: 56px;
+  }
+  .skills__content__block_bottom__soft_ru::before {
+    left: 9px;
+    width: 483px;
+  }
+  .skills__content__block_bottom__soft_ru::after {
+    left: 9px;
+  }
+  .description_soft_top_ru::before {
+    left: 192px;
+  }
+  .description_soft_bottom_ru::before {
+    left: 27px;
+  }
+  .description_soft_bottom_ru::after {
+    left: 9px;
+  }
+  .list_soft_top_ru .line_one {
+    width: 143px;
+    left: -145px;
+    top: 51px;
+    transform: rotate(-37deg);
+  }
+  .list_soft_top_ru .line_two {
+    width: 137px;
+    left: -140px;
+    top: 29px;
+    transform: rotate(-22deg);
+  }
+  .list_soft_top_ru .line_three {
+    width: 120px;
+    left: -132px;
+    top: 16px;
+    transform: rotate(-11deg);
+  }
+  .list_soft_top_ru .line_four {
+    width: 114px;
+    left: -129px;
+    top: 4px;
+    transform: rotate(2deg);
+  }
+  .list_soft_top_ru .line_five {
+    width: 126px;
+    left: -135px;
+    top: -25px;
+    transform: rotate(28deg);
+  }
+  .list_soft_bottom_ru {
+    padding-right: 80px;
+  }
+  .list_soft_bottom_ru::before {
+    right: 47px;
+  }
+  .list_soft_bottom_ru::after {
+    left: 9px;
+  }
+  .list_soft_bottom_ru li::before {
+    left: 197px;
+  }
+  .list_soft_bottom_ru li::after {
+    left: 202px;
+  }
+  .skills__slider_ua {
+    height: 400px;
+  }
+  .skills__content__block_bottom__wrapper_ua::before {
+    height: 56px;
+  }
+  .skills__content__block_bottom__soft_ua::before {
+    left: 20px;
+    width: 473px;
+  }
+  .skills__content__block_bottom__soft_ua::after {
+    left: 20px;
+  }
+  .description_soft_top_ua::before {
+    left: 162px;
+  }
+  .description_soft_bottom_ua::before {
+    left: 38px;
+  }
+  .description_soft_bottom_ua::after {
+    left: 20px;
+  }
+  .list_soft_top_ua .line_one {
+    width: 167px;
+    left: -169px;
+    top: 44px;
+    transform: rotate(-29deg);
+  }
+  .list_soft_top_ua .line_two {
+    width: 145px;
+    left: -161px;
+    top: 25px;
+    transform: rotate(-15deg);
+  }
+  .list_soft_top_ua .line_three {
+    width: 139px;
+    left: -157px;
+    top: 13px;
+    transform: rotate(-5deg);
+  }
+  .list_soft_top_ua .line_four {
+    width: 145px;
+    left: -161px;
+    top: 0px;
+    transform: rotate(5deg);
+  }
+  .list_soft_top_ua .line_five {
+    width: 149px;
+    left: -162px;
+    top: -21px;
+    transform: rotate(20deg);
+  }
+  .list_soft_bottom_ua {
+    padding-right: 80px;
+  }
+  .list_soft_bottom_ua::before {
+    right: 47px;
+  }
+  .list_soft_bottom_ua::after {
+    left: 9px;
+  }
+  .list_soft_bottom_ua li::before {
+    left: 197px;
+  }
+  .list_soft_bottom_ua li::after {
+    left: 202px;
+  }
 }
 @media (max-width: 575.9px) {
   .description_hard_middle, .description_hard_junior {
@@ -1841,6 +1975,15 @@ body {
     height: 100%;
     width: 50px;
     background: bottom;
+  }
+  .list_soft_top_ru::before {
+    height: 171px;
+  }
+  .skills__slider_ua {
+    height: 495px;
+  }
+  .list_soft_top_ua::before {
+    height: 155px;
   }
 }
 @keyframes slide-hard-active {
