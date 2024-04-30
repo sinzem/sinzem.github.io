@@ -1,7 +1,7 @@
 window.addEventListener("DOMContentLoaded", () => {
 
     const scroll = calcScroll();
-
+    
     // ---for headerDropMenu---
     
     const menu = document.querySelector(".header__menu");
