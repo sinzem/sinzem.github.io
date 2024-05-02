@@ -461,6 +461,24 @@ body {
   width: 100%;
   cursor: pointer;
 }
+.cases__clarification {
+  margin-top: 50px;
+  transform: translateX(50%);
+  text-align: end;
+}
+.cases__clarification h3 {
+  margin-top: 5px;
+}
+.cases__clarification a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--main-color);
+  transition: all 0.15s linear;
+}
+.cases__clarification a:hover {
+  transform: translateY(-2px);
+  color: var(--hover-color);
+}
 
 @media (min-width: 1199.5px) {
   .cases__item:hover {
@@ -534,6 +552,12 @@ body {
   }
   .cases__item.active + * {
     filter: grayscale(0.1) brightness(0.6);
+  }
+  .cases__clarification {
+    transform: translateX(0%);
+    max-width: 300px;
+    margin: 40px auto 0;
+    padding: 10px;
   }
 }
 :root {
@@ -661,6 +685,7 @@ body {
 }
 .footer__policy input {
   margin: 0 10px;
+  cursor: pointer;
 }
 .footer__policy label a {
   display: inline-block;
@@ -671,6 +696,10 @@ body {
 .footer__policy label a:hover {
   transform: translateY(-2px);
   color: var(--hover-color);
+}
+.footer__tel a {
+  text-decoration: none;
+  color: var(--main-color);
 }
 
 .send-modal {
@@ -720,7 +749,7 @@ body {
   border-radius: 4px;
   display: none;
 }
-.send-modal__success, .send-modal__failure, .send-modal__send {
+.send-modal__success, .send-modal__failure, .send-modal__send, .send-modal__sorry-git {
   width: 80%;
   line-height: 1.2;
   background: var(--main-color);
@@ -730,7 +759,7 @@ body {
 .send-modal__loading.active {
   display: block;
 }
-.send-modal__success.active, .send-modal__failure.active {
+.send-modal__success.active, .send-modal__failure.active, .send-modal__sorry-git.active {
   display: block;
   animation: message 1s ease forwards;
 }
