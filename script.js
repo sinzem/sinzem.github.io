@@ -126,6 +126,7 @@ window.addEventListener("DOMContentLoaded", () => {
     const modalLoading = document.querySelector(".send-modal__loading");
     const modalSuccess = document.querySelector(".send-modal__success");
     const modalFailure = document.querySelector(".send-modal__failure");
+    const modalGit = document.querySelector(".send-modal__sorry-git")
     const modalSend = document.querySelector(".send-modal__send");
     const twoVal = modalSend.textContent.slice(7, 11);
     const oneVal = "dagj";
@@ -154,19 +155,32 @@ window.addEventListener("DOMContentLoaded", () => {
             },
             body: JSON.stringify(object)
         })
-        .then(() => { 
-            modalLoading.classList.remove("active");
-            modalSuccess.classList.add("active");
+        .then((e) => { 
+            if (e.status === 200) {
+                modalLoading.classList.remove("active");
+                modalFailure.classList.remove("active");
+                modalGit.classList.remove("active");
+                modalSuccess.classList.add("active");
+            } else {
+                console.log(e);
+                modalLoading.classList.remove("active");
+                modalFailure.classList.remove("active");
+                modalSuccess.classList.remove("active");
+                modalGit.classList.add("active");
+            }
         })
         .catch((e) => {
             console.log(e);
             modalLoading.classList.remove("active");
+            modalSuccess.classList.remove("active");
+            modalGit.classList.remove("active");
             modalFailure.classList.add("active");
         }).finally(() => { 
                 setTimeout(() => {
                     modalLoading.classList.contains("active") ?  modalLoading.classList.remove("active") : null;
                     modalSuccess.classList.contains("active") ?  modalSuccess.classList.remove("active") : null;
                     modalFailure.classList.contains("active") ?  modalFailure.classList.remove("active") : null;
+                    modalGit.classList.contains("active") ?  modalGit.classList.remove("active") : null;
                     messageModal.classList.remove("active");
                     document.body.style.overflow = "";
                     document.body.style.paddingRight = `0px`;
