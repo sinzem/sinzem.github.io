@@ -93,7 +93,7 @@ window.addEventListener("DOMContentLoaded", () => {
                 start += 25;
                 document.documentElement.scrollTo(0, start); 
                 if (start < toBlock) {
-                    requestAnimationFrame(setTimeout(to, 4));
+                    setTimeout(to, 4);
                 } else {
                     location.hash = hash;
                 }
