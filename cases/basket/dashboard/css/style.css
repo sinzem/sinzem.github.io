@@ -462,6 +462,9 @@ aside {
         top: 100px;
         border: 1px solid #9197b3;
     }
+    .search__block input {
+        width: 167px;
+    }
     .customers__block {
         margin-top: 80px;
     }
