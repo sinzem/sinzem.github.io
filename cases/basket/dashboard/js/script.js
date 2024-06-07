@@ -37,7 +37,7 @@ window.addEventListener("DOMContentLoaded", () => {
     const next = document.querySelector(".customers__pagination_next");
     const paginationPages = document.querySelector('.customers__pagination_pages');
 
-    const customers = () => fetch("../customers.json")
+    const customers = () => fetch("customers.json")
         .then(response => response.json())
         .catch(error => console.log(error));
     
