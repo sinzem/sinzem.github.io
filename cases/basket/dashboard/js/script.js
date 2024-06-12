@@ -28,7 +28,6 @@ window.addEventListener("DOMContentLoaded", () => {
     })
 
     // For customers__block
-    const paginationButton = document.querySelectorAll(".customers__pagination_page");
     const customersWrapper = document.querySelector(".customers__wrapper");
     const calculateStart = document.querySelector(".customers__calculate_start");
     const calculateEnd = document.querySelector(".customers__calculate_end");
@@ -110,11 +109,14 @@ window.addEventListener("DOMContentLoaded", () => {
 
     async function showPaginationPages() {
         let paginationBlock = [];
+        let skipBlockLeft = [];
+        let skipBlockRight = [];
         paginationPages.innerHTML = "";
         for (let i = 1; i <= pageTotal; i++) {
             if (i === 1 || i === pageTotal ||  
-                i < offsetMax / limit + 3 &&
-                i > offsetMax / limit - 3
+                i < 7 && offsetMax / limit < i + 3 ||
+                i > pageTotal - 6 && offsetMax / limit > pageTotal - 3 ||
+                i < offsetMax / limit + 3 && i > offsetMax / limit - 3
             ) {
                 const element = document.createElement("button");
                 element.textContent = `${i}`;
@@ -123,16 +125,20 @@ window.addEventListener("DOMContentLoaded", () => {
                 if (offsetMax / limit === i) element.classList.add("active");
                 paginationPages.append(element);
                 paginationBlock.push(element);
-            } 
-            if (offsetMax / limit === i - 3 && pageTotal !== i ||
-                offsetMax / limit === i + 3 && i !== 1) {
-                    const skip = document.createElement("div");
-                    skip.textContent = `...`;
-                    skip.classList.add("skip");
-                    skip.classList.add("skip_right");
-                    paginationPages.append(skip);
-            } 
+            } else {
+                i < offsetMax / limit ? skipBlockLeft.push(i) : skipBlockRight.push(i)
+            }
         }
+        const skipLeft = document.createElement("div");
+        skipLeft.textContent = `..`;
+        skipLeft.classList.add("skip");
+        const skipRight = document.createElement("div");
+        skipRight.textContent = `..`;
+        skipRight.classList.add("skip");
+        
+        skipBlockLeft.length > 0 ? paginationBlock[0].after(skipLeft) : null;
+        skipBlockRight.length > 0 ? paginationBlock[paginationBlock.length - 1].before(skipRight) : null;
+        
         paginationBlock.forEach(block => {
             block.addEventListener("click", (e) => {
                 offset = e.target.textContent * limit - limit;
