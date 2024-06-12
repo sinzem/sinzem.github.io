@@ -54,13 +54,8 @@ window.addEventListener("DOMContentLoaded", () => {
 
     prev.addEventListener("click", () => {
         next.style.opacity = "1";
-        if (offset <= 0) {
-            offset = 0; 
-            prev.style.opacity = ".5";
-        } else { 
-            offset -= limit;
-            prev.style.opacity = "1";
-        }
+        offset <= 0 ? offset = 0 : offset -= limit;
+        offset < 8 ? prev.style.opacity = ".5" : prev.style.opacity = "1";
         offsetMax <= limit ? offsetMax = limit : offsetMax -= limit;
         buildCustomersBlock();
         showPagesStatistic();
@@ -68,13 +63,8 @@ window.addEventListener("DOMContentLoaded", () => {
 
     next.addEventListener("click", () => {
         prev.style.opacity = "1";
-        if (offset < customersTotal - limit) {
-            offset += limit;
-            next.style.opacity = "1";
-        } else {
-            offset = offset;
-            next.style.opacity = ".5";
-        }
+        offset < customersTotal - limit ? offset += limit : offset = offset;
+        offset >= customersTotal - limit ? next.style.opacity = ".5" : next.style.opacity = "1";
         offsetMax < customersTotal ? offsetMax += limit : offsetMax = offsetMax;
         buildCustomersBlock();
         showPagesStatistic();
@@ -123,11 +113,8 @@ window.addEventListener("DOMContentLoaded", () => {
         paginationPages.innerHTML = "";
         for (let i = 1; i <= pageTotal; i++) {
             if (i === 1 || i === pageTotal ||  
-                offsetMax / limit === i ||
-                offsetMax / limit === i + 1 || 
-                offsetMax / limit === i - 1 ||
-                offsetMax / limit === i + 2 ||
-                offsetMax / limit === i - 2 
+                i < offsetMax / limit + 3 &&
+                i > offsetMax / limit - 3
             ) {
                 const element = document.createElement("button");
                 element.textContent = `${i}`;
@@ -148,7 +135,6 @@ window.addEventListener("DOMContentLoaded", () => {
         }
         paginationBlock.forEach(block => {
             block.addEventListener("click", (e) => {
-                // console.log(e.target.textContent);
                 offset = e.target.textContent * limit - limit;
                 offsetMax = e.target.textContent * limit;
                 buildCustomersBlock();
