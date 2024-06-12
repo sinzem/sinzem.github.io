@@ -271,12 +271,20 @@ aside {
 }
 .customers__pagination_pages {
     display: flex;
+    width: 280px;
+    justify-content: space-between;
 }
 .customers__pagination_button {
     width: 26px;
     height: 24px;
     border-radius: 4px;
-    margin-right: 12px;
+    margin: 0 6px;
+}
+.customers__pagination_prev {
+    margin-left: 0;
+}
+.customers__pagination_next {
+    margin-right: 0;
 }
 .customers__pagination_page {
     &.active {
@@ -317,7 +325,6 @@ aside {
 }
 .skip {
     display: block;
-    margin-right: 12px;
     line-height: 21px;
 }
 
@@ -474,16 +481,16 @@ aside {
     .customres__grid {
         grid-template-columns: 135px 85px 85px;
     }
+    .customers__pagination_pages {
+        width: 238px;
+    }
     .customers__pagination_button {
         width: 26px;
         height: 24px;
         border-radius: 4px;
-        margin-right: 6px;
+        margin: 0 3px;
     }
     @keyframes aside-hide {0%{left: 0} 100%{left:-264px}}
-    .skip {
-        margin-right: 6px;
-    }
 }
 
 
