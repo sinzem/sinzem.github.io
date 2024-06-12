@@ -458,7 +458,7 @@ aside {
         right: -100px;
     }
     .search__block {
-        right: 20px;
+        right: 22px;
         top: 100px;
         border: 1px solid #9197b3;
     }
@@ -481,6 +481,9 @@ aside {
         margin-right: 6px;
     }
     @keyframes aside-hide {0%{left: 0} 100%{left:-264px}}
+    .skip {
+        margin-right: 6px;
+    }
 }
 
 
