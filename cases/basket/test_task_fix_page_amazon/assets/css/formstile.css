@@ -1,0 +1,43 @@
+.comments__send {
+    margin: 3px 0;
+    padding: 15px 10px;
+    background-color: #eeeff4;
+}
+.comments__form__inputs {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 10px;
+}
+.comments__input {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    label {
+        font-size: 12px;
+        margin-bottom: 0;
+    }
+    input, textarea {
+        border: 1px black solid;
+        border-radius: 8px;
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+    input {
+       
+    }
+    textarea {
+        resize: vertical;
+    }
+}
+.comments__form__btn {
+    border-radius: 8px;
+    margin-top: 6px;
+    padding: 5px 30px;
+    background-color: #ed9220;
+    color: white;
+    border: 2px solid white;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .74);
+}
+.comments__form__btn:focus {
+    outline: none;
+}
