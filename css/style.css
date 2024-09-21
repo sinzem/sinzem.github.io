@@ -368,6 +368,7 @@ body {
   position: fixed;
   top: 4vh;
   right: 4vw;
+  z-index: 10;
 }
 .basket__btn a {
   display: block;
