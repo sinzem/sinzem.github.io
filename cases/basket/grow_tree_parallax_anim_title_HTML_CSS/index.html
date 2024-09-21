@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="img/tree-from-wectors-market.png">
+
+    <link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css">
+    <script defer src="libs/swiper/swiper-bundle.min.js"></script>
+
+    <script defer src="libs/btn/anim-menu-btn.min.js"></script>
+
+    <link rel="stylesheet" href="css/main.css">
+    <script defer src="js/app.js"></script>
+
+    <title>Grow Tree</title>
+</head>
+<body>
+    <div class="swiper slider">
+
+        <div class="slider-ui">
+            <div class="container header-wrapper">
+                <div class="top-line">
+                    <div class="row">
+                        <div class="col col--center">
+                            <a href="#" class="logo">
+                                <img src="img/logo.svg" alt="Grow">
+                            </a>
+                        </div>
+                        <div class="col col--center col--right col--lead">
+                            <nav class="main-menu">
+                                <ul>
+                                    <li><a href="#">Main</a></li>
+                                    <li><a href="#">Info</a></li>
+                                    <li><a href="#">Contacts</a></li>
+                                </ul>
+                            </nav>
+                            <a href="#" class="button button--top">Plant now</a>
+                        </div>
+                        <div class="col col--center">
+                            <button class="submenu anim-menu-btn">
+                                <i class="anim-menu-btn__icon anim-menu-btn__icon--close"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="header-content">
+
+                    <div class="header-contnet__slide active">
+                        <h1 class="letters">Grow</h1>
+                        <div class="header-content__info">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, voluptate illum. Nihil consequuntur esse quia suscipit provident molestiae eaque architecto voluptatum pariatur minus.</p>
+                            <button class="button button--main">Plant a tree now</button>
+                        </div>
+                    </div>
+
+                    <div class="header-contnet__slide">
+                        <h1 class="letters">Live</h1>
+                        <div class="header-content__info">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At totam dignissimos recusandae ipsam. Illo asperiores maxime a inventore, dignissimos suscipit.</p>
+                            <button class="button button--main">Plant a tree now</button>
+                        </div>
+                    </div>
+
+                    <div class="header-contnet__slide">
+                        <h1 class="letters">Wood</h1>
+                        <div class="header-content__info">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, voluptatum obcaecati in iste dignissimos ratione ex? Ad, similique incidunt.</p>
+                            <button class="button button--main">Plant a tree now</button>
+                        </div>
+                    </div>
+
+                </div> 
+
+                <div class="header-bottom"></div>
+
+            </div>
+        </div>
+
+        <div class="swiper-wrapper">
+            <div class="swiper-slide slider__item">
+                <!-- (параллакс уже настроен в слайдере, подключаем в js и через дата-атрибут задаем глубину в процентах) -->
+                <div class="slider__layer" data-swiper-parallax="35%" style="background-image: url(img/slides/slide-1-layer-back.jpg);"></div>
+                <div class="slider__layer" data-swiper-parallax="25%" style="background-image: url(img/slides/slide-1-layer-middle.png);"></div>
+                <div class="slider__layer" data-swiper-parallax="14%" style="background-image: url(img/slides/slide-1-layer-front.png);"></div>
+            </div>
+            <div class="swiper-slide slider__item">
+                <div class="slider__layer" data-swiper-parallax="35%" style="background-image: url(img/slides/slide-2-layer-back.jpg);"></div>
+                <div class="slider__layer" data-swiper-parallax="25%" style="background-image: url(img/slides/slide-2-layer-middle.png);"></div>
+                <div class="slider__layer" data-swiper-parallax="14%" style="background-image: url(img/slides/slide-2-layer-front.png);"></div>   
+            </div>
+            <div class="swiper-slide slider__item">
+                <div class="slider__layer" data-swiper-parallax="35%" style="background-image: url(img/slides/slide-3-layer-back.jpg);"></div>
+                <div class="slider__layer" data-swiper-parallax="25%" style="background-image: url(img/slides/slide-3-layer-middle.png);"></div>
+                <div class="slider__layer" data-swiper-parallax="14%" style="background-image: url(img/slides/slide-3-layer-front.png);"></div>    
+            </div>
+        </div>
+    </div>
+</body>
+</html>
