@@ -20,3 +20,12 @@ swiper.on('slideChange', () => {
     })
 })
 
+const menuItems = document.querySelectorAll(".main-menu ul li");
+menuItems.forEach(item => {
+    item.addEventListener("click", () => {
+        menuItems.forEach(e => {
+            e.classList.contains("active") ? e.classList.remove("active") : null;
+        })
+        item.classList.add("active");
+    })
+})
