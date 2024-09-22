@@ -117,9 +117,7 @@ body {
 }
 
 .main-menu li.active > *::before,
-.main-menu li:hover > *::before,
-.main-menu li.active > *::after,
-.main-menu li:hover > *::after {
+.main-menu li.active > *::after {
     visibility: visible;
 }
 
