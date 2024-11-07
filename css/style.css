@@ -292,6 +292,12 @@ body {
   font-weight: bold;
 }
 
+.freelancehunt {
+    position: absolute;
+    left: 4vw;
+    top: 95vh;
+}
+
 @media (max-width: 1199px) {
   .social {
     left: -90px;
