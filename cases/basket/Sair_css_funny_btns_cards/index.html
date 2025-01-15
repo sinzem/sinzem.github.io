@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Ripple effect on buttons</title>
+</head>
+<body>
+    <div class="buttons-block">
+        <a href="#" class="btn">Press Me</a>
+        <button class="hover_btn">Hover Me</button>
+        <a href="#" class="btn">Press Me</a>
+    </div>
+    <div class="cards-block">
+        <div class="container">
+            <div class="card">
+                <div class="content">
+                    <h2>01</h2>
+                    <h3>Card One</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium a, accusamus deleniti dignissimos dolores culpa exercitationem provident neque?</p>
+                    <a href="#">Read More</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="content">
+                    <h2>02</h2>
+                    <h3>Card Two</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta, laudantium reprehenderit! Aut velit fugiat cum perferendis. Asperiores, mollitia.</p>
+                    <a href="#">Read More</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="content">
+                    <h2>03</h2>
+                    <h3>Card Three</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni excepturi incidunt amet repellendus, quibusdam ratione quisquam totam velit qui.</p>
+                    <a href="#">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const btn = document.querySelectorAll(".btn");
+        btn.forEach(b => {
+            b.addEventListener("click", (e) => {
+                let x = e.pageX - e.target.offsetLeft;
+                let y = e.pageY - e.target.offsetTop;
+                let ripples = document.createElement("span");
+                ripples.style.left = x + "px";
+                ripples.style.top = y + "px";
+                e.target.appendChild(ripples);
+
+                setTimeout(() => {
+                    ripples.remove();
+                }, 500)
+            })
+        })
+    </script>
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script type="text/javascript">
+        VanillaTilt.init(document.querySelectorAll(".card"), {
+            max: 25,
+            speed: 400,
+            glare: true,
+            "max-glare": 1
+        });
+    </script>
+</body>
+</html>
