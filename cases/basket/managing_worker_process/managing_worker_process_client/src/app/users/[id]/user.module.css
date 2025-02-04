@@ -1,0 +1,9 @@
+.main {
+    min-height: 100.6vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+@media (max-width: 1199px) {
+   
+}
