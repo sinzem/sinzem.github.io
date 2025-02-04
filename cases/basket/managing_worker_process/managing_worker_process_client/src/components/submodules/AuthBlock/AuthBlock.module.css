@@ -1,0 +1,27 @@
+.auth_block {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100.6vh;
+}
+
+.auth_wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100.6vh;
+}
+
+@media (max-width: 1199px) {
+    .auth_wrap {
+        background-color: var(--background);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 360px;
+        min-height: fit-content;
+        height: 640px 
+    }
+}

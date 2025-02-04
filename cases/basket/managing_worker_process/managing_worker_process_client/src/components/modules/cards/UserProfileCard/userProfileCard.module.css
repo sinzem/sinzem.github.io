@@ -1,0 +1,49 @@
+.card {
+    position: relative;
+    width: 628px;
+    margin: 40px 0 0 42px;
+    padding: 45px 29px 52px;
+    background-color: var(--foreground);
+    border-radius: 20px;
+}
+.data_block {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.row {
+    display: flex;
+    font-family: var(--sansDM);
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.label {
+    width: 128px;
+}
+.button_block {
+    display: flex;
+    gap: 22px;
+    margin-top: 44px;
+}
+
+.password {
+    cursor: pointer;
+}
+
+.photo_block {
+    position: absolute;
+    top: 35px;
+    right: 15px;
+    width: 138px;
+    height: 138px;
+    cursor: pointer;
+}
+.photo_block p {
+    margin: 4px 8px;
+    font-size: 12px;
+    color: var(--light_gray);
+    text-align: end;
+    line-height: 1;
+}

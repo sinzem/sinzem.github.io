@@ -1,0 +1,54 @@
+.wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    animation: block_appear 5s ease forwards;
+}
+
+.form_block {
+    position: absolute;
+    width: 454px;
+    top: 50%;
+    left: 12vw;
+    transform: translateY(-50%);
+}
+
+@keyframes block_appear {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 1199px) {
+    .wrap {
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        animation: block_appear 5s ease forwards;
+    }
+    
+    .form_block {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        left: 0;
+    }
+    
+    @keyframes block_appear {
+        0% {
+            opacity: 0;
+        }
+        50% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+}

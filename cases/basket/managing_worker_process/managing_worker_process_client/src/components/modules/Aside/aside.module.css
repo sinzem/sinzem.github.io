@@ -1,0 +1,132 @@
+.main {
+    position: absolute;
+    height: 100%;
+    width: 295px;
+    background-color: var(--foreground);
+    padding: 29px 0 0 0;
+    z-index: 10;
+}
+.top {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    width: fit-content;
+    margin: 0 auto;
+}
+.logo_wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+}
+.title {
+    line-height: 26px;
+    font-size: 20px;
+    color: var(--light_blue);
+    font-family: var(--sansDM);
+    font-weight: 500;
+}
+.img_wrap {
+    width: 52px;
+    height: 54px;
+    position: relative;
+    justify-content: center;
+}
+.img {
+    height: 100%; 
+}
+.hamburger {
+    display: none;
+}
+
+.menu {
+    padding-top: 82px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 5;
+}
+
+.backpanel {
+    display: none;
+}
+
+@media (max-width: 1199px) {
+    .main {
+        padding: 8px 20px 0 25px;
+        width: 100%;
+        height: 52px;
+    } 
+    .top {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+    }
+    .img_wrap {
+        width: 32px;
+        height: 34px;
+    }
+    .title {
+        line-height: 18px;
+        font-size: 14px;
+    }
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 20px;
+        height: 14px;
+        margin: 0 0 0 auto;
+        cursor: pointer;
+    }
+    .hamburger_line {
+        width: 100%;
+        height: 2px;
+        background-color: var(--textbright);
+        transition: all .7s ease;
+    }
+
+    .active {
+        .hamburger_line:nth-child(1) {
+            transform: translate(0px, 6px) rotate(-45deg);
+        }  
+        .hamburger_line:nth-child(2) {
+            opacity: 0;
+        } 
+        .hamburger_line:nth-child(3) {
+            transform: translate(0px, -6px) rotate(45deg);
+        }  
+    }
+  
+    .menu {
+        position: absolute;
+        top: 100%;
+        left: -100%;
+        padding-top: 41px;
+        width: 220px;
+        height: calc(100.6vh - 52px);
+        transition: all .7s ease;
+        background-color: var(--foreground);
+        gap: 2px;
+    }
+    .show {
+        left: 0;
+    }
+    .backpanel {
+        display: block;
+        position: absolute;
+        height: calc(100.6vh - 52px);
+        width: 100%;
+        top: 100%;
+        left: 0;
+        transition: all 1s ease-in;
+        background-color: rgba(0, 0, 0, .4);
+    }
+    .backpanel_hidden {
+        left: -100%;
+        overflow: hidden;
+    }
+}

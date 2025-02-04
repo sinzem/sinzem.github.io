@@ -1,0 +1,24 @@
+.page_wrapper {
+    padding-left: 295px;
+    width: 100%;
+    min-height: 100.6vh;
+    position: relative;
+    top: 0;
+    /* left: 100%; */
+    left: 0;
+    animation: show_page .3s ease-in-out forwards;
+}
+
+@keyframes show_page {
+    /* 0% {left: 100%}; 
+    100% {left: 0}; */
+    0% {opacity: 0; transform: scale(.97);}
+    100% {opacity: 1; transform: scale(1);}
+}
+
+
+@media (max-width: 1199px) {
+    .page_wrapper {
+        padding-left: 0;
+    }
+}
