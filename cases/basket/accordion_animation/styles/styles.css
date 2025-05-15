@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --option-height: 400px;
+    --option-width: 60px;
+    --gather: 10px;
+    --radius: 1.875rem;
+    --bg: #f5f5f5;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #1f2020;
+    }
+}
+
+body {
+    background-color: var(--bg);
+    min-width: 320px;
+}
+
+.wrapper {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.options {
+    display: flex;
+    flex-direction: row;
+    min-width: 480px;
+    max-width: calc(var(--total-options) * 130px);
+    height: var(--option-height);
+    width: 100%;
+}
+
+.option {
+    /* background: #000; */
+    /* background-color: Canvas; */
+    /* background-color: CanvasText; */
+    background-color: color-mix(in srgb, var(--bg), Canvas 10%); /* (удобно для создания противоположных оттенков при переключении темы) */
+    margin: var(--gather);
+    flex-grow: 1;
+    border-radius: var(--radius);
+    flex: 0 0 var(--option-width);
+    transition: flex-grow 1.25s cubic-bezier(.17, .84, .44, 1);
+    background-position: center;
+    background-size: cover;
+}
+
+.option:not(.active) {
+    cursor: pointer;
+}
+
+.option.active {
+    flex-grow: var(--total-options);
+}
+
+@media (max-width: 768px) {
+    .options {
+        flex-direction: column;
+        min-height: 100vh;
+        min-width: auto;
+    }
+}
