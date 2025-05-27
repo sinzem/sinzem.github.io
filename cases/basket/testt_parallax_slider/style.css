@@ -1,0 +1,98 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+*,*:before,*::after{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family: inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner{padding: 0; border: 0;}
+a,a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size: inherit; font-weight: 400;}
+
+
+:root { 
+    --index: calc(1vw + 1vh);
+}
+
+.wrap {
+    width: 100%;
+    min-height: 200vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider_wrap {
+    width: calc(var(--index) * 56);
+    max-width: 90%;
+    height: calc(var(--index) * 14);
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none; 
+    scroll-behavior: smooth; 
+    position: relative;
+}
+
+.slider_wrap::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+} 
+
+.slider {
+    width: fit-content;
+    padding: 0 80vw;
+    display: flex;
+    flex-direction: row;
+    gap: calc(var(--index) * 1.5);
+}
+
+.slide {
+    width: calc(var(--index) * 7);
+    height: calc(var(--index) * 14);
+    border: 2px solid darkgray;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    perspective: 1500px;
+    transform-style: preserve-3d;
+}
+
+.item {
+    position: absolute;
+    top: 0;
+    right: 0; 
+    width: calc(var(--index) * 21);
+    height: calc(var(--index) * 14);
+    background-size: cover;
+    background-position: 50%;
+    transform: translateZ(100px);
+    /* transition: all .3s ease; */
+    will-change: transform, right;
+}
+
