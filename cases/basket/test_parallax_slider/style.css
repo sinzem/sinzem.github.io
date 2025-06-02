@@ -42,7 +42,7 @@ h1,h2,h3,h4,h5,h6{font-size: inherit; font-weight: 400;}
 
 .wrap {
     width: 100%;
-    min-height: 101vh;
+    min-height: 110vh;
     display: flex;
     justify-content: center;
     align-items: center;
