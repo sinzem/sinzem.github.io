@@ -6,153 +6,60 @@
 
     <link rel="stylesheet" href="style.css">
 
-    <title>CSS effects</title>
+    <title>Slider</title>
 
 </head>
 <body>
 
-    <div class="wrapper wrapper_glitch">
-        <span class="text">only CSS</span>
-        <h1 class="glitch" data-text="GL1TCH">GL1TCH</h1>
-        <span class="text">effects</span>
-    </div>
-
-    <div class="wrapper wrapper_cube">
-        <div class="cube">
-            <div class="face front">Hello</div>
-            <div class="face back"></div>
-            <div class="face right"></div>
-            <div class="face left"></div>
-            <div class="face top"></div>
-            <div class="face bottom"></div>
-        </div>
-    </div>
-
-    <div class="wrapper">
-        <div class="container">
-            <div class="card">
-                <div class="card_inner">
-                    <div class="card_front">Front side</div>
-                    <div class="card_back">Back side</div>
+    <div class="wrap">
+        <div class="slider_wrap">
+            <div class="slider">
+                <div class="slide">
+                    <div class="item" style="background-image: url(assets/house.jpg)"></div>
                 </div>
-            </div>
-            <div class="card">
-                <div class="card_inner">
-                    <div class="card_front">Front side</div>
-                    <div class="card_back">Back side</div>
+                <div class="slide">
+                    <div class="item" style="background-image: url(assets/cat.jpg);"></div>
                 </div>
-            </div>
-            <div class="card">
-                <div class="card_inner">
-                    <div class="card_front">Front side</div>
-                    <div class="card_back">Back side</div>
+                <div class="slide">
+                    <div class="item" style="background-image: url(assets/bottle.jpg);"></div>
                 </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="wrapper">
-        <div class="round">
-            <input type="checkbox" id="onoff" name="onoff" />
-            <div class="back_round">
-                <label for="onoff" class="but">
-                    <span class="on">|</span>
-                    <span class="off">0</span>
-                </label>
-            </div>
-        </div>
-    </div>
-
-    <div class="wrapper">
-        <div class="btn_wrapper">
-            <button class="delivery_btn" id="deliveryBtn">
-                <span class="icon_circle" id="circleIcon">
-                    <img src="assets/deliverytruck.png" alt="truck">
-                </span>
-                <span class="btn_text" id="btnText">Deliver</span>
-                <span class="check_icon" id="checkIcon"> &#9989;</span>
-            </button>
-    
-            <span class="truck" id="truckClone">
-                <img src="assets/deliverytruck.png" alt="truck">
-            </span>
-        </div>
-    </div>
-
-    <div class="wrapper wrapper_lines">
-        <div class="marquee_wrapper">
-            <!-- Полоса 1 -->
-            <!-- <div class="marquee_container" data-speed="30" data-direction="left"> 
-                <div class="marquee_track">
-                    <div class="marquee_inner">
-                        <article class="card_lines">
-                            <h3>Card 1A</h3>
-                            <a href="#">Lorem, ipsum.</a>
-                        </article>
-                        <article class="card_lines">
-                            <h3>Card 2A</h3>
-                            <a href="#">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam sit doloremque, voluptatibus deleniti animi ducimus atque accusantium incidunt eligendi? Necessitatibus atque quidem nulla eaque corrupti velit itaque laborum cumque adipisci.</a>
-                        </article>
-                        <article class="card_lines">
-                            <h3>Card 3A</h3>
-                            <a href="#">Lorem, ipsum.</a>
-                        </article>
-                        <article class="card_lines">
-                            <h3>Card 4A</h3>
-                            <a href="#">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam sit doloremque, voluptatibus deleniti animi ducimus atque accusantium incidunt eligendi? Necessitatibus atque quidem nulla eaque corrupti velit itaque laborum cumque adipisci.</a>
-                        </article>
-                    </div>
+                <div class="slide">
+                    <div class="item" style="background-image: url(assets/house.jpg)"></div>
                 </div>
-            </div>  -->
-
-                 <!-- Полоса 2 -->
-            <!-- <div class="marquee_container" data-speed="30" data-direction="right"> 
-                <div class="marquee_track">
-                    <div class="marquee_inner">
-                        <article class="card_lines">
-                            <h3>Card 1B</h3>
-                            <a href="#">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam sit doloremque, voluptatibus deleniti animi ducimus atque accusantium incidunt eligendi? Necessitatibus atque quidem nulla eaque corrupti velit itaque laborum cumque adipisci.</a>
-                        </article>
-                        <article class="card_lines">
-                            <h3>Card 2B</h3>
-                            <a href="#">Lorem, ipsum.</a>
-                        </article>
-                        <article class="card_lines">
-                            <h3>Card 3B</h3>
-                            <a href="#">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam sit doloremque, voluptatibus deleniti animi ducimus atque accusantium incidunt eligendi? Necessitatibus atque quidem nulla eaque corrupti velit itaque laborum cumque adipisci.</a>
-                        </article>
-                        <article class="card_lines">
-                            <h3>Card 4B</h3>
-                            <a href="#">Lorem, ipsum.</a>
-                        </article>
-                    </div>
+                <div class="slide">
+                    <div class="item" style="background-image: url(assets/cat.jpg);"></div>
                 </div>
-            </div> -->
-
-            <!-- Полоса 3 -->
-            <div class="marquee_container" data-speed="30" data-direction="left"> 
-                <div class="marquee_track">
-                    <div class="marquee_inner">
-                        <article class="card_lines">
-                            <h3>Card 1C</h3>
-                            <a href="#">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam sit doloremque, voluptatibus deleniti animi ducimus atque accusantium incidunt eligendi? Necessitatibus atque quidem nulla eaque corrupti velit itaque laborum cumque adipisci.</a>
-                        </article>
-                        <article class="card_lines">
-                            <h3>Card 2C</h3>
-                            <a href="#">Lorem, ipsum.</a>
-                        </article>
-                        <article class="card_lines">
-                            <h3>Card 3C</h3>
-                            <a href="#">Lorem, ipsum.</a>
-                        </article>
-                        <article class="card_lines">
-                            <h3>Card 4C</h3>
-                            <a href="#">Lorem, ipsum.</a>
-                        </article>
-                    </div>
+                <div class="slide">
+                    <div class="item" style="background-image: url(assets/bottle.jpg);"></div>
                 </div>
-            </div>
-
+                <div class="slide">
+                    <div class="item" style="background-image: url(assets/house.jpg)"></div>
+                </div>
+                <div class="slide">
+                    <div class="item" style="background-image: url(assets/cat.jpg);"></div>
+                </div>
+                <div class="slide">
+                    <div class="item" style="background-image: url(assets/bottle.jpg);"></div>
+                </div>
+                <div class="slide">
+                    <div class="item" style="background-image: url(assets/house.jpg)"></div>
+                </div>
+                <div class="slide">
+                    <div class="item" style="background-image: url(assets/cat.jpg);"></div>
+                </div>
+                <div class="slide">
+                    <div class="item" style="background-image: url(assets/bottle.jpg);"></div>
+                </div>  
+                <div class="slide">
+                    <div class="item" style="background-image: url(assets/house.jpg)"></div>
+                </div>
+                <div class="slide">
+                    <div class="item" style="background-image: url(assets/cat.jpg);"></div>
+                </div>
+                <div class="slide">
+                    <div class="item" style="background-image: url(assets/bottle.jpg);"></div>
+                </div>
+            </div> 
         </div>
     </div>
     
