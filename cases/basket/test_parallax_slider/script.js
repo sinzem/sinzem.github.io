@@ -65,7 +65,7 @@ class MoveBackground {
 
         this.sliderWrapper.addEventListener("mouseenter", () => {
             document.body.style.overflow = 'hidden';
-            document.body.style.paddingRight = `${this.scroll}px`;
+            document.body.style.paddingRight = `${this.scrollBarWidth}px`;
         });
 
         this.sliderWrapper.addEventListener("wheel", (e) => {
