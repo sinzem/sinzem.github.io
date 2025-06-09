@@ -27,7 +27,6 @@ class RunningLine {
         
         this.styleBlock = null;
         this.innerParams = null;
-        this.innerPrevWidth = null;
         this.innerWidth = null;
         this.trackWidth = null;
         this.speed = 1;
@@ -37,13 +36,13 @@ class RunningLine {
     }
 
     #getAndSetValues = () => {
-        if (this.speedIndex < 101 && this.speedIndex > 0 && Number.isInteger(this.speedIndex)) {
-            this.speed = this.speedIndex * 0.1;
+        if (this.speedIndex < 11 && this.speedIndex > 0 && Number.isInteger(this.speedIndex)) {
+            this.speed = this.speedIndex;
         }
 
         this.innerParams = window.getComputedStyle(this.inner);
-        // this.innerPrevWidth = this.innerParams.width;
-        this.innerWidth = this.innerPrevWidth = this.inner.scrollWidth;
+
+        this.innerWidth = this.inner.scrollWidth;
 
         this.track.style.height = this.innerParams.height;
 
@@ -90,18 +89,29 @@ class RunningLine {
         const prevStyle = this.styleBlock.textContent;
 
         const checkStyle = new RegExp(`
-            @keyframes scroll-${this.direction}-${this.index} {
-                0% { ${this.direction}: 0; }
-                100% { ${this.direction}: -[0-9]+px; }
-            }
-        `, "g");
+                @keyframes scroll-${this.direction}-${this.index} {
+                    0% { left: -[0-9]+px; }
+                    100% { left: -[0-9]+px; }
+                }
+            `, "g");
 
-        const newAnimation = `
-            @keyframes scroll-${this.direction}-${this.index} {
-                0% { ${this.direction}: 0; }
-                100% { ${this.direction}: ${-(parseInt(this.innerPrevWidth) + parseInt(this.innerParams.gap))}px; }
-            }
-        `;
+        let newAnimation;
+
+        if (this.direction === "right") {
+            newAnimation = `
+                @keyframes scroll-${this.direction}-${this.index} {
+                    0% { left: ${Math.round(-this.innerWidth - parseInt(this.innerParams.gap)) / 2}px; }
+                    100% { left: -0px; }
+                }
+            `;
+        } else {
+            newAnimation = `
+                @keyframes scroll-${this.direction}-${this.index} {
+                    0% { left: -0px; }
+                    100% { left: ${-(this.innerWidth + parseInt(this.innerParams.gap)) / 2}px; }
+                }
+            `;
+        }
 
         if (checkStyle.test(prevStyle)) {
             const newStyle = prevStyle.replace(checkStyle, newAnimation);
@@ -115,9 +125,8 @@ class RunningLine {
             `;
         }
 
-        this.inner.style.willChange = `${this.direction}`;
         this.inner.style.animationName = `scroll-${this.direction}-${this.index}`;
-        this.inner.style.animationDuration = `${parseInt(this.innerPrevWidth) / 20 / this.speed}s`;
+        this.inner.style.animationDuration = `${this.innerWidth / 50 / this.speed}s`;
     }
 
     #cleanInner = () => {
