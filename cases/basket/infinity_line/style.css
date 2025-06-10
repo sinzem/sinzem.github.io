@@ -42,10 +42,8 @@ h1,h2,h3,h4,h5,h6{font-size: inherit; font-weight: 400;}
     --bg-color: #000;
     --font-family: "Courier New", Courier, monospace;
     --text-color: #fff;
-    --glitch-color-1: #ff00c8;
-    --glitch-color-2: #00fff7;
-    --text-size: clamp(2rem, 8vw, 9rem);
-    --glitch-size: clamp(6rem, 20vw, 20rem);
+
+    --gap: 16px;
 }
 
 body {
@@ -75,8 +73,6 @@ body {
 
 .running_wrapper {
     position: relative;
-    /* display: flex;
-    flex-direction: column; */
     overflow: hidden;
     width: 100%;
 }
@@ -91,21 +87,17 @@ body {
 .running_track {
     margin: 0 auto;
     width: 100%;
-    position: relative;
 }
 
 .running_inner {
-    position: absolute;
-    top: 0;
     display: flex;
-    /* animation: scroll-left 5s linear infinite forwards running;  */
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-fill-mode: forwards;
     animation-play-state: running; 
-    /* transition: left .3s linear; */
-    will-change: left;
-    gap: 16px;
+    will-change: transform;
+    gap: var(--gap);
+    
 }
 
 .running_container:hover .running_inner {
@@ -154,8 +146,8 @@ body {
 }
 
 .running_container:hover .card {
-    opacity: .4;
-    transform: scale(.8);
+    opacity: .7;
+    transform: scale(.95);
 }
 
 .running_container:hover .card:hover {
@@ -174,13 +166,4 @@ body {
 .running_container .card a:hover {
     color: rgb(16, 198, 55);
 }
-/* 
-@keyframes scroll-left {
-    0% {transform: translateX(0%);}
-    100%{transform: translateX(-50%);} 
-}
 
-@keyframes scroll-right {
-    0% {transform: translateX(-50%);}
-    100%{transform: translateX(0);}
-} */

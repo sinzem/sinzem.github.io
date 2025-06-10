@@ -26,7 +26,7 @@ class RunningLine {
         this.speedIndex = Math.round(parseInt(container.getAttribute("data-speedIndex")));
         
         this.styleBlock = null;
-        this.innerParams = null;
+        this.innerGap = null;
         this.innerWidth = null;
         this.trackWidth = null;
         this.speed = 1;
@@ -40,11 +40,9 @@ class RunningLine {
             this.speed = this.speedIndex;
         }
 
-        this.innerParams = window.getComputedStyle(this.inner);
+        this.innerGap = parseInt(getComputedStyle(this.inner).getPropertyValue('--gap'));
 
         this.innerWidth = this.inner.scrollWidth;
-
-        this.track.style.height = this.innerParams.height;
 
         this.trackWidth = this.track.offsetWidth;
 
@@ -52,14 +50,13 @@ class RunningLine {
             this.inner.dataset.originalLength = this.inner.children.length;
         }
 
-        if (this.innerWidth < this.trackWidth) {
+        if (this.innerWidth < this.trackWidth * 2) {
             while (this.innerWidth < this.trackWidth * 2) {
                 this.#addRequiredChildren();
             }
         } else {
-            this.#addRequiredChildren();
+             this.#addRequiredChildren();
         }
-       
     }
 
     #addRequiredChildren = () => {
@@ -90,8 +87,8 @@ class RunningLine {
 
         const checkStyle = new RegExp(`
                 @keyframes scroll-${this.direction}-${this.index} {
-                    0% { left: -[0-9]+px; }
-                    100% { left: -[0-9]+px; }
+                    0% { transform: translateX[\(]\-[0-9]+px[\)]; }
+                    100% { transform: translateX[\(]\-[0-9]+px[\)]; }
                 }
             `, "g");
 
@@ -100,15 +97,15 @@ class RunningLine {
         if (this.direction === "right") {
             newAnimation = `
                 @keyframes scroll-${this.direction}-${this.index} {
-                    0% { left: ${Math.round(-this.innerWidth - parseInt(this.innerParams.gap)) / 2}px; }
-                    100% { left: -0px; }
+                    0% { transform: translateX(${Math.round((-this.innerWidth - this.innerGap) / 2)}px); }
+                    100% { transform: translateX(-0px); }
                 }
             `;
         } else {
             newAnimation = `
                 @keyframes scroll-${this.direction}-${this.index} {
-                    0% { left: -0px; }
-                    100% { left: ${-(this.innerWidth + parseInt(this.innerParams.gap)) / 2}px; }
+                    0% { transform: translateX(-0px); }
+                    100% { transform: translateX(${Math.round(-(this.innerWidth + this.innerGap) / 2)}px); }
                 }
             `;
         }
@@ -116,12 +113,12 @@ class RunningLine {
         if (checkStyle.test(prevStyle)) {
             const newStyle = prevStyle.replace(checkStyle, newAnimation);
             this.styleBlock.innerHTML = `
-                ${newStyle}
+                ${newStyle.trim()}
             `;
         } else {
             this.styleBlock.innerHTML = `
-                ${prevStyle}
-                ${newAnimation}
+                ${prevStyle.trim()}
+                ${newAnimation.trim()}
             `;
         }
 
@@ -139,70 +136,9 @@ class RunningLine {
 
     #addStyleBlock = () => {
         const style = document.createElement('style');
+        style.id = "running_line";
         document.head.appendChild(style);
-        this.styleBlock = document.querySelector("style");
+        this.styleBlock = document.querySelector("#running_line");
     }
 }
-
-// ===================================================================
-
-// window.addEventListener("DOMContentLoaded", () => {
-
-//     document.querySelectorAll(".running_container").forEach(initMarquee);
-
-//     function initMarquee(container) {
-       
-//         const track = container.querySelector(".running_track");
-//         const inner = track.querySelector(".running_inner");
-//         const direction = container.getAttribute("data-direction") || "left";
-
-//         let speed = 1;
-//         const speedIndex = Math.round(parseInt(container.getAttribute("data-speedIndex"))); 
-//         if (speedIndex < 101 && speedIndex > 0 && Number.isInteger(speedIndex)) {
-//             speed = speedIndex * 0.1;
-//         }
-
-//         const innerParams = window.getComputedStyle(inner);
-//         const innerPrevWidth = innerParams.width;
-
-//         track.style.height = innerParams.height;
-
-//         let innerWidth = inner.scrollWidth;
-//         const trackWidth = track.offsetWidth;
-
-//         while (innerWidth < trackWidth * 2) {
-//             const originalCards = Array.from(inner.children);
-//             originalCards.forEach(card => {
-//                 inner.appendChild(card.cloneNode(true));
-//             })
-//             innerWidth = inner.scrollWidth;
-//         }
-
-//         // inner.animate([
-//         //     { left: '0px' },
-//         //     { left: '-1186px' }
-//         //   ], {
-//         //     duration: 20000,
-//         //     easing: "linear",
-//         //     fill: 'forwards',
-//         //     iterations: Infinity,
-//         //   });
-
-//         const style = document.createElement('style');
-//         style.innerHTML = `
-//             @keyframes scroll-${direction} {
-//                 0% { ${direction}: 0; }
-//                 100% { ${direction}: ${-(parseInt(innerPrevWidth) + parseInt(innerParams.gap))}px; }
-//             }
-//         `;
-
-//         document.head.appendChild(style);
-
-//         inner.style.animationName = `scroll-${direction}`;
-//         inner.style.animationDuration = `${parseInt(innerPrevWidth) / 20 / speed}s`;
-     
-//     }
-        
-// })
-
 
