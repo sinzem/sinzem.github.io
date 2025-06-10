@@ -25,7 +25,8 @@ class RunningLine {
         this.direction = this.container.getAttribute("data-direction") || "left";
         this.speedIndex = Math.round(parseInt(container.getAttribute("data-speedIndex")));
         
-        this.styleBlock = null;
+        this.styleBlock = document.querySelector("#running_line");
+
         this.innerGap = null;
         this.innerWidth = null;
         this.trackWidth = null;
@@ -135,10 +136,12 @@ class RunningLine {
     }
 
     #addStyleBlock = () => {
-        const style = document.createElement('style');
-        style.id = "running_line";
-        document.head.appendChild(style);
-        this.styleBlock = document.querySelector("#running_line");
+        if (!this.styleBlock) {
+            const style = document.createElement('style');
+            style.id = "running_line";
+            document.head.appendChild(style);
+            this.styleBlock = document.querySelector("#running_line");  
+        }
     }
 }
 
