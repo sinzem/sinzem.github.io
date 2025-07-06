@@ -1,11 +1,12 @@
-@import './_vars.css';
+@import '_vars.css';
 
 @import '../vendor/global-reset/global-reset.css';
 @import '../vendor/grid-system/grid-system.css';
 @import '../vendor/swiper/swiper-bundle.min.css';
 
-@import './_fonts.css';
-@import './_main.css';
-@import './_light.css';
+@import '_fonts.css';
+@import '_main.css';
+@import '_light.css';
 
-@import './_media.css';
+@import '_media.css';
+
