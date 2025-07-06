@@ -1,11 +1,11 @@
-@import url('../modules_css/_vars.css');
+@import url('./_vars.css');
 
 @import url('../vendor/global-reset/global-reset.css');
 @import url('../vendor/grid-system/grid-system.css');
 @import url('../vendor/swiper/swiper-bundle.min.css');
 
-@import url('../modules_css/_fonts.css');
-@import url('../modules_css/_main.css');
-@import url('../modules_css/_light.css');
+@import url('./_fonts.css');
+@import url('./_main.css');
+@import url('./_light.css');
 
-@import url('../modules_css/_media.css');
+@import url('./_media.css');
