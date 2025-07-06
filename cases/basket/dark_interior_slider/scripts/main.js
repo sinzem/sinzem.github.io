@@ -47,7 +47,7 @@ const swiper = new Swiper(".head-slider", {
 function updateSlideCounter(swiperInstance) {
     const realIndex = swiperInstance.realIndex + 1;
     const totalSlides = swiperInstance.slides.length;
-    const counterElement = document.querySelector(".slider-botton__count .value");
+    const counterElement = document.querySelector(".slider-bottom__count .value");
 
     if (counterElement) {
         counterElement.textContent = `${realIndex} / ${totalSlides}`;
