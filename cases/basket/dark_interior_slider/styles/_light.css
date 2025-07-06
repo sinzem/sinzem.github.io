@@ -1,0 +1,19 @@
+.light .top-line {
+    border-color: #E5E5E5;
+}
+
+.light .logo {
+    border-image: url("../assets/logo-light.svg");
+}
+
+.light .main-menu a {
+    color: #777;
+}
+
+.light .main-menu li.active a {
+    color: var(--body-color);
+}
+
+.light .icon-font-light::before {
+    content: "\E802";  /* (подключаем иконку из иконочных стилей) */
+  }
