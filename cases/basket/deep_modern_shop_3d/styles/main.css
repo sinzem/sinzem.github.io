@@ -1,0 +1,300 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-show: #ECF0F6;
+    --bg-odd: #F6F8FC;
+    --aside: 300px;
+    --model-width: 300px;
+    /* --model-height: 640px; */
+    --model-height: 87.5vh;
+}
+
+@font-face {
+    font-family: raleway-1;
+    src: url(../assets/fonts/raleway-400.woff2);
+    font-weight: 400;
+}
+@font-face {
+    font-family: raleway-1;
+    src: url(../assets/fonts/raleway-300.woff2);
+    font-weight: 300;
+}
+@font-face {
+    font-family: raleway-1;
+    src: url(../assets/fonts/raleway-600.woff2);
+    font-weight: 600;
+}
+@font-face {
+    font-family: raleway-1;
+    src: url(../assets/fonts/raleway-700.woff2);
+    font-weight: 700;
+}
+
+body {
+    font-family: raleway-1, sans-serif;
+}
+
+.show {
+    background: var(--bg-show);
+    height: 100vh;
+    width: calc(100vw - var(--aside));
+    position: fixed;
+}
+
+.layers {
+    position: absolute;
+    inset: 0;
+}
+
+.layers > * {
+    width: var(--model-width);
+    height: var(--model-height);
+    position: absolute;
+    left: calc(100vw - var(--aside) - 20vw);
+    top: 50%;
+    margin-left: calc(var(--model-width)  / -2);
+    margin-top: calc(var(--model-height)  / -2);
+    cursor: pointer;
+    animation-timeline: scroll();
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+    animation-range: 0 300vh;
+}
+
+.layers img {
+    height: 100%;
+}
+
+.layer6 {
+    margin-left: -10vw;
+    opacity: 1;
+    animation-name: animation-6;
+}
+
+@keyframes animation-6 {
+    to {
+        transform: scale(5);
+        margin-left: 320vw;
+    }
+}
+
+.layer5 {
+    margin-left: -30vw;
+    transform: scale(.8);
+    opacity: .85;
+    filter: blur(2.5px);
+    animation-name: animation-5;
+}
+
+@keyframes animation-5 {
+    to {
+        transform: scale(3.75);
+        margin-left: 200vw;
+    }
+    10%, 100% { 
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+.layer4 {
+    margin-left: -42.5vw;
+    transform: scale(.575);
+    opacity: .7;
+    filter: blur(5px);
+    animation-name: animation-4;
+}
+
+@keyframes animation-4 {
+    to {
+        transform: scale(2.75);
+        margin-left: 120vw;
+    }
+    20%, 100% { 
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+.layer3 {
+    margin-left: -52vw;
+    transform: scale(.375);
+    opacity: .55;
+    filter: blur(7.5px);
+    animation-name: animation-3;
+}
+
+@keyframes animation-3 {
+    to {
+        transform: scale(1.85);
+        margin-left: 65vw;
+    }
+    35%, 100% { 
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+.layer2 {
+    margin-left: -58vw;
+    transform: scale(.25);
+    opacity: .3;
+    filter: blur(10px);
+    animation-name: animation-2;
+}
+
+@keyframes animation-2 {
+    to {
+        transform: scale(1.35);
+        margin-left: 25vw;
+    }
+    55%, 100% { 
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+.layer1 {
+    margin-left: -62vw;
+    transform: scale(.15);
+    opacity: .1;
+    filter: blur(12.5px);
+    animation-name: animation-1;
+}
+
+@keyframes animation-1 {
+    to {
+        transform: scale(.85);
+        margin-left: -2.5vw;
+    }
+    65%, 100% { 
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+
+.aside {
+    background: #fff;
+    width: var(--aside);
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.item {
+    padding: 30px 0 40px;
+    text-align: center;
+    position: relative;
+    font-size: 14px;
+    height: 50vh;
+}
+
+.item:nth-child(odd) {
+    background: var(--bg-odd);
+}
+
+.item h3 {
+    margin:  0 0 3px 0;
+    text-align: left;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.item .price {
+    text-align: left;
+    font-weight: 600;
+    opacity: .5;
+    letter-spacing: -.25px;
+}
+
+.item__bottom {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    padding: 0 20px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.add {
+    font-size: 50px;
+    font-weight: 300;
+    cursor: pointer;
+    padding: 10px;
+    line-height: 20px;
+    position: relative;
+    top: -5px;
+}
+
+.item img {
+    height: calc(100% - 50px);
+    max-width: 150px;
+    object-fit: contain;
+}
+
+.logo {
+    position: fixed;
+    bottom: 8vh;
+    left: 3.5vw;
+    text-transform: uppercase;
+    z-index: 10;
+}
+
+.logo__text {
+    font-weight: 700;
+    text-decoration: none;
+    color: #333;
+    font-size: 20px;
+    letter-spacing: .5px;
+}
+
+.logo p {
+    font-size: 12px;
+    opacity: .6;
+}
+
+.collection {
+    position: absolute;
+    top: 5vh;
+    left: 3.5vw;
+    max-width: 360px;
+    z-index: 10;
+}
+
+.collection h2 {
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 0;
+}
+
+.collection p {
+    font-size: 14px;
+    line-height: 1.7;
+    margin-top: 14px;
+}
+
+@media (max-width: 991px) {
+    :root {
+        --aside: 240px;
+    }
+
+    .collection {
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 767px) {
+    .show {
+        display: none;
+    }
+    .aside {
+        width: 100%;
+    }
+}
