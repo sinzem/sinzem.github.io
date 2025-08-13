@@ -1,0 +1,143 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    user-select: none;
+    min-height: 200vh;
+} 
+
+.ex_1 {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px grey solid;
+}
+
+.ex_1__top, .ex_1__bottom {
+    width: 100%;
+    height: 120px;
+    padding: 10px;
+    border: 1px grey solid;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ex_1__drag {
+    width: 100px;
+    height: 70px;
+    background: url(../assets/main_bottom_logo_nike.png);
+    background-size: cover;
+    cursor: grab;
+}
+
+/* =============================================================================== */
+
+.ex_2 {
+    margin-top: 40px;
+    width: 100%;
+    height: 200px;
+    border: 1px grey solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.ex_2__empty {
+    width: 100px;
+    height: 100px;
+    background-color: antiquewhite;
+    border: 1px solid gray;
+    border-radius: 4px;
+}
+
+.ex_2__fill {
+    background-color: aquamarine;
+    width: 98px;
+    height: 98px;
+    border-radius: 4px;
+    cursor: grab;
+}
+
+.ex_2__hold {
+    filter: opacity(0.4);
+    border: 1px solid #888;
+    box-shadow: 0px 0px 5px #888;
+    cursor: grabbing;
+}
+
+.ex_2__hovered {
+    background-color: rgba(0, 0, 0, .4);
+    border-style: dashed;
+    border-color: white;
+}
+
+.ex_2__invisible {
+    cursor: grabbing;
+}
+
+@media (max-width: 800px) {
+    .ex_2 {
+        flex-direction: column;
+    }
+}
+
+/* =============================================================================== */
+
+.ex_3 {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    margin-top: 40px;
+    padding: 20px;
+    border: 1px grey solid;
+}
+
+.ex_3__adidas {
+    top: 20px;
+    left: 0;
+}
+
+.ex_3__oasics {
+    top: 50px;
+    left: 160px;
+}
+
+.ex_3__nike {
+    top: 100px;
+    left: 40px;
+}
+
+.ex_3__basket {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.ex_3__draggable {
+    position: absolute;
+    transition-property: scale, opacity;
+    transition-duration: .2s;
+    touch-action: none; /* (отключение стандартного поведения на touch-screen для нормальной работы js) */
+    cursor: grab;
+    z-index: 1;
+}
+
+.ex_3__draggable img {
+    pointer-events: none;
+}
+
+.ex_3__draggable.ex_3__is-dragging {
+    opacity: .5;
+    scale: 1.05;
+    cursor: grabbing;
+}
+
+
+
