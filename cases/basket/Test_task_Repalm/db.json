@@ -27,7 +27,7 @@
         {
             "id": "0004",
             "img": "Juicer_Philips_HR1832.jpg",
-            "name": "Juicer Philips HR1832.jpg",
+            "name": "Juicer Philips HR1832",
             "price": "3199",
             "oldPrice": "4999",
             "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque, asperiores expedita"
@@ -43,7 +43,7 @@
         {
             "id": "0006",
             "img": "Moto_Edge_50_fusion_8.jpg",
-            "name": "Moto Edge 50 fusion 8.jpg",
+            "name": "Moto Edge 50 fusion 8",
             "price": "9999",
             "oldPrice": "12499",
             "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi sapiente cum qui rem!"
@@ -51,7 +51,7 @@
         {
             "id": "0007",
             "img": "Power_Bank_Xiaomi_10000mAh.jpg",
-            "name": "Power Bank Xiaomi 10000mAh.jpg",
+            "name": "Power Bank Xiaomi 10000mAh",
             "price": "699",
             "oldPrice": "999",
             "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, quod"
@@ -96,4 +96,5 @@
             "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem cupiditate delectus quas dolor sed!"
         }
     ]
+
 }
