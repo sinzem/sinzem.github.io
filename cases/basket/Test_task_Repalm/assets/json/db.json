@@ -1,97 +1,99 @@
-[
-    {
-        "id": "0001",
-        "img": "Console_PlayStation_5_Slim_Digital_Edition.jpg",
-        "name": "Console PlayStation 5 Slim Digital Edition",
-        "price": "20499",
-        "oldPrice": "24999",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum placeat unde tenetur fugit voluptates ipsam aliquid"
-    },
-    {
-        "id": "0002",
-        "img": "Convector_Nomi_SCH-20.jpg",
-        "name": "Convector Nomi SCH-20",
-        "price": "1199",
-        "oldPrice": "1999",
-        "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem quis numquam suscipit enim vitae"
-    },
-    {
-        "id": "0003",
-        "img": "Freezer_Gorenje_NRR9185ESXL.jpg",
-        "name": "Freezer Gorenje NRR9185ESXL",
-        "price": "39999",
-        "oldPrice": "64199",
-        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi et ex recusandae provident deleniti minima"
-    },
-    {
-        "id": "0004",
-        "img": "Juicer_Philips_HR1832.jpg",
-        "name": "Juicer Philips HR1832.jpg",
-        "price": "3199",
-        "oldPrice": "4999",
-        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque, asperiores expedita"
-    },
-    {
-        "id": "0005",
-        "img": "Laptop_Xiaomi_RedmiBook_16_2024_i5.jpg",
-        "name": "Laptop Xiaomi RedmiBook 16 2024 i5",
-        "price": "25899",
-        "oldPrice": "33999",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum placeat unde tenetur fugit voluptates ipsam aliquid"
-    },
-    {
-        "id": "0006",
-        "img": "Moto_Edge_50_fusion_8.jpg",
-        "name": "Moto Edge 50 fusion 8.jpg",
-        "price": "9999",
-        "oldPrice": "12499",
-        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi sapiente cum qui rem!"
-    },
-    {
-        "id": "0007",
-        "img": "Power_Bank_Xiaomi_10000mAh.jpg",
-        "name": "Power Bank Xiaomi 10000mAh.jpg",
-        "price": "699",
-        "oldPrice": "999",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, quod"
-    },
-    {
-        "id": "0008",
-        "img": "Tablet_Xiaomi_Redmi_Pad_2_WiFi.jpg",
-        "name": "Tablet Xiaomi Redmi Pad 2 WiFi",
-        "price": "7499",
-        "oldPrice": "7999",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero dolorum neque eligendi error sit inventore ipsa similique?"
-    },
-    {
-        "id": "0009",
-        "img": "Washing_machine_Samsung_WW60A3100BE.jpg",
-        "name": "Washing machine Samsung WW60A3100BE",
-        "price": "13999",
-        "oldPrice": "16799",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum placeat unde tenetur fugit voluptates ipsam aliquid"
-    },
-    {
-        "id": "0010",
-        "img": "Wi-Fi_Netis_N5_AC1200.jpg",
-        "name": "Wi-Fi Router Netis N5 AC1200",
-        "price": "719",
-        "oldPrice": "999",
-        "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta aut est fugit"
-    },
-    {
-        "id": "0011",
-        "img": "Xiaomi_Redmi_Note_14.jpg",
-        "name": "Xiaomi Redmi Note 14",
-        "price": "12499",
-        "oldPrice": "15999",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum placeat unde tenetur fugit voluptates ipsam aliquid"
-    },{
-        "id": "0012",
-        "img": "Xiaomi_Robot_Vacuum_S20.jpg",
-        "name": "Xiaomi Robot Vacuum S20",
-        "price": "7999",
-        "oldPrice": "13999",
-        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem cupiditate delectus quas dolor sed!"
-    }
-]
+{
+    "products": [
+        {
+            "id": "0001",
+            "img": "Console_PlayStation_5_Slim_Digital_Edition.jpg",
+            "name": "Console PlayStation 5 Slim Digital Edition",
+            "price": "20499",
+            "oldPrice": "24999",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum placeat unde tenetur fugit voluptates ipsam aliquid"
+        },
+        {
+            "id": "0002",
+            "img": "Convector_Nomi_SCH-20.jpg",
+            "name": "Convector Nomi SCH-20",
+            "price": "1199",
+            "oldPrice": "1999",
+            "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem quis numquam suscipit enim vitae"
+        },
+        {
+            "id": "0003",
+            "img": "Freezer_Gorenje_NRR9185ESXL.jpg",
+            "name": "Freezer Gorenje NRR9185ESXL",
+            "price": "39999",
+            "oldPrice": "64199",
+            "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi et ex recusandae provident deleniti minima"
+        },
+        {
+            "id": "0004",
+            "img": "Juicer_Philips_HR1832.jpg",
+            "name": "Juicer Philips HR1832.jpg",
+            "price": "3199",
+            "oldPrice": "4999",
+            "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque, asperiores expedita"
+        },
+        {
+            "id": "0005",
+            "img": "Laptop_Xiaomi_RedmiBook_16_2024_i5.jpg",
+            "name": "Laptop Xiaomi RedmiBook 16 2024 i5",
+            "price": "25899",
+            "oldPrice": "33999",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum placeat unde tenetur fugit voluptates ipsam aliquid"
+        },
+        {
+            "id": "0006",
+            "img": "Moto_Edge_50_fusion_8.jpg",
+            "name": "Moto Edge 50 fusion 8.jpg",
+            "price": "9999",
+            "oldPrice": "12499",
+            "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi sapiente cum qui rem!"
+        },
+        {
+            "id": "0007",
+            "img": "Power_Bank_Xiaomi_10000mAh.jpg",
+            "name": "Power Bank Xiaomi 10000mAh.jpg",
+            "price": "699",
+            "oldPrice": "999",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, quod"
+        },
+        {
+            "id": "0008",
+            "img": "Tablet_Xiaomi_Redmi_Pad_2_WiFi.jpg",
+            "name": "Tablet Xiaomi Redmi Pad 2 WiFi",
+            "price": "7499",
+            "oldPrice": "7999",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero dolorum neque eligendi error sit inventore ipsa similique?"
+        },
+        {
+            "id": "0009",
+            "img": "Washing_machine_Samsung_WW60A3100BE.jpg",
+            "name": "Washing machine Samsung WW60A3100BE",
+            "price": "13999",
+            "oldPrice": "16799",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum placeat unde tenetur fugit voluptates ipsam aliquid"
+        },
+        {
+            "id": "0010",
+            "img": "Wi-Fi_Netis_N5_AC1200.jpg",
+            "name": "Wi-Fi Router Netis N5 AC1200",
+            "price": "719",
+            "oldPrice": "999",
+            "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta aut est fugit"
+        },
+        {
+            "id": "0011",
+            "img": "Xiaomi_Redmi_Note_14.jpg",
+            "name": "Xiaomi Redmi Note 14",
+            "price": "12499",
+            "oldPrice": "15999",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum placeat unde tenetur fugit voluptates ipsam aliquid"
+        },{
+            "id": "0012",
+            "img": "Xiaomi_Robot_Vacuum_S20.jpg",
+            "name": "Xiaomi Robot Vacuum S20",
+            "price": "7999",
+            "oldPrice": "13999",
+            "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem cupiditate delectus quas dolor sed!"
+        }
+    ]
+}
