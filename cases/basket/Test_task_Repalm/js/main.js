@@ -38,7 +38,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
 
 async function getProducts(url) {
-    return await fetch(url).then(data => data.json());;
+    return await fetch(url).then(data => data.json()).then(data => data.products);
 }
 
 class ProductCard {
