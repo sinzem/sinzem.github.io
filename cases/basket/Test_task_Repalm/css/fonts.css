@@ -1,0 +1,11 @@
+@font-face {
+    font-family: actay-r;
+    src: url("../assets/fonts/Actay-Regular.otf");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: actay-r;
+    src: url("../assets/fonts/ActayWide-Bold.otf");
+    font-weight: 700;
+}

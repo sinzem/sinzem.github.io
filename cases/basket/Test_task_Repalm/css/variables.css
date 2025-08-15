@@ -1,0 +1,10 @@
+:root {
+    --index: calc(1vw + 1vh);
+    --color-text: #1e1f23;
+    --background: url("../assets/img/bg-gen-min.jpg");
+    color-scheme: light;
+}
+
+.dark {
+
+}
