@@ -1,5 +1,5 @@
 window.addEventListener("DOMContentLoaded", () => {
-    const productsJson = "../assets/json/db.json";
+    const productsJson = "db.json";
     const hamburger = document.querySelector(".hamburger");
     let scrollWidth = calcScroll();
 
