@@ -1,12 +1,13 @@
-@import "./_normalize.css"; 
-@import "./_fonts.css";
-@import "./_root.css";
-@import "./_menu.css";
-@import "./_header.css";
-@import "./_timetable.css";
-@import "./_gallery.css";
-@import "./_about.css";
-@import "./_contacts.css";
-@import "./_footer.css";
-@import "./_popup.css";
+@import url("./_normalize.css"); 
+@import url("./_fonts.css");
+@import url("./_root.css");
+@import url("./_menu.css");
+@import url("./_header.css");
+@import url("./_timetable.css");
+@import url("./_gallery.css");
+@import url("./_about.css");
+@import url("./_contacts.css");
+@import url("./_footer.css");
+@import url("./_popup.css");
+
 
