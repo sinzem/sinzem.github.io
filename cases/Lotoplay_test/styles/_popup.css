@@ -1,0 +1,103 @@
+.popup_message {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .5);
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.popup_message__text {
+    max-width: 300px;
+    padding: 30px;
+    border: 2px solid #dbb905;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(253, 221, 22, .4);
+    background-color: var(--color-btn-main);
+    text-shadow: 0.5px 0px 0.5px black;
+    font-weight: 500;
+    color: black;
+    text-align: center;
+}
+
+.popup_sender {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .5);
+    position: fixed;
+    top: 0;
+    left: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.popup_form {
+    width: 320px;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    background-color: var(--color-bg-main);
+    border-radius: 10px;
+}
+
+.popup_form__area {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.popup_form__area label {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-text-gray);
+}
+
+.popup_form__area input, .popup_form__area textarea {
+    border: 1px solid var(--color-lines);
+    border-radius: 10px;
+    background-color: var(--color-bg-card);
+    padding: 13px;
+    font-size: 16px;
+    color: var(--color-text-gray);
+    overflow: hidden;
+}
+
+.popup_form__area input:focus, 
+.popup_form__area textarea:focus {
+    box-shadow: 2px 2px 4px var(--color-text-gray);
+}
+
+.popup_form__area textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.popup_btn {
+    margin: 0 0 0 auto;
+    width: fit-content;
+    padding: 12px 24px;
+    background-color: var(--color-btn-other);
+    border-radius: 10px;
+    color: var(--color-text-main);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.popup_active {
+    display: flex;
+    animation: popup_show .5s ease forwards;
+}
+
+.popup_inactive {
+    display: flex;
+    animation: popup_hide .5s ease forwards;
+}
+
+@keyframes popup_show {0% {left: 100%} 100% {left: 0}}
+@keyframes popup_hide {0% {left: 0} 90% {left: -100%} 100%{left: -100%; display: none}}

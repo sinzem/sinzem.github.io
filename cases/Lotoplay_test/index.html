@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Грим та Грiм</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Замовлення квиткiв на концерти групи Грим та Грiм">
+    <meta name="keywords" content="Грим та Грiм, концерт, квитки, замовити">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://makeup_and_thunder">
+    <meta property="og:title" content="Грим та Грiм">
+    <meta property="og:description" content="Замовлення квиткiв на концерти групи Грим та Грiм">
+    <meta property="og:image" content="./assets/img/band_center.jpg">
+    
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="shortcut icon" href="./assets/icons/icon.png">
+
+    <script defer src="scripts/script.js"></script>
+</head>
+<body>
+    <aside id="menu" class="menu">
+        <div class="container menu_container">
+            <div class="logo menu_logo">
+                <a href="#">G&G</a>
+            </div>
+            <nav class="menu_navigation">
+                <ul>
+                    <li>
+                        <a href="#about">Про гурт</a>
+                    </li>
+                    <li>
+                        <a href="#timetable">Концерти</a>
+                    </li>
+                    <li>
+                        <a href="#gallery">Галерея</a>
+                    </li>
+                    <li>
+                        <a href="#contacts">Контакти</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </aside>
+
+    <div class="top"></div>
+
+    <header id="header" class="header" style="background-image: url(./assets/img/header.jpg)">
+        <div class="container header_container">
+            <div class="header_wrapper">
+                <h1 class="title header_title">Гурт &laquo;Грим та Грiм&raquo;</h1>
+                <h2 class="subtitle header_subtitle">Справжній український рок, який гуркоче в серці.</h2>
+                <h3 class="description header_description">&laquo;Грим та Грiм&raquo; &mdash; це поєднання <a href="https://slovnyk.ua/index.php?swrd=%D0%BF%D0%BE%D1%82%D1%83%D0%B6%D0%BD%D0%B8%D0%B9">потужних</a> гiтарних рифiв, чесних текстiв i вибухової енергiї сцени. Ми граємо для тих, хто цiнує живий звук, свободу та силу музики.</h3>
+                <h3 class="description header_description"><a href="#timetable">Нашi концерти</a> &mdash; це завжди контакт з залом, драйв i емоцiї. Приєднуйся до нас на найближчих виступах i вiдчуй цей саунд наживо!</h3>
+                <button data-popup="header" class="btn header_btn">Замовити квиток</button>
+            </div>
+        </div>
+    </header> 
+
+    <section id="timetable" class="timetable">
+        <div class="container timetable_container">
+            <div class="timetable_wrapper">
+                <div class="timetable_title">
+                    <h2 class="title">Найближчi концерти</h2>
+                </div>
+                <div class="timetable_cards">
+                    <div class="timetable_card timetable_card__top">
+                        <div class="timetable_location">Мiсто / Заклад</div>
+                        <div class="timetable_quantity">К-ть мiсць</div>
+                        <div class="timetable_date">Дата i час</div>
+                        <button data-popup="timetable" class="btn timetable_btn">Замовити квиток</button>
+                    </div>
+                    <div class="timetable_card timetable_card__top">
+                        <div class="timetable_location">Київ &mdash; Docker-G Pub</div>
+                        <div class="timetable_quantity"><span>К-ть мiсць &mdash; </span> 250</div>
+                        <div class="timetable_date">25.10.2025, 19.00</div>
+                        <button data-popup="timetable" class="btn timetable_btn">Замовити квиток</button>
+                    </div>
+                    <div class="timetable_card timetable_card__top">
+                        <div class="timetable_location">Львiв &mdash; !FESTrepublic</div>
+                        <div class="timetable_quantity"><span>К-ть мiсць &mdash; </span> 400</div>
+                        <div class="timetable_date">01.11.2025, 20.00</div>
+                        <button data-popup="timetable" class="btn timetable_btn">Замовити квиток</button>
+                    </div>
+                    <div class="timetable_card timetable_card__top">
+                        <div class="timetable_location">Одеса &mdash; Зелен театр</div>
+                        <div class="timetable_quantity"><span>К-ть мiсць &mdash; </span> 700</div>
+                        <div class="timetable_date">09.11.2025, 19.30</div>
+                        <button data-popup="timetable" class="btn timetable_btn">Замовити квиток</button>
+                    </div>
+                    <div class="timetable_card timetable_card__top">
+                        <div class="timetable_location">ХаркiВ &mdash; ArtZavod</div>
+                        <div class="timetable_quantity"><span>К-ть мiсць &mdash; </span> 500</div>
+                        <div class="timetable_date">16.11.2025, 19.00</div>
+                        <button data-popup="timetable" class="btn timetable_btn">Замовити квиток</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> 
+
+    <section id="gallery" class="gallery">
+        <div class="container gallery_container">
+            <h2 class="title gallery_title">Учасники гурту</h2>
+            <div class="gallery_cards">
+                <div class="gallery_card">
+                    <div class="gallery_img">
+                        <img src="./assets/img/band_left.jpg" alt="Максим гiтарист - фото">
+                    </div>
+                    <h3 class="description gallery_description">
+                        Максим &mdash; гiтара
+                    </h3>
+                </div>
+                <div class="gallery_card">
+                    <div class="gallery_img">
+                        <img src="./assets/img/band_center.jpg" alt="Олена вокалiстка - фото">
+                    </div>
+                    <h3 class="description gallery_description">
+                        Олена &mdash; вокал
+                    </h3>
+                </div>
+                <div class="gallery_card">
+                    <div class="gallery_img">
+                        <img src="./assets/img/band_right.jpg" alt="Тарас барабанщик - фото">
+                    </div>
+                    <h3 class="description gallery_description">
+                        Тарас &mdash; барабани
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container about_container">
+            <h2 class="title about_title">Наша iсторiя</h2>
+            <div class="about_block">
+                <div class="about_img" style="background-image: url(./assets/img/history.jpg)"></div>
+                <p>&laquo;Грим та Грiм&raquo; народився з бажання створювати музику, яка вiдчувається серцем. Ми почали свiй шлях у маленькiй студiї в центрi Києва, де кожен акорд, кожне слово було наповнене емоцiями та переживаннями. Це було мiсце, де народжувались нашi першi пiснi, де ми вчились грати разом як єдиний органiзм.</p>
+                <p>За роки нашої дiяльностi ми виступили на десятках сцен, вiд невеликих клубiв до великих фестивалiв. Наша музика &mdash; це поєднання традицiйного року з сучасними елементами, що робить її унiкальною та впiзнаваною. Ми не боїмось експериментувати зi звуком, додаючи електроннi елементи або народнi iнструменти.</p>
+                <p>Кожен наш виступ &mdash; це не просто концерт, а справжня подiя, де ми дiлимося своєю енергiєю з глядачами та створюємо неповторну атмосферу. Ми вiримо, що музика має силу об'єднувати людей, створювати спiльноти та надихати на змiни.</p>
+                <p>Наш колектив складається з досвiчених музикантiв, кожен з яких приносить свiй унiкальний стиль та бачення. Максим створює неймовiрнi гiтарнi рифи, Олена зачаровує своїм вокалом, а Тарас тримає ритм, який змушує серця битися в унiсон з музикою.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacts" class="contacts">
+        <div class="container contacts_container">
+            <h2 class="title contacts_title">Зв'жись з нами</h2>
+            <h3 class="subtitle contacts_subtitle">Хочеш заказати виступ або маєш питання? Пиши!</h3>
+            <div class="contacts_info">
+                <form class="contacts_form">
+                    <div class="contacts_form__inputs">
+                        <div class="contacts_form__area contacts_form__name">
+                            <label for="name">Iм'я</label>
+                            <input data-input id="name" type="text" name="name">
+                        </div>
+                        <div class="contacts_form__area contacts_form__email">
+                            <label for="email">Email</label>
+                            <input data-input id="email" type="text" name="email">
+                        </div>
+                    </div>
+                    
+                    <div class="contacts_form__area contacts_form__textarea">
+                        <label for="textarea">Повiдомлення</label>
+                        <textarea data-input name="textarea" id="textarea" placeholder="Розкажи про свої iдеї..."></textarea>
+                    </div>
+                    <button data-send="contacts" class="btn contacts_btn">Вiдправити</button>
+                </form>
+                <div class="contacts_location">
+                    <h3 class="subtitile contacts_info__subtitle">Наше мiсцезнаходження</h3>
+                    <div class="contacts_map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2543.1234369697754!2d30.52988204198562!3d50.401537119847056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cf4e367d1663%3A0x9ba07dbf7d7ce12d!2z0YPQuy4g0KTQtdC-0LTQvtGB0LjQudGB0LrQsNGPLCDQmtC40LXQsiwgMDIwMDA!5e0!3m2!1sru!2sua!4v1758654661696!5m2!1sru!2sua" width="524" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> 
+
+    <footer id="footer" class="footer">
+        <div class="container footer_container">
+            <div class="footer_items">
+                <div class="footer_item footer_copy">
+                    &copy; 
+                    2025
+                    <a href="#header">&laquo;Грим та Грiм&raquo;.</a> 
+                     Всi права захищенi.
+                </div>
+                <div class="footer_item footer_links">
+                    <a href="https://www.instagram.com/">Instagram</a>
+                    <div class="footer_dot"></div>
+                    <a href="https://www.youtube.com/">Youtube</a>
+                    <div class="footer_dot"></div>
+                    <a href="https://www.facebook.com/">Facebook</a>
+                </div>
+                <div class="footer_item footer_phone">
+                    <a href="https://lotoplay.team/">booking@lotoplay</a>
+                    <div class="footer_dot"></div>
+                    <a href="tel:+380991234567">+38 (099) 123-45-67</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="popup_sender">
+        <form class="popup_form">
+            <div class="popup_form__area popup_form__name">
+                <label for="popup_name">Iм'я</label>
+                <input data-input id="popup_name" type="text" name="name">
+            </div>
+            <div class="popup_form__area popup_form__email">
+                <label for="popup_email">Email</label>
+                <input data-input id="popup_email" type="text" name="email">
+            </div>
+            <div class="popup_form__area popup_form__textarea">
+                <label for="popup_textarea">Додаткова iнформацiя</label>
+                <textarea data-input name="textarea" id="popup_textarea" placeholder="Вкажiть бажаний варiант зв'язку"></textarea>
+        </div>
+            <button data-send="popup" class="btn popup_btn">Вiдправити</button>
+        </form>
+    </div>
+
+    <div class="popup_message">
+        <div class="popup_message__text">Hello</div>
+    </div>
+</body>
+</html>
