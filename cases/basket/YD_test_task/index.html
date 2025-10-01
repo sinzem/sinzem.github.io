@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Тестове завдання на посаду Front End developer у компанiю YellowDuckCoder">
+    <meta name="keywords" content="https://sinzem.github.io/cases/YD_test_task/">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sinzem.github.io/cases/YD_test_task/">
+    <meta property="og:title" content="Yellow Duck Test Task">
+    <meta property="og:description" content="Тестове завдання на посаду Front End developer у компанiю YellowDuckCoder">
+    <meta property="og:image" content="./assets/img/img/img_main_bus_1.jpg">
+    
+    <link rel="stylesheet" href="styles/style.css">
+    <!-- <link rel="stylesheet" href="styles/main.css"> -->
+    <link rel="shortcut icon" href="./assets/img/icon/png/icon_globe.png">
+
+    <script defer src="scripts/main.js"></script>
+
+    <title>Yellow Duck Test Task</title>
+</head>
+<body>
+    <div class="top"></div>
+    <section class="menu" id="menu">
+        <div class="container menu_container">
+            <div class="logo menu_logo">
+                <img src="./assets/img/icon/png/icon_head_logo_main.png" alt="logo">
+            </div>
+            <nav class="menu_navigation">
+                <li class="menu_link">
+                    <a href="#">Головна</a>
+                    <div class="menu_line"></div>
+                </li>
+                <li class="menu_link">
+                    <a href="#">Перевізникам</a>
+                    <div class="menu_line"></div>
+                </li>
+                <li  class="menu_link">
+                    <a href="#">Про нас</a>
+                    <div class="menu_line"></div>
+                </li>
+                <li class="menu_link active">
+                    <a href="#">Профіль перевізника</a>
+                    <div class="menu_line"></div>
+                </li>
+            </nav>
+            <div class="menu_authorization">
+                <button class="menu_btn menu_registration">Створити профіль</button>
+                <div class="menu_authorization__divider"></div>
+                <button class="menu_btn menu_login active">Увійти</button>
+            </div>
+        </div>
+        <div class="menu_background hide"></div>
+    </section>
+
+    <header id="header" class="header">
+        <div class="container header_container">
+            <div class="header_url">
+                <span>
+                    <a href="#">Головна </a> 
+                    / 
+                    <a href="#"> Профіль перевізника </a> 
+                    / 
+                </span> 
+                Stripe
+            </div>    
+            <div class="header_banner">
+                <div class="header_logo">
+                    <img src="./assets/img/icon/png/icon_head_logo_truck.png" alt="logo truck">
+                </div>
+                <di class="header_wrapper">
+                    <div class="header_top">
+                        <h1>Stripe</h1>
+                        <button>43 Поїздок</button>
+                    </div>
+                    <div class="header_links">
+                        <div class="header_link">
+                            <img src="./assets/img/icon/png/icon_globe.png" alt="globe">
+                            <a href="#">https://stripe.com</a>
+                        </div>
+                        <div class="header_link">
+                            <img src="./assets/img/icon/png/icon_phone.png" alt="phone">
+                            <a href="tel:+380735555555">+38 (073) 555 55 55</a>
+                        </div>
+                    </div>
+                    <div class="header_info">
+                        <div class="header_info__item">
+                            <img src="./assets/img/icon/png/icon_head_flame_1.png" alt="flame">
+                            <div class="header_info__description">
+                                <p>На ринку від:</p>
+                                <p>Травень  31, 2011</p>
+                            </div>
+                        </div>
+                        <div class="header_info__item">
+                            <img src="./assets/img/icon/png/icon_head_people_2.png" alt="people">
+                            <div class="header_info__description">
+                                <p>Перевезених пасажирів:</p>
+                                <p>4000+</p>
+                            </div>
+                        </div>
+                        <div class="header_info__item">
+                            <img src="./assets/img/icon/png/icon_head_car_3.png" alt="vehicle">
+                            <div class="header_info__description">
+                                <p>Автопарк:</p>
+                                <p>8 бусів</p>
+                            </div>
+                        </div>
+                        <div class="header_info__item">
+                            <img src="./assets/img/icon/png/icon_head_location_4.png" alt="location">
+                            <div class="header_info__description">
+                                <p>Обслуговуємо:</p>
+                                <p>8 країн</p>
+                            </div>
+                        </div>
+                        <div class="header_info__item">
+                            <img src="./assets/img/icon/png/icon_head_city_5.png" alt="city">
+                            <div class="header_info__description">
+                                <p>Місто:</p>
+                                <p>Львів</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+        </div>
+            
+        <div class="bg_lines header__bg_lines_1"></div>
+        <div class="bg_lines header__bg_lines_2"></div>
+        <div class="bg_lines header__bg_lines_3"></div>
+        <div class="bg_lines header__bg_lines_4"></div> 
+    </header>
+
+    <section id="info" class="info">
+        <div class="container info_container">
+            <div id="main" class="main">
+                <div class="info_description">
+                    <h2 class="title info_title">
+                        Опис перевізника
+                    </h2>
+                    <div class="text info_text">Stripe is a software platform for starting and running internet businesses. Millions of businesses rely on Stripe’s software tools to accept payments, expand globally, and manage their businesses online. Stripe has been at the forefront of expanding internet commerce, powering new business models, and supporting the latest platforms, from marketplaces to mobile commerce sites. We believe that growing the GDP of the internet is a problem rooted in code and design, not finance. Stripe is built for developers, makers, and creators. We work on solving the hard technical problems necessary to build global economic infrastructure—from designing highly reliable systems to developing advanced machine learning algorithms to prevent fraud.</div>
+                </div>
+                <div class="info_social">
+                    <h2 class="title info_title">
+                        Ми у соц. мережах
+                    </h2>
+                    <div class="info_social__links">
+                        <a href="https://twitter.com/">
+                            <img src="./assets/img/icon/png/icon_main_twitter_1.png" alt="twitter">
+                            twitter.com/stripe
+                        </a>
+                        <a href="https://facebook.com/">
+                            <img src="./assets/img/icon/png/icon_main_facebook_2.png" alt="facebook">
+                            facebook.com/StripeHQ
+                        </a>
+                    </div>
+                </div>
+                <div class="info_photos">
+                    <div class="info_photo">
+                        <img src="./assets/img/img/img_main_bus_1.jpg" alt="bus">
+                    </div>
+                    <div class="info_photo">
+                        <img src="./assets/img/img/img_main_bus_2.jpg" alt="bus">
+                    </div>
+                    <div class="info_photo">
+                        <img src="./assets/img/img/img_main_bus_3.jpg" alt="bus">
+                    </div>
+                </div>
+            </div>
+            <aside id="aside" class="aside">
+                <div class="countries">
+                    <h2 class="title info_title">Обслуговуємо країни</h2>
+                    <div class="countries_block">
+                        <div class="countries_country">
+                            <div class="country_wrap">
+                                <img src="./assets/img/icon/png/icon_aside_france_1.jpg" alt="france">
+                                <p>Франція</p>
+                            </div>
+                        </div>
+                        <div class="countries_country">
+                            <div class="country_wrap">
+                                <img src="./assets/img/icon/png/icon_aside_italy_2.jpg" alt="italy">
+                                <p>Італія</p>
+                            </div>
+                        </div>
+                        <div class="countries_country">
+                            <div class="country_wrap">
+                                <img src="./assets/img/icon/png/icon_aside_germany_3.jpg" alt="germany">
+                                <p>Німеччина</p>
+                            </div>
+                        </div>
+                        <div class="countries_country">
+                            <div class="country_wrap">
+                                <img src="./assets/img/icon/png/icon_aside_holland_4.jpg" alt="holland">
+                                <p>Нідерланди</p>
+                            </div>
+                        </div>
+                        <div class="countries_country">
+                            <div class="country_wrap">
+                                <img src="./assets/img/icon/png/icon_aside_spain_5.jpg" alt="spain">
+                                <p>Іспанія</p>
+                            </div>
+                        </div>
+                        <div class="countries_country">
+                            <div class="country_wrap">
+                                <img src="./assets/img/icon/png/top_ukraine.jpg" alt="ukraine">
+                                <p>Україна</p>
+                            </div>
+                        </div>
+                        <div class="countries_country">
+                            <div class="country_wrap">
+                                <img src="./assets/img/icon/png/top_estonia.jpg" alt="estonia">
+                                <p>Естонiя</p>
+                            </div>
+                        </div>
+                        <div class="countries_btn">
+                            <button>Усі країни</button>
+                            <img class="countries_img" src="./assets/img/icon/png/icon_arrow.png" alt="arrow down">
+                        </div>
+                    </div>
+                </div>
+                <div class="calendar">
+                    <h2 class="title info_title">Календар поїздок</h2>
+                    <div class="calendar_wrapper">
+                        <button class="calendar_order"><span>+</span>Купити квиток</button>
+                        <div class="calendar_header">
+                            <div class="calendar_months"></div>
+                                <div class="calendar_buttons">
+                                    <button class="calendar_prev">
+                                    <img src="./assets/img/icon/png/icon_arrow.png" alt="arrow prev">
+                                </button>
+                                <button class="calendar_next">
+                                    <img src="./assets/img/icon/png/icon_arrow.png" alt="arrow next">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="calendar_body">
+                            <div class="calendar_day__names"></div>
+                            <div class="calendar_days"></div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <section id="drivers" class="drivers">
+        <div class="container drivers_container">
+                 <div class="drivers_top">
+            <h2 class="title drivers_title">Наші водії</h2>
+            <div class="drivers_quantity">
+                Усі водії (<span>7</span>)
+            </div>
+        </div>
+        <div class="drivers_wrapper">
+            <div class="drivers_slider">
+                <div class="drivers_list">
+                    <div class="drivers_card">
+                        <div class="drivers_card__img">
+                            <img src="./assets/img/img/img_drivers_Julia_1.jpg" alt="driver's photo">
+                            <div class="drivers_card__name">Юлія</div>
+                            <div class="drivers_card_experience">Досвід роботи: 5 років</div>
+                            <div class="drivers_card__links">
+                                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24.000000" height="24.000000" opacity="0.5" fill="none">
+                                        <rect id="Icon" width="24.000000" height="24.000000" x="0.000000" y="0.000000" fill="rgb(255,255,255)" fill-opacity="0" />
+                                        <path id="Vector" d="M0 0L24 0L24 24L0 24L0 0Z" fill-rule="nonzero" />
+                                        <path id="Vector" d="M16 4C18.2091 4 20 5.79086 20 8L20 16C20 18.2091 18.2091 20 16 20L8 20C5.79086 20 4 18.2091 4 16L4 8C4 5.79086 5.79086 4 8 4L16 4Z" stroke="rgb(81,91,111)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                        <path id="Vector" d="M12 15C10.3431 15 9 13.6569 9 12C9 10.3431 10.3431 9 12 9C13.6569 9 15 10.3431 15 12C15 13.6569 13.6569 15 12 15Z" stroke="rgb(81,91,111)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                        <path id="Vector" d="M0 0L0.000999928 0" stroke="rgb(81,91,111)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" transform="matrix(0,1,-1,0,16.5,7.5)" />
+                                    </svg>
+                                </div>
+                                <div class="drivers_card__links">
+                                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24.000000" height="24.000000" opacity="0.5" fill="none">
+                                        <rect id="Icon" width="24.000000" height="24.000000" x="0.000000" y="0.000000" fill="rgb(255,255,255)" fill-opacity="0" />
+                                        <path id="Vector" d="M0 0L24 0L24 24L0 24L0 0Z" fill-rule="nonzero" />
+                                        <path id="Vector" d="M18 4C19.1046 4 20 4.89543 20 6L20 18C20 19.1046 19.1046 20 18 20L6 20C4.89543 20 4 19.1046 4 18L4 6C4 4.89543 4.89543 4 6 4L18 4Z" stroke="rgb(81,91,111)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                        <path id="Vector" d="M0 0L5 0" stroke="rgb(81,91,111)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" transform="matrix(0,1,-1,0,8,11)" />
+                                        <path id="Vector" d="M0 0L0.0100002 0" stroke="rgb(81,91,111)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" transform="matrix(0,1,-1,0,8,8)" />
+                                        <path id="Vector" d="M5 0L0 0" stroke="rgb(81,91,111)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" transform="matrix(0,1,-1,0,12,11)" />
+                                        <path id="Vector" d="M16 16L16 13C16 12.4696 15.7893 11.9609 15.4142 11.5858C15.0391 11.2107 14.5304 11 14 11C13.4696 11 12.9609 11.2107 12.5858 11.5858C12.2107 11.9609 12 12.4696 12 13" fill-rule="nonzero" stroke="rgb(81,91,111)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="drivers_slider__arrow drivers_slider__prev">
+                    <img src="./assets/img/icon/png/icon_arrow.png" alt="prev">
+                </button>
+                <button class="drivers_slider__arrow drivers_slider__next">
+                    <img src="./assets/img/icon/png/icon_arrow.png" alt="next">
+                </button>
+                <div class="drivers__pagination">
+                    <div class="drivers__pagination__dot"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container services_container">
+              <h2 class="title services_title">Сервіс</h2>
+        <h4 class="service_subtitle">Найкращі умови для вашого комфорту</h4>
+        <div class="services_list">
+            <div class="services_item">
+                <img src="./assets/img/icon/png/icon_services_fan_1.png" alt="fan">
+                <h3>Кондиціонер</h3>
+            </div>
+            <div class="services_item">
+                <img src="./assets/img/icon/png/icon_services_wifi_2.png" alt="wifi">
+                <h3>Wi-Fi</h3>
+            </div>
+            <div class="services_item">
+                <img src="./assets/img/icon/png/icon_services_tv_3.png" alt="tv">
+                <h3>TV</h3>
+            </div>
+            <div class="services_item">
+                <img src="./assets/img/icon/png/icon_services_wc_4.png" alt="toilet">
+                <h3>Туалет</h3>
+            </div>
+            <div class="services_item">
+                <img src="./assets/img/icon/png/icon_services_seat_5.png" alt="seat">
+                <h3>Зручні сидіння</h3>
+            </div>
+            <div class="services_item">
+                <img src="./assets/img/icon/png/icon_services_care_6.png" alt="care for pet">
+                <h3>Перевозимо тварин</h3>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section id="reviews" class="reviews">
+        <div class="container reviews_container">
+            <div class="reviews_description">
+                <h2 class="title reviews_title">
+                    Що <span>кажуть люди?</span>
+                </h2>
+                <p class="text reviews_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <button class="btn revious_btn"></button>
+            </div>
+            <div class="reviews_slider">
+                <div class="reviews_wrapper">
+                    <div class="reviews_line">
+                        <div class="reviews_card">
+                            <div class="reviews_card__top">
+                                <img src="./assets/img/img/img_testimonials_ben_1.jpg" alt="client's photo">
+                                <div class="reviews_card__info">
+                                    <h2>Ben Yardley</h2>
+                                    <h3>Київ - Кишинів</h3>
+                                    <h4>1 May 2023</h4>
+                                </div>
+                            </div>
+                            <div class="reviews_text reviews_card__description">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                            </div>
+                            <div class="reviews_card__stars">
+                                <img src="./assets/img/icon/png/icon_testimonials_star_1.png" alt="star">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="revievs_pagination">
+                    <div class="revievs_pagination__dot"></div>
+                </div>
+            </div>
+        </div>
+        <div class="bg_lines revievs_lines__top"></div>
+        <div class="bg_lines revievs_lines__bottom"></div>
+    </section>
+
+    <div id="footer" class="footer">
+        <div class="container footer_container">
+            <div class="footer_top">
+                <div class="footer_item">
+                    <div class="footer_logo">
+                        <img src="./assets/img/icon/png/icon_logo_footer.png" alt="logo">
+                    </div>
+                    <div class="footer_text footer_description">
+                        Платформа пошуку перевізників та бронювання поїздок
+                    </div>
+                </div>
+                <div class="footer_item">
+                    <div class="footer_item__title">Клієнтам</div>
+                    <nav class="footer_nav">
+                        <a href="#">Головна</a>
+                        <a href="#">Про нас</a>
+                        <a href="#">Ціни</a>
+                        <a href="#">Маршрути</a>
+                        <a href="#">Політика приватності</a>
+                    </nav>
+                </div>
+                <div class="footer_item">
+                    <div class="footer_item__title">Перевiзникам</div>
+                    <nav class="footer_nav">
+                        <a href="#">Help Docs</a>
+                        <a href="#">Особистий кабiнет</a>
+                        <a href="#">Оновлення</a>
+                        <a href="#">Контакти</a>
+                    </nav>
+                </div>
+                <div class="footer_item">
+                    <div class="footer_item__title">Зворотній зв’язок</div>
+                    <h4>Маєш пропозиції щодо покращення сервісу - пиши нам!</h4>
+                    <form class="footer_form">
+                        <input type="email" name="email" placeholder="Email Address">
+                        <button type="submit">Надiслати</button>
+                    </form>
+                    <div class="footer_contacts footer_phone">
+                        <img src="./assets/img/icon/png/icon_footer_phone.png" alt="phone">
+                        <a href="tel:+380735555555">+ 38 (073) 555 55 55</a>
+                    </div>
+                    <div class="footer_contacts footer_email">
+                        <img src="./assets/img/icon/png/icon_footer_phone.png" alt="phone">
+                        <a href="mailto:gmail@gmail.com">gmail@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_bottom">
+                <div class="footer_copy">
+                    2024 @ Sprinters. All rights reserved.
+                </div>
+                <div class="footer_socials">
+                    <a href="https://www.facebook.com/">
+                        <svg viewBox="0 0 5.99609 12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="5.996094" height="12.000000" fill="none" customFrame="#000000">
+                            <path id="Facebook" d="M4.08994 12L4.08994 6.6L5.72824 6.6L5.99585 4.2L4.08994 4.2L4.08994 3.03105C4.08994 2.41305 4.10572 1.8 4.9687 1.8L5.84277 1.8L5.84277 0.084082C5.84277 0.058282 5.09197 0 4.33241 0C2.7461 0 1.75283 0.994317 1.75283 2.82012L1.75283 4.2L0 4.2L0 6.6L1.75283 6.6L1.75283 12L4.08994 12Z" fill="rgb(255,255,255)" fill-rule="evenodd" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="footer_socials">
+                    <a href="https://www.instagram.com/">
+                        <svg viewBox="0 0 11.9922 12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="11.992188" height="12.000000" fill="none" customFrame="#000000">
+                        <path id="Instagram" d="M3.51936 0.0736373C2.5433 0.117707 1.69731 0.356504 1.01419 1.03721C0.328689 1.72149 0.0930205 2.57141 0.0488712 3.53798C0.021427 4.14127 -0.139052 8.69895 0.326304 9.89421C0.640121 10.7006 1.25819 11.3206 2.07137 11.6356C2.45082 11.7833 2.88397 11.8833 3.51936 11.9125C8.83217 12.1531 10.8016 12.0221 11.6321 9.89421C11.7794 9.51544 11.8808 9.08237 11.9089 8.44812C12.1517 3.11801 11.8695 1.96268 10.9436 1.03721C10.2092 0.304095 9.34525 -0.194952 3.51936 0.0736373ZM3.56827 10.8405C2.98657 10.8143 2.67097 10.7173 2.46037 10.6357C1.93058 10.4297 1.53264 10.0331 1.328 9.50603C0.973616 8.59782 1.09115 4.2843 1.12277 3.58632C1.1538 2.90263 1.29221 2.27779 1.77427 1.79541C2.37088 1.19986 3.14169 0.907991 8.39007 1.14502C9.07498 1.17599 9.70083 1.31421 10.1841 1.79541C10.7807 2.39095 11.0766 3.16823 10.8356 8.40007C10.8093 8.98073 10.7121 9.2958 10.6304 9.50603C10.0904 10.8907 8.84827 11.0829 3.56827 10.8405ZM8.44795 2.81376C8.44795 3.20802 8.76834 3.52861 9.16389 3.52861C9.55944 3.52861 9.88042 3.20802 9.88042 2.81376C9.88042 2.41952 9.55944 2.09922 9.16389 2.09922C8.76834 2.09922 8.44795 2.41952 8.44795 2.81376ZM2.91558 5.99276C2.91558 7.68172 4.28719 9.05105 5.97918 9.05105C7.67117 9.05105 9.04278 7.68172 9.04278 5.99276C9.04278 4.3038 7.67117 2.93535 5.97918 2.93535C4.28719 2.93535 2.91558 4.3038 2.91558 5.99276ZM3.99067 5.99276C3.99067 4.89696 4.88082 4.0079 5.97918 4.0079C7.07754 4.0079 7.96768 4.89696 7.96768 5.99276C7.96768 7.08915 7.07754 7.97849 5.97918 7.97849C4.88082 7.97849 3.99067 7.08915 3.99067 5.99276Z" fill="rgb(255,255,255)" fill-rule="evenodd" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="footer_socials">
+                    <a href="https://dribbble.com/">
+                        <svg viewBox="0 0 17.9912 18.0039" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17.991211" height="18.003906" fill="none" customFrame="#000000">
+                            <path id="Dribbble" d="M11.873 3.16905C11.3039 2.19422 10.5321 1.42238 9.55724 0.853385C8.5822 0.284423 7.51781 0 6.36326 0C5.20882 0 4.14412 0.284423 3.16925 0.853385C2.19433 1.42229 1.42249 2.19413 0.853473 3.16905C0.284423 4.14403 0 5.20874 0 6.36309C0 7.51749 0.28451 8.58203 0.853385 9.55706C1.42238 10.5319 2.19422 11.3037 3.16914 11.8728C4.14412 12.4417 5.20874 12.7262 6.36314 12.7262C7.51755 12.7262 8.58229 12.4417 9.55721 11.8728C10.5321 11.3039 11.3039 10.5319 11.8728 9.55706C12.4417 8.58211 12.7261 7.51744 12.7261 6.36309C12.7261 5.20862 12.4417 4.14388 11.873 3.16905ZM6.36317 0.927966C7.73294 0.927966 8.92881 1.38088 9.95063 2.28667L9.84706 2.43157C9.80565 2.48967 9.70208 2.60139 9.53643 2.76718C9.37076 2.93283 9.18985 3.09035 8.99379 3.23945C8.79756 3.38861 8.53121 3.55844 8.19415 3.74901C7.8572 3.93958 7.4982 4.10677 7.11702 4.25036C6.48186 3.07926 5.80254 2.02428 5.07893 1.08534C5.51536 0.980405 5.9434 0.927966 6.36317 0.927966ZM2.10463 2.99078C2.63485 2.32257 3.28101 1.8088 4.04333 1.44983C4.72823 2.3612 5.40204 3.40521 6.06491 4.58168C4.38576 5.02356 2.71219 5.24452 1.04407 5.24443C1.22092 4.41043 1.57441 3.65914 2.10463 2.99078ZM1.29254 8.32271C1.04947 7.70133 0.927966 7.04807 0.927966 6.36309C0.927966 6.28572 0.93081 6.22771 0.936266 6.18908C2.93588 6.18908 4.79459 5.93232 6.51239 5.41852C6.68918 5.76095 6.83556 6.06752 6.95155 6.33824C6.92918 6.34927 6.89354 6.36163 6.8438 6.37548C6.79391 6.38929 6.7581 6.39887 6.73582 6.40447L6.42934 6.51216C6.21935 6.58953 5.94448 6.72212 5.60491 6.90982C5.26527 7.09781 4.90487 7.32138 4.52372 7.58105C4.14258 7.84074 3.74901 8.18457 3.34308 8.61279C2.93709 9.04083 2.59602 9.50053 2.31984 9.9921C1.87796 9.50053 1.53555 8.9439 1.29254 8.32271ZM6.36317 11.7983C5.07063 11.7983 3.91622 11.384 2.89986 10.5555L3.02415 10.6467C3.21745 10.2213 3.50188 9.8125 3.87757 9.42041C4.2532 9.02832 4.61496 8.71195 4.96294 8.47161C5.31091 8.2315 5.68925 8.00505 6.09805 7.79214C6.50676 7.57962 6.78556 7.44416 6.93483 7.38635C7.084 7.32837 7.20277 7.28269 7.29114 7.2495L7.30762 7.24117L7.32431 7.24117C7.86544 8.6607 8.25228 10.0362 8.48417 11.3673C7.79925 11.6547 7.09235 11.7982 6.36317 11.7983ZM10.9369 9.30024C10.5281 9.93275 10.0171 10.4562 9.40413 10.8703C9.17748 9.59995 8.82417 8.30454 8.34348 6.98452C9.44267 6.8131 10.5722 6.89334 11.7322 7.22463C11.6106 7.97583 11.3454 8.66784 10.9369 9.30024ZM11.7155 6.28853C11.6602 6.27756 11.5911 6.26503 11.5083 6.2513C11.4255 6.23757 11.3246 6.22092 11.2058 6.20159C11.0872 6.18226 10.9544 6.16436 10.8082 6.14776C10.6618 6.13119 10.5057 6.11604 10.3399 6.10223C10.1743 6.08835 9.99747 6.07741 9.80977 6.06906C9.62175 6.06081 9.43129 6.05664 9.23793 6.05664C9.04478 6.05664 8.84161 6.06224 8.62907 6.07321C8.41647 6.08409 8.21078 6.10365 8.01196 6.13122C7.99528 6.10356 7.97461 6.05797 7.94977 5.99442C7.92496 5.93095 7.90685 5.88255 7.89614 5.84941C7.79106 5.61742 7.6695 5.35502 7.53128 5.06236C7.91242 4.9076 8.27569 4.72953 8.62112 4.52787C8.96622 4.32621 9.2422 4.14681 9.44946 3.98941C9.65663 3.83183 9.85269 3.66474 10.0377 3.48804C10.2228 3.3113 10.3428 3.18846 10.3982 3.1194C10.4535 3.05021 10.506 2.9826 10.5556 2.9164L10.5639 2.90805C11.3703 3.89124 11.782 5.0235 11.7984 6.30508L11.7155 6.28853Z" fill="rgb(255,255,255)" fill-rule="nonzero" transform="matrix(0.70686,-0.707353,-0.70686,-0.707353,8.99609,18.0039)" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="footer_socials">
+                    <a href="https://www.linkedin.com/">
+                        <svg viewBox="0 0 9.99316 10" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="9.993164" height="10.000000" fill="none" customFrame="#000000">
+                            <path id="LinkedIn" d="M9.99292 10L7.99434 10L7.99434 6.50049C7.99434 5.54049 7.57114 5.00488 6.81217 5.00488C5.98626 5.00488 5.49611 5.56299 5.49611 6.50049L5.49611 10L3.49752 10L3.49752 3.5L5.49611 3.5L5.49611 4.23096C5.49611 4.23096 6.12316 3.12988 7.53616 3.12988C8.94966 3.12988 9.99292 3.99305 9.99292 5.77905L9.99292 10ZM1.22014 2.46045C0.546114 2.46045 0 1.90948 0 1.22998C0 0.55098 0.546114 0 1.22014 0C1.89366 0 2.43977 0.55098 2.43977 1.22998C2.44027 1.90948 1.89366 2.46045 1.22014 2.46045ZM0 10L2.49823 10L2.49823 3.5L0 3.5L0 10Z" fill="rgb(255,255,255)" fill-rule="evenodd" />
+                        </svg>
+
+                    </a>
+                </div>
+                <div class="footer_socials">
+                    <a href="https://x.com/">
+                        <svg viewBox="0 0 11.9912 10" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="11.991211" height="10.000000" fill="none" customFrame="#000000">
+                            <path id="Twitter" d="M3.77139 10C8.29646 10 10.7715 6.15218 10.7715 2.81576C10.7715 2.70623 10.7715 2.59752 10.7643 2.48922C11.2458 2.13232 11.6613 1.68918 11.9917 1.18214C11.5432 1.38643 11.0665 1.52041 10.5791 1.57948C11.0923 1.26381 11.4767 0.767869 11.6607 0.182674C11.1775 0.476809 10.6492 0.684398 10.0982 0.79578C9.16645 -0.220776 7.60813 -0.270029 6.61702 0.686221C5.97846 1.3028 5.70685 2.2221 5.90531 3.09897C3.92728 2.99683 2.08416 2.03813 0.834622 0.460998C0.181674 1.61477 0.515643 3.09022 1.59669 3.8311C1.20517 3.8194 0.822031 3.71122 0.479668 3.51554L0.479668 3.54759C0.480268 4.74936 1.3059 5.78415 2.4535 6.02229C2.09135 6.12382 1.71122 6.13854 1.34307 6.06532C1.66505 7.09418 2.58901 7.79888 3.64128 7.81919C2.77008 8.52191 1.69383 8.90349 0.585795 8.90227C0.39033 8.90165 0.194865 8.88995 0 8.86595C1.12542 9.60683 2.43431 10 3.77139 9.99817" fill="rgb(255,255,255)" fill-rule="evenodd" />
+                        </svg>
+
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

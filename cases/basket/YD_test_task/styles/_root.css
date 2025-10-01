@@ -1,0 +1,7 @@
+:root {
+    --index: calc((1vw + 1vh) / 2);
+    --color-bg-main: #F8F8FD;
+    --color-text-main: #25324B;
+    --color-text-secondary: #515B6F;
+    --color-brand: #4640DE; 
+}

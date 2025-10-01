@@ -1,0 +1,133 @@
+.header {
+    position: relative;
+    margin-top: 74px;
+    padding: 40px 0 84px;
+    overflow: hidden;
+}
+
+.header_url {
+    font-family: rubik;
+    font-weight: 400;
+}
+.header_url span {
+    opacity: .6;
+}
+
+.header_banner {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    align-items: center;
+}
+
+.header_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.header_logo {
+    width: 172px;
+    height: 172px;
+}
+.header_logo img {
+    width: 100%;
+    height: 100%;
+}
+
+.header_top {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    align-items: center;
+}
+
+.header_top h1 {
+    font-family: lato;
+    font-size: 48px;
+    line-height: 58px;
+    font-weight: 900;
+}
+
+.header_top button {
+    padding: 4px 12px;
+    line-height: 19px;
+    font-family: rubik;
+    font-weight: 400;
+    color: var(--color-brand);
+    border: 1px solid var(--color-brand);
+}
+
+.header_links {
+    display: flex;
+    flex-direction: row;
+    gap: 34px;
+    align-items: center;
+}
+
+.header_link {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+}
+
+.header_link img {
+    width: 24px;
+    height: 24px;
+}
+.header_link a {
+    color: var(--color-brand);
+    font-family: rubik;
+    font-weight: 600;
+}
+
+.header_info {
+    padding-top: 14px;
+    display: flex;
+    flex-direction: row;
+    gap: 42px;
+}
+
+.header_info__item {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    align-items: center;
+}
+
+.header_info__description p {
+    display: block;
+    line-height: 19px;
+    font-family: rubik;
+    font-weight: 400px;
+}
+
+.header_info__description p:last-of-type {
+    margin-top: 8px;
+    font-weight: 600;
+}
+
+.header__bg_lines_1 {
+    top: calc(var(--index) * -15);
+    left: calc(var(--index) * -14); 
+}
+
+.header__bg_lines_2 {
+    top: calc(var(--index) * -30);
+    left: calc(var(--index) * -4); 
+}
+
+.header__bg_lines_3 {
+    top: calc(var(--index) * 3);
+    right: calc(var(--index) * -1.5); 
+    height: calc(var(--index) * 18)
+}
+
+.header__bg_lines_4 {
+    top: calc(var(--index) * -24);
+    right: calc(var(--index) * -14);
+}
+ 
+
