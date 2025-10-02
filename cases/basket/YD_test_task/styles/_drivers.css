@@ -1,0 +1,87 @@
+.drivers {
+    padding: 72px 0;
+}
+
+.drivers_top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.drivers_top button {
+    font-family: rubik;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19px;
+    color: var(--color-brand);
+}
+
+.drivers_wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
+.drivers_list {
+    margin-top: 11px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.drivers_card {
+    width: fit-content;
+    padding: 24px;
+    border: 1px	solid rgba(214, 221, 235, 1);
+}
+
+.drivers_card__img {
+    margin: 0 auto;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.drivers_card__img img {
+    height: 100%;
+}
+
+.drivers_card__name {
+    margin-top: 16px;
+    font-family: rubik;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 21px;
+}
+
+.drivers_card_experience {
+    margin-top: 4px;
+    font-family: rubik;
+    font-weight: 400;
+    line-height: 21px;
+    color: rgba(124, 132, 147, 1)
+}
+
+.drivers_card__links {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 16px;
+}
+
+.drivers_card.hidden {
+    display: none;
+}
+
+.drivers_divider {
+    margin: 72px auto 0;
+}
+

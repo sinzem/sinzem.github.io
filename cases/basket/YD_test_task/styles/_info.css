@@ -21,13 +21,6 @@
     gap: 16px;
 }
 
-.info_title {
-    font-family: lato;
-    font-size: 32px;
-    font-weight: 900;
-    line-height: 38px;
-}
-
 .info_text {
     font-family: rubik;
     font-weight: 400;
@@ -156,13 +149,17 @@
     cursor: pointer;
 }
 
-.countries_btn button {
+.countries_button {
     padding-right: 21px;
     font-family: rubik;
     font-size: 16px;
     line-height: 19px;
     font-weight: 600;
     color: var(--color-brand);
+}
+
+.countries_button:active {
+    transform: translateY(-1px);
 }
 
 .countries_img {
@@ -272,3 +269,23 @@
     justify-content: center;
 }
 
+.calendar_day {
+    width: 90%;
+    height: 100%;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.calendar_day__hidden {
+    opacity: .4;
+    cursor: auto;
+}
+
+.calendar_day__today {
+    border: 1px solid rgba(70, 64, 222, .5);
+}
+
+.calendar_day.active {
+    background-color: var(--color-brand);
+    color: #FFFFFF;
+}

@@ -1,0 +1,40 @@
+.services {
+    padding-bottom: 72px;
+}
+
+.services_title {
+    padding-top: 0;
+}
+
+.services_subtitle {
+    margin-top: 8px;
+    font-family: rubik;
+    font-weight: 400;
+    line-height: 19px;
+}
+
+.services_list {
+    margin-top: 28px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.services_item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    font-family: lato;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 29px;
+}
+
+.services_item h3 {
+    width: min-content;
+}
+
+

@@ -110,24 +110,33 @@
 }
 
 .header__bg_lines_1 {
-    top: calc(var(--index) * -15);
-    left: calc(var(--index) * -14); 
+    /* top: calc(var(--index) * -15);
+    left: calc(var(--index) * -14);  */
+    top: -208px;
+    left: calc(50% - 1144px);
 }
 
 .header__bg_lines_2 {
-    top: calc(var(--index) * -30);
-    left: calc(var(--index) * -4); 
+    /* top: calc(var(--index) * -30);
+    left: calc(var(--index) * -4);  */
+    top: -408px;
+    left: calc(50% - 1044px);
 }
 
 .header__bg_lines_3 {
-    top: calc(var(--index) * 3);
-    right: calc(var(--index) * -1.5); 
-    height: calc(var(--index) * 18)
+    /* top: calc(var(--index) * 3);
+    right: calc(var(--index) * -1.5);  */
+    /* height: calc(var(--index) * 18) */
+    top: 52px;
+    left: calc(50% + 474px);
+    height: 250px;
 }
 
 .header__bg_lines_4 {
-    top: calc(var(--index) * -24);
-    right: calc(var(--index) * -14);
+    /* top: calc(var(--index) * -24);
+    right: calc(var(--index) * -14); */
+    top: -332px;
+    left: calc(50% + 640px);
 }
  
 

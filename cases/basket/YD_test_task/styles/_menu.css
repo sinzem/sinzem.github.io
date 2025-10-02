@@ -3,12 +3,12 @@
     position: fixed;
     top: 0;
     left: 0;
-    transition: top .4s ease;
+    transition: all .4s ease;
     z-index: 10;
 }
 
 .menu.hide {
-    top: -100%
+    top: -100%;
 }
 
 .menu_background {
@@ -76,10 +76,6 @@
     display: block;
     transform: translateY(-1px);
 }
-
-/* .menu_link a:active {
-    transform: translateY(1px);
-} */
 
 .menu_link.active a {
     color: var(--color-brand);

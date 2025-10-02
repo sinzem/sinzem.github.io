@@ -3,6 +3,7 @@ html, body {
     font-size: 16px;
     font-weight: 400;
     scroll-behavior: smooth;
+    color: var(--color-text-main);
 }
 
 body {
@@ -41,11 +42,23 @@ button:active {
     height: 1px;
 }
 
+.title {
+    font-family: lato;
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 38px;
+}
+
+.divider {
+    width: 100%;
+    height: 1px;
+    background-color: #D6DDEB;
+}
+
 .bg_lines {
     position: absolute;
-    border: 6px solid var(--color-brand);
+    border: 6px solid #dad9f8;
     background-color: transparent;
-    opacity: .2;
     transform: skewY(-25deg);
     width: 500px;
     height: 500px;
