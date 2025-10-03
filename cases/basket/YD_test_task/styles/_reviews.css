@@ -167,3 +167,42 @@
     left: calc(50% + 54px);
     width: 1000px;
 }
+
+@media (max-width: 1439px) {
+  
+}
+
+@media (max-width: 1199px) {
+    .reviews_container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .reviews_description {
+        width: 736px;
+        text-align: center;
+    }
+    .reviews_btn {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 991px) {
+    
+}
+
+@media (max-width: 767px) {
+    .reviews_description {width: 100%;}
+    .reviews_slider {width: 100%;}
+}
+
+@media (max-width: 575px) {
+    .reviews {padding: 42px 0 42px;}
+    .reviews_title {font-size: 36px;}
+}
+
+@media (max-width: 399px) {
+    .reviews_card {
+        padding: 30px 10px;
+        width: 300px;
+    }
+}

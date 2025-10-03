@@ -15,13 +15,16 @@
     <!-- <link rel="stylesheet" href="styles/main.css"> -->
     <link rel="shortcut icon" href="./assets/img/icon/png/icon_globe.png">
 
-    <script defer src="scripts/reviewsDB.js"></script>
+    <script defer src="scripts/insteadDB.js"></script>
     <script defer src="scripts/main.js"></script>
 
     <title>Yellow Duck Test Task</title>
 </head>
 <body>
     <div class="top"></div>
+    <div class="menu_background hide"></div>
+    <div class="hamburger"><div></div><div></div><div></div>
+    </div>
     <section class="menu" id="menu">
         <div class="container menu_container">
             <div class="logo menu_logo">
@@ -51,7 +54,6 @@
                 <button class="menu_btn menu_login active">Увійти</button>
             </div>
         </div>
-        <div class="menu_background hide"></div>
     </section>
 
     <header id="header" class="header">
@@ -69,7 +71,7 @@
                 <div class="header_logo">
                     <img src="./assets/img/icon/png/icon_head_logo_truck.png" alt="logo truck">
                 </div>
-                <di class="header_wrapper">
+                <!-- <di class="header_wrapper"> -->
                     <div class="header_top">
                         <h1>Stripe</h1>
                         <button>43 Поїздок</button>
@@ -86,42 +88,52 @@
                     </div>
                     <div class="header_info">
                         <div class="header_info__item">
-                            <img src="./assets/img/icon/png/icon_head_flame_1.png" alt="flame">
+                            <div class="header_info__img">
+                                <img src="./assets/img/icon/png/icon_head_flame_1.png" alt="flame">
+                            </div>
                             <div class="header_info__description">
                                 <p>На ринку від:</p>
                                 <p>Травень  31, 2011</p>
                             </div>
                         </div>
                         <div class="header_info__item">
-                            <img src="./assets/img/icon/png/icon_head_people_2.png" alt="people">
+                            <div class="header_info__img">
+                                <img src="./assets/img/icon/png/icon_head_people_2.png" alt="people">
+                            </div>
                             <div class="header_info__description">
                                 <p>Перевезених пасажирів:</p>
                                 <p>4000+</p>
                             </div>
                         </div>
                         <div class="header_info__item">
-                            <img src="./assets/img/icon/png/icon_head_car_3.png" alt="vehicle">
+                            <div class="header_info__img">
+                                <img src="./assets/img/icon/png/icon_head_car_3.png" alt="vehicle">
+                            </div>
                             <div class="header_info__description">
                                 <p>Автопарк:</p>
                                 <p>8 бусів</p>
                             </div>
                         </div>
                         <div class="header_info__item">
-                            <img src="./assets/img/icon/png/icon_head_location_4.png" alt="location">
+                            <div class="header_info__img">
+                                <img src="./assets/img/icon/png/icon_head_location_4.png" alt="location">
+                            </div>
                             <div class="header_info__description">
                                 <p>Обслуговуємо:</p>
                                 <p>8 країн</p>
                             </div>
                         </div>
                         <div class="header_info__item">
-                            <img src="./assets/img/icon/png/icon_head_city_5.png" alt="city">
+                            <div class="header_info__img">
+                                 <img src="./assets/img/icon/png/icon_head_city_5.png" alt="city">
+                            </div>
                             <div class="header_info__description">
                                 <p>Місто:</p>
                                 <p>Львів</p>
                             </div>
                         </div>
                     </div>
-                </div>
+                <!-- </div> -->
             </div>    
         </div>
             
@@ -242,7 +254,7 @@
                 </div>
             </aside>
         </div>
-    </section>
+    </section>  
 
     <section id="drivers" class="drivers">
         <div class="container drivers_container">
@@ -396,7 +408,7 @@
             </div>
         </div>
         </div>
-    </section>
+    </section> 
 
     <section id="reviews" class="reviews">
         <div class="container reviews_container">
@@ -440,8 +452,8 @@
         </div>
         <div class="bg_lines revievs_lines__top"></div>
         <div class="bg_lines revievs_lines__bottom"></div>
-    </section>
-
+    </section> 
+ 
     <div id="footer" class="footer">
         <div class="container footer_container">
             <div class="footer_top">
@@ -475,8 +487,8 @@
                 <div class="footer_item footer_feedback">
                     <div class="footer_item__title">Зворотній зв’язок</div>
                     <h4>Маєш пропозиції щодо покращення сервісу - пиши нам!</h4>
-                    <form class="footer_form">
-                        <input type="email" name="email" placeholder="Email Address">
+                    <form data-form="footer" class="footer_form">
+                        <input type="text" name="email" placeholder="Email Address" required>
                         <button type="submit">Надiслати</button>
                     </form>
                     <div class="footer_contacts footer_phone">
@@ -485,7 +497,7 @@
                     </div>
                     <div class="footer_contacts footer_email">
                         <img src="./assets/img/icon/png/icon_footer_mail_2.png" alt="phone">
-                        <a href="mailto:gmail@gmail.com">gmail@gmail.com</a>
+                        <a href="mailto:gmail@gmail.com?subject=Доброго дня&body=Хочу зв'язатися з вами">gmail@gmail.com</a>
                     </div>
                 </div>
             </div>
@@ -534,6 +546,43 @@
                 </div>
             </div>
         </div>
+    </div> 
+
+    <div data-popup="notification" class="notification">
+        <div class="notification_text"></div>
+    </div>
+
+    <div data-popup="order" class="order">
+        <form data-form="order" class="order_form">
+            <input type="text" name="email" placeholder="Email Address" required>
+            <button type="submit">Надiслати</button>
+        </form>
+    </div>
+
+    <div data-popup="review" class="review">
+        <form data-form="review" class="review_form">
+            <input class="review_file" type="file" name="photo" placeholder="Photo">
+            <input type="text" name="name" placeholder="Name" required maxlength="24">
+            <input type="text" name="email" placeholder="Email Address" required maxlength="24">
+            <select name="route" required>
+                <option value="" disabled selected hidden>Маршрут</option>
+                <option value="Харкiв - Прага">Харкiв &mdash; Прага</option>
+                <option value ="Львів - Париж">Львів &mdash; Париж</option>
+                <option value ="Київ - Варшава">Київ &mdash; Варшава</option>
+                <option value ="Чернiгiв - Таллiн">Чернiгiв &mdash; Таллiн</option>
+            </select>
+            <input type="date" name="date" placeholder="Date" required>
+            <textarea name="text" id="textarea" placeholder="Review" maxlength="1000"></textarea>
+            <select name="rating" required>
+                <option value="" disabled selected hidden>Оцiнка</option>
+                <option value="5">5 зiрок</option>
+                <option value ="4">4 зiрки</option>
+                <option value ="3">3 зiрки</option>
+                <option value ="2">2 зiрки</option>
+                <option value ="1">1 зiрка</option>
+            </select>
+            <button type="submit">Надiслати</button>
+        </form>
     </div>
 </body>
 </html>

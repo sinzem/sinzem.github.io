@@ -1,5 +1,9 @@
+let windowWidth = window.innerWidth; 
+let scrollWidth = calcScroll();
+
 // menu===========================================
 const menu = document.querySelector(".menu");
+const hamburger = document.querySelector(".hamburger");
 const menuBack = document.querySelector(".menu_background");
 const menuItems = document.querySelectorAll(".menu_link");
 const navLinks = document.querySelectorAll(".menu_link");
@@ -7,18 +11,21 @@ const authBtns = document.querySelectorAll(".menu_btn");
 
 window.addEventListener("scroll", () => throttledHideMenu(this.scrollY, menu, menuBack));
 
+windowWidth > 991 ? menu.classList.add("active") : null;
+
 const throttledHideMenu = throttle(hideMenu, 120);
 
-function hideMenu(scroll, block, back) {
-    return (() => {
-        if (scroll > 100 && scroll - this.scrollPrev > 0) {
-            block.classList.add("hide");
-        } else {
-            block.classList.remove("hide");
-            (scroll > 100) ? back.classList.remove("hide") : back.classList.add("hide"); 
-        }
-        this.scrollPrev = scroll;
-    })()
+function hideMenu(scroll, block) {
+    if (windowWidth > 991) {
+        return (() => {
+            if (scroll > 100 && scroll - this.scrollPrev > 0) {
+                block.classList.remove("active");
+            } else {
+                block.classList.add("active"); 
+            }
+            this.scrollPrev = scroll;
+        })()
+    }
 }
 
 navLinks.forEach(link => {
@@ -38,6 +45,28 @@ authBtns.forEach(link => {
         }
     })
 })
+
+hamburger.addEventListener("click", () => {
+    if (hamburger.classList.contains("active")) {
+        hamburger.classList.remove("active");
+        showMenu(false);
+        blockBody(false);
+    } else {
+        hamburger.classList.add("active");
+        showMenu(true);
+        blockBody(true);
+    }
+});
+
+function showMenu(trigger) {
+    if (trigger) {
+        menu.classList.add("active");
+        menuBack.classList.remove("hide");
+    } else {
+        menu.classList.remove("active");
+        menuBack.classList.add("hide");
+    } 
+}
 
 // countries======================================
 const countries = document.querySelectorAll(".countries_country");
@@ -69,7 +98,7 @@ countriesBtnBlock.addEventListener("click", () => {
     }
 })
 
-// calendar=======================================
+// // calendar=======================================
 const orderButton = document.querySelector(".calendar_order");
 const monthAndYear = document.querySelector(".calendar_months");
 const daysContainer = document.querySelector(".calendar_days");
@@ -95,14 +124,8 @@ daysContainer.addEventListener("click", (e) => {
 })
 
 orderButton.addEventListener("click", () => {
-    console.log(selectedDays);
-    selectedDays = [];
     renderCalendar();
 })
-
-const monthNames = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december'];
-
-const dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
 let currentDate = new Date();
 const stringToday = String(new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate()));
@@ -178,7 +201,7 @@ driversBtn.addEventListener("click", () => {
     }
 })
 
-// reviews=====================================
+// // reviews=====================================
 
 class Card {
     constructor({id, photo, name, linkUrl, linkText, date, text, rating}, parentSelector) {
@@ -224,40 +247,233 @@ class Card {
     }
 }
 
+const reviewsSlider = document.querySelector(".reviews_wrapper");
 const reviewLine = document.querySelector(".reviews_line");
 const reviewCards = document.getElementsByClassName("reviews_card");
 const reviewPagination = document.querySelector(".revievs_pagination");
 const reviewDots = document.getElementsByClassName("revievs_pagination__dot");
+let reviewDotsArr = Array.from(reviewDots);
 let activeDot = 0;
 
-reviewsData.forEach(obj => new Card(obj, ".reviews_line").render());
+function renderReviews() {
+    reviewLine.innerHTML = ``;
+    reviewPagination.innerHTML = ``;
+    reviewsData.forEach(obj => new Card(obj, ".reviews_line").render());
+    for (let i = 0; i < reviewsData.length; i++) {
+        reviewPagination.innerHTML += `<div class="revievs_pagination__dot"></div>`;
+    }
+    reviewDotsArr = Array.from(reviewDots);
+    reviewDotsArr.forEach((dot, i) => {
+        if (i === activeDot) dot.classList.add("active");
+        dot.addEventListener("click", () => {
+            if (i !== activeDot) {
+                activeDot = i;
+                changeSlide();
+            }
+        })
+    });
+}
+
+renderReviews();
 let lineGap = parseInt(window.getComputedStyle(reviewLine).gap);
 let cardWidth = parseInt(window.getComputedStyle(reviewCards[0]).width);
 
-for (let i = 0; i < reviewCards.length; i++) {
-    reviewPagination.innerHTML += `<div class="revievs_pagination__dot"></div>`;
+reviewsSlider.addEventListener('touchstart', swipeStart);
+
+function swipeStart(e) {
+    positionStart = e.changedTouches[0].clientX;
+    reviewsSlider.addEventListener('touchend', swipeEnd);
 }
 
-const reviewDotsArr = Array.from(reviewDots);
-reviewDotsArr.forEach((dot, i) => {
-    if (i === activeDot) dot.classList.add("active");
-    dot.addEventListener("click", () => {
-        if (i !== activeDot) {
-            activeDot = i;
-            reviewLine.style.transform = `translateX(-${activeDot * (cardWidth + lineGap)}px)`;
-            reviewDotsArr.forEach((pag, j) => 
-                j !== i ? pag.classList.remove("active") : pag.classList.add("active")
-            )
+function swipeEnd(e) {
+    positionEnd = e.changedTouches[0].clientX;
+    reviewsSlider.removeEventListener('touchend', swipeEnd);
+
+    if (positionStart - positionEnd > 100 && activeDot < reviewDotsArr.length - 1) {
+        activeDot += 1;
+        changeSlide();
+    } else if (positionStart - positionEnd < -100 && activeDot >= 1) {
+        activeDot -= 1;
+        changeSlide();
+    } 
+}
+
+function changeSlide () {
+    reviewLine.style.transform = `translateX(-${activeDot * (cardWidth + lineGap)}px)`;
+    Array.from(reviewDots).forEach((pag, j) => 
+        j !== activeDot ? pag.classList.remove("active") : pag.classList.add("active")
+    )
+}
+
+// // forms=======================================
+const popups = document.querySelectorAll("[data-popup]");
+const forms = document.querySelectorAll("[data-form]");
+const orderWrapper = document.querySelector(".order")
+const orderBtn = document.querySelector(".calendar_order");
+const reviewWrapper = document.querySelector(".review");
+const reviewBtn = document.querySelector(".reviews_btn");
+
+let errors = [];
+let noError = true;
+
+forms.forEach(form => {
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        errors = [];
+        noError = true;
+        const formData = new FormData(e.target);
+        const obj = {block: form.dataset.form};
+        formData.forEach((value, key) => obj[key] = value);
+        
+        if (form.dataset.form === "order") obj.selectedDays = selectedDays;
+        if (form.dataset.form === "review") {
+            obj.id = Math.round(Math.random() * Math.random() * 1e6);
+            obj.photo = "./assets/img/img/img_drivers_unknown_2.jpg";
+            obj.linkUrl = "#";
+            obj.linkText = obj.route; 
+        };
+
+        checkForm(obj);
+        if (errors.length) {
+            if (form.dataset.form !== "footer") noError = false;
+            showNotification(errors);
+            return;
         }
+
+        const base = formAttributes[form.dataset.form];
+        const example = JSON.stringify(obj, null, 2);
+        
+        fetch(base.address, {
+            method: "POST",
+            headers: {"Content-type": base.content},
+            body: JSON.stringify(obj)
+        })
+        .then(res => {
+            if (res.status === 201) {
+                console.log(res);
+                if (form.dataset.form === "order") {
+                    selectedDays = [];
+                    renderCalendar();
+                };
+                if (form.dataset.form === "review" && reviewsData.length < 12) {
+                    reviewsData.unshift(obj);
+                    renderReviews();
+                }
+                
+                const messages = [base.message];
+                showNotification(messages, example);
+                e.target.reset();
+                // if (e.target.parentNode.classList.contains("active")) {
+                    e.target.parentNode.classList.remove("active");
+                // };
+            } else {
+                console.log(err);
+                showNotification(["Помилка вiдправки, спробуйте пiзнiше."], example);
+            }
+        })
+        .catch(err => {
+            console.log(err);
+            showNotification(["Помилка вiдправки, спробуйте пiзнiше."], example);
+        })
+        
     })
+})
+
+function checkForm (obj) {
+    if (obj.email) {
+        const isEmail = checkEmail(obj.email);
+        !isEmail ? errors.push(errorMessages.email) : null;
+    }
+    if (obj.name) {
+        obj.name.trim().length < 2 ? errors.push("Iм'я повинно бути не менше 2 лiтер.") : null;
+    }
+
+    return errors;
+}
+
+orderBtn.addEventListener("click", () => {
+    if (!selectedDays.length) {
+        showNotification(["Потрiбно вибрати дату або дати Вашої подорожi."]);
+        return;
+    }
+    orderWrapper.classList.add("active");
+    orderWrapper.children[0].reset();
+    blockBody(true);
 });
 
-// services====================================
+reviewBtn.addEventListener("click", () => {
+    reviewWrapper.classList.add("active");
+    reviewWrapper.children[0].reset();
+    blockBody(true);
+});
+
+// // notifications===============================
+const notificationsBlock = document.querySelector(".notification");
+
+function showNotification(arr, example) {
+    notificationsBlock.children[0].innerHTML = ``;
+    if (arr) arr.forEach(message => notificationsBlock.children[0].innerHTML += `<p>${message}</p>`);
+    if (example) notificationsBlock.children[0].innerHTML += `<br><p>Example:<br>${example}</p>`;
+    notificationsBlock.classList.add("active");
+    blockBody(true);
+}
+
+document.addEventListener("keydown", (e) => {
+    popups.forEach(wrapper => {
+        hidePopup(wrapper, e.key, "Escape"); 
+    })
+})
+
+popups.forEach(popup => {
+    popup.addEventListener("click", e => {
+        hidePopup(popup, e.target, e.currentTarget);
+    })
+})
+
+function hidePopup(block, element, name) {
+    if (element === name) {
+        if (block.dataset.popup === "notification" && !noError) {
+            block.classList.remove("active");
+            noError = true;
+            return;
+        } 
+        block.classList.remove("active");
+        blockBody(false);
+    } 
+}
+
+// // services====================================
+const windowResizeTrottled = throttle(windowResize, 120);
+window.addEventListener("resize", windowResizeTrottled);
+
+function windowResize() {
+    windowWidth = window.innerWidth;
+    scrollWidth = calcScroll();
+    lineGap = parseInt(window.getComputedStyle(reviewLine).gap);
+    cardWidth = parseInt(window.getComputedStyle(reviewCards[0]).width);
+
+    windowWidth > 991 ? showMenu(true) : showMenu(); 
+    hamburger.classList.remove("active");
+    blockBody(false);
+} 
+
+
+function blockBody(trigger) {
+    if (trigger) {
+        document.body.style.paddingRight = `${scrollWidth}px`;
+        document.body.style.overflow = `hidden`;
+        if (windowWidth > 991) menu.style.paddingRight = `${scrollWidth}px`;
+    } else {
+        document.body.style.paddingRight = ``;
+        document.body.style.overflow = ``;
+        if (windowWidth > 991) menu.style.paddingRight = ``;
+    }
+}
 
 function checkEmail(email) {
     const emailPrepared = email.trim();
     const reg = /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/;
-
+    
     return reg.test(emailPrepared);
 }
 
