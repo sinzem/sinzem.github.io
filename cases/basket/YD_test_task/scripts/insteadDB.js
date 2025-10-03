@@ -102,6 +102,9 @@ const formAttributes = {
 
 const errorMessages = {
     email: "Введіть валідну email адресу",
+    noDate: "Потрiбно вибрати дату або дати Вашої подорожi.",
+    shortName: "Iм'я повинно бути не менше 2 лiтер.",
+    sending: "Помилка вiдправки, спробуйте пiзнiше.",
 }
 
 const monthNames = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december'];

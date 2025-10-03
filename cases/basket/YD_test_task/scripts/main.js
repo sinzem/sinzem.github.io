@@ -382,12 +382,12 @@ forms.forEach(form => {
                 // };
             } else {
                 console.log(err);
-                showNotification(["Помилка вiдправки, спробуйте пiзнiше."], example);
+                showNotification([errorMessages.sending], example);
             }
         })
         .catch(err => {
             console.log(err);
-            showNotification(["Помилка вiдправки, спробуйте пiзнiше."], example);
+            showNotification([errorMessages.sending], example);
         })
         
     })
@@ -399,7 +399,7 @@ function checkForm (obj) {
         !isEmail ? errors.push(errorMessages.email) : null;
     }
     if (obj.name) {
-        obj.name.trim().length < 2 ? errors.push("Iм'я повинно бути не менше 2 лiтер.") : null;
+        obj.name.trim().length < 2 ? errors.push(errorMessages.shortName) : null;
     }
 
     return errors;
@@ -407,7 +407,7 @@ function checkForm (obj) {
 
 orderBtn.addEventListener("click", () => {
     if (!selectedDays.length) {
-        showNotification(["Потрiбно вибрати дату або дати Вашої подорожi."]);
+        showNotification([errorMessages.noDate]);
         return;
     }
     orderWrapper.classList.add("active");
@@ -466,7 +466,7 @@ function windowResize() {
     lineGap = parseInt(window.getComputedStyle(reviewLine).gap);
     cardWidth = parseInt(window.getComputedStyle(reviewCards[0]).width);
 
-    windowWidth > 991 ? showMenu(true) : showMenu(); 
+    windowWidth > 991 ? showMenu(true) : showMenu(false); 
     hamburger.classList.remove("active");
     blockBody(false);
 } 
