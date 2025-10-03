@@ -17,12 +17,22 @@
     color: var(--color-brand);
 }
 
-.drivers_wrapper {
-    width: 100%;
-    overflow: hidden;
+.drivers_top button:hover {
+    transform: none;
+
 }
 
-.drivers_list {
+.drivers_wrapper {
+    width: 100%;
+    margin-top: 10px;
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    cursor: e-resize;
+}
+
+/* .drivers_list {
     margin-top: 11px;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -30,10 +40,20 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+} */
+
+.drivers_list {
+    width: fit-content;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
 }
 
 .drivers_card {
-    width: fit-content;
+    width: 225px;
     padding: 24px;
     border: 1px	solid rgba(214, 221, 235, 1);
 }

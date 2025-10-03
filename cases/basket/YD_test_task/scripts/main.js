@@ -179,28 +179,42 @@ renderDayNames();
 renderCalendar();
 
 // drivers_list================================
+const driversList = document.querySelector(".drivers_wrapper");
+// const drivers = document.querySelectorAll(".drivers_card");
+// const driversBtn = document.querySelector(".drivers_top button");
+// driversBtn.children[0].textContent = `${drivers.length}`;
+// let isAllDrivers = false;
 
-const drivers = document.querySelectorAll(".drivers_card");
-const driversBtn = document.querySelector(".drivers_top button");
-driversBtn.children[0].textContent = `${drivers.length}`;
-let isAllDrivers = false;
+// drivers.forEach((driver, i) => i > 4 ? driver.classList.add("hidden") : null);
 
-drivers.forEach((driver, i) => i > 4 ? driver.classList.add("hidden") : null);
-
-driversBtn.addEventListener("click", () => {
-    if (!isAllDrivers) {
-        drivers.forEach(driver => {
-            isAllDrivers = true;
-            driver.classList.remove("hidden");
-        });
-    } else {
-         drivers.forEach((driver, i) => {
-            isAllDrivers = false;
-            i > 4 ? driver.classList.add("hidden") : null;
-        });
-    }
+// driversBtn.addEventListener("click", () => {
+//     if (!isAllDrivers) {
+//         drivers.forEach(driver => {
+//             isAllDrivers = true;
+//             driver.classList.remove("hidden");
+//         });
+//     } else {
+//          drivers.forEach((driver, i) => {
+//             isAllDrivers = false;
+//             i > 4 ? driver.classList.add("hidden") : null;
+//         });
+//     }
+// })
+    
+driversList.addEventListener("mouseenter", () => {
+    blockBody(true);
+    driversList.addEventListener("wheel", horizontalScroll)
 })
 
+driversList.addEventListener("mouseleave", () => {
+    blockBody(false);
+    driversList.removeEventListener("wheel", horizontalScroll)
+})
+
+function horizontalScroll(e) {
+    let position = e.deltaY * 0.5;
+    driversList.scrollLeft += position;
+}
 // // reviews=====================================
 
 class Card {
