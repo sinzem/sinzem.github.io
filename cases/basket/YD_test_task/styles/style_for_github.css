@@ -185,8 +185,13 @@ button:active {
     grid-template: 1fr / auto 1fr auto;
 }
 
-.menu_navigation {
+.menu_nav__wrapper {
     padding-left: 48px;
+    display: flex;
+    align-items: center;
+}
+
+.menu_navigation {
     display: flex;
     flex-direction: row;
     gap: 24px;
@@ -310,6 +315,7 @@ button:active {
 @media (max-width: 1199px) {
     .menu_authorization {gap: 8px;}
     .menu_navigation {padding-left: 16px; gap: 16px;}
+    .menu_nav__wrapper {padding-left: 6px;}
 }
 
 @media (max-width: 991px) {
