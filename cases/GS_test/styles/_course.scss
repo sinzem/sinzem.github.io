@@ -1,0 +1,257 @@
+.course {
+    background-color: var(--color-white);
+    padding-bottom: 40px;
+    &_container {
+        padding: 40px 60px 0;
+    }
+    &_top {
+        &__base {
+            padding: 0 60px 40px;
+            display: flex;
+            justify-content: space-between;
+        }
+        &__description {
+            margin-top: 30px;
+            max-width: 540px;
+            & span {
+                font-weight: 700;
+            }
+        }
+        &__quantity {
+            margin-top: 14px;
+            display: flex;
+            gap: 37px;
+        }
+        &__item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+        &__round {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--color-pink);
+            border-radius: 50%;
+            & h3 {
+                color: var(--color-white);
+                font-size: 30px;
+                font-weight: 700;
+            }
+        }
+    }
+    &_divider {
+        margin-left: auto;
+        width: calc(100% - 60px);
+        height: 1px;
+        background-color: rgba(0,0,0,.2);
+    }
+    &_module {
+        transition: all .3s ease;
+        &__wrapper {
+            padding: 40px 60px;
+            transition: all .3s ease;
+        }
+        &__top {
+            display: flex;
+            justify-content: space-between;
+            transition: all .3s ease;
+            & svg path, & svg rect {
+                transition: all .3s ease;
+            }
+        }
+        &__description {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: space-between;
+        }
+        &__name h2 {
+            font-size: 32px;
+            line-height: 38px;
+            font-weight: 700;
+            transition: all .3s ease;
+        }
+        &__quantity {
+            display: flex;
+            gap: 12px;
+            transition: all .3s ease;
+            & div {
+                padding: 6px 16px;
+                display: flex;
+                gap: 10px;
+                align-items: center;
+                border: 1px solid rgba(0,0,0,.2);
+                border-radius: 22px;
+                transition: all .3s ease;
+            }
+        }
+        &__btns {
+            display: flex;
+            gap: 116px;
+            & svg {
+                transition: all .3s ease;
+                & path {
+                    transition: all .3s ease;
+                }
+            }
+        }
+        &__btn {
+            width: 120px;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background-color: var(--color-violet);
+            color: var(--color-white);
+            font-size: 16px;
+            font-weight: 500;
+            transition: all .3s ease;
+        }
+        &__bottom {
+            display: none;
+        }
+    }
+    &_module.active {
+        margin: 48px auto 60px;
+        & .course_divider {
+            display: none;
+        }
+        & .course_module {
+            &__wrapper {
+                background-color: var(--color-violet);
+                border-radius: 20px;
+            }
+            &__top {
+                // background-color: var(--color-violet);
+                color: var(--color-white);
+                & svg path, & svg rect {
+                    fill: var(--color-white);
+                }
+            }
+            &__quantity div {
+                border: 1px solid rgba(255,255,255,.2);
+            }
+            &__btns svg {
+                transform: rotate(180deg);
+                & path {
+                    stroke: var(--color-white);
+                }
+            }
+            &__btn {
+                background-color: rgba(255,255,255,.2);
+            }
+            &__bottom {
+                padding: 48px 41px 60px 62px;
+                display: flex;
+                gap: 136px;
+            }
+        }
+    }
+    &_lessons {
+        min-width: 477px;
+        max-height: fit-content;
+        padding: 29px;
+        background-color: var(--color-violet-light);
+        border-radius: 20px;
+        &__title {
+            font-size: 22px;
+            font-weight: 700;
+            line-height: 26px;
+        }
+        &__list {
+            margin-top: 22px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            overflow: hidden;
+        }
+        &__about {
+            display: none;
+            &.active {
+                display: block;
+            }
+        }
+        &__item {
+            & button {
+                margin-left: 0px;
+                font-size: 16px;
+                font-weight: 700;
+                background-color: transparent;
+                position: relative;
+                transition: all .3s ease;
+                & span {
+                    color: var(--color-violet);
+                }
+                &::before {
+                    content: url("../assets/png/arrow_short_main.png");
+                    position: absolute;
+                    top: 0;
+                    left: -13px;
+                }
+            }
+            &.active {
+                & button {
+                    margin-left: 13px;
+                    color: var(--color-violet);
+                }
+            }
+        }
+        &__description {
+            margin-top: 16px;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 1.4;
+        }
+        &__results {
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            & h3 {
+                font-weight: 700;
+                line-height: 19px;
+                color: var(--color-violet);
+            }
+        }
+        &__result {
+            margin-top: 8px;
+            line-height: 1.4;
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            & h4 {
+                font-weight: 500;
+            }
+            &:first-of-type {
+                margin-top: 0;
+            }
+        }
+        &__dot {
+            min-width: 10px;
+            width: 10px;
+            height: 10px;
+            background-color: var(--color-violet);
+            border-radius: 2px;
+        }
+        &__button {
+            margin-top: 48px;
+        }
+    }
+    &__btn {
+        margin: 0 auto;
+        border-radius: 12px;
+        & a {
+            padding: 25px 57px;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 22px;
+        }
+    }
+    
+}

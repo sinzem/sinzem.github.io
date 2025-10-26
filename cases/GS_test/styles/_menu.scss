@@ -1,0 +1,46 @@
+.menu {
+    width: 100%;
+    position: fixed;
+    top: -100%;
+    left: 0;
+    background-color: rgba(30,30,30,.8);
+    z-index: 10;
+    transition: all .4s ease;
+    &.active {
+        top: 0;
+    }
+    &_container {
+        padding: 22px 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &_list {
+        display: flex;
+        gap: 40px;
+       
+    }
+    &_item {
+        & a {
+            font-size: 15px;
+            color: var(--color-white);
+            opacity: .8;
+            transition: all .4s ease;
+        }
+        &.active a {
+            color: var(--color-violet);
+            opacity: 1;
+        }
+    }
+    &_btn {
+        background-color: transparent;
+        border: 1px solid var(--color-white);
+        transition: all .4s ease;
+        &.active {
+            background-color: var(--color-white);
+            & a {
+                color: var(--color-black);
+            }
+        }
+    }
+}
