@@ -1,9 +1,18 @@
 .format {
     background-color: var(--color-white);
     &_container {
+        width: 100%;
         padding: 60px 0 122px;
+        margin: 0 auto;
+        overflow-x: scroll;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        scroll-behavior: smooth;
     }
-
+    &_wrapper {
+        width: fit-content;
+        margin: 0 auto;
+    }    
     &_grid {
         &__top {
             width: fit-content;
@@ -166,8 +175,8 @@
 
     &_bottom {
         margin: 40px auto 0;
-        width: 1200px;
         display: flex;
+        justify-content: center;
     }
     &_dial {
         &__title {
@@ -310,3 +319,44 @@
         }
     }
 }
+
+@media (max-width: 1439px) {
+    .format {
+        &_column {
+            &__first {
+                width: 320px;
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .format {
+        &_wrapper {
+           padding: 0 20px;
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .format {
+        &_wrapper {
+            padding: 0 10px;
+        }
+        &_grid {
+            &__title {
+                font-size: 36px;
+            }
+            &__description {
+                padding: 16px 8px;
+            }
+        }
+        &_column {
+            &__first {
+                width: 250px;
+            }
+        }
+    }
+}
+
+

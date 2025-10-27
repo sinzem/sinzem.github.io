@@ -1,46 +1,50 @@
-    .clock {
-        display: flex;
-        flex-direction: column;
-        gap: 17px;
-        &_title {
-            color: var(--color-white);
-            & span {
-                font-weight: 700;
-            }
-        }
-        &_body {
-            display: flex;
-            align-items: center;
-            gap: 7px;
-        }
-        &_digit {
-            width: 61px;
-            height: 61px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background-color: var(--color-white);
-            border-radius: 4px;
-            & h2 {
-                font-weight: 900;
-                font-size: 30px;
-            }
-            & h5 {
-                font-weight: 400;
-                font-size: 10px;
-                line-height: 14px;
-            }
-        }
-        &_semicolon {
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-            & div {
-                width: 6px;
-                height: 6px;
-                border-radius: 50%;
-                background-color: var(--color-white);
-            }
+.clock {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    &_title {
+        color: var(--color-white);
+        & span {
+            font-weight: 700;
         }
     }
+    &_body {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+    }
+    &_digit {
+        width: 61px;
+        height: 61px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--color-white);
+        border-radius: 4px;
+        & h2 {
+            font-weight: 900;
+            font-size: 30px;
+        }
+        & h5 {
+            font-weight: 400;
+            font-size: 10px;
+            line-height: 14px;
+        }
+    }
+    &_semicolon {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        & div {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: var(--color-white);
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .clock_body {gap: 2px}
+}
