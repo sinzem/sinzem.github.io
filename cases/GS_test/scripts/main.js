@@ -130,9 +130,43 @@ function setPromotionPeriod(obj) {
 }
 
 // format-block=====================================
+const formatBlock = document.querySelector(".format_container");
 const formatHeaders = document.querySelectorAll(".format_grid__plan");
 const rows = document.querySelector(".format_grid__rows");
 const prices = document.querySelectorAll(".format_price");
+let start = 0;
+
+formatBlock.addEventListener("mousedown", (e) => {
+    if (e.target.nodeName !== "BUTTON" && windowWidth < 992) {
+        formatBlock.style.scrollBehavior = "auto";
+        formatBlock.style.cursor = "grabbing";
+        start = e.clientX;
+        formatBlock.addEventListener("mousemove", throttleMoveFormatBlock);
+    }  
+});
+
+formatBlock.addEventListener("mouseup", () => {
+    if (windowWidth < 992) {
+        formatBlock.style.scrollBehavior = "smooth";
+        formatBlock.style.cursor = "grab";
+        formatBlock.removeEventListener("mousemove", throttleMoveFormatBlock);
+    }
+});
+
+formatBlock.addEventListener("mouseleave", () => {
+    if (windowWidth < 992) {
+        formatBlock.style.scrollBehavior = "smooth";
+        formatBlock.style.cursor = "grab";
+        formatBlock.removeEventListener("mousemove", throttleMoveFormatBlock);
+    }
+});
+
+const throttleMoveFormatBlock = throttle(moveFormatBlock, 60)
+
+function moveFormatBlock(e) {
+    let move = e.clientX - start;
+    formatBlock.scrollLeft -= move * 0.1;
+};
 
 function renderFormats(obj) {
     formatHeaders.forEach((header, i) => {

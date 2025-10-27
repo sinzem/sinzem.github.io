@@ -65,14 +65,14 @@
         }
         &_container {
             height: 100%;
-            padding: 100px 100px;
+            padding: 10vh 100px;
             flex-direction: column;
             align-items: flex-start;
-            gap: 70px;
+            gap: 9vh;
         }
         &_list {
             flex-direction: column;
-            gap: 30px;
+            gap: 3vh;
             flex-grow: 1;
         }
         &_btn a {
@@ -83,7 +83,7 @@
 
 @media (max-width: 575px) {
     .menu_container {
-        padding: 32px 40px;
+        padding: 32px 40px 10vh;
     }
     .menu_btn {
         align-self: center;
@@ -91,10 +91,5 @@
 }
 
 @media (max-width: 399px) {
-    .menu_container {
-        padding: 32px 40px;
-    }
-    .menu_btn a {
-        padding: 16px 20px;
-    }
+    .menu_btn a {padding: 16px 20px;}
 }

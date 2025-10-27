@@ -8,6 +8,7 @@
         -ms-overflow-style: none;
         scrollbar-width: none;
         scroll-behavior: smooth;
+        user-select: none;
     }
     &_wrapper {
         width: fit-content;
@@ -332,6 +333,9 @@
 
 @media (max-width: 991px) {
     .format {
+        &_container {
+            cursor: grab;
+        }
         &_wrapper {
            padding: 0 20px;
         }
