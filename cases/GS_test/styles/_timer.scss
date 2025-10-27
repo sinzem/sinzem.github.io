@@ -13,6 +13,9 @@
         border-radius: 20px;
         overflow: hidden;
     }
+    &_dial {
+        z-index: 1;
+    }
     &_gift {
         padding-right: 24px;
         width: 489px;
@@ -21,6 +24,7 @@
         align-items: center;
         background-color: #E8DDF3;
         border-radius: 20px;
+        z-index: 1;
         &__img {
             width: 121px;
             height: 121px;
@@ -32,7 +36,7 @@
         &__description {
             max-width: 345px;
             font-size: 28px;
-            font-weight: 400px;
+            font-weight: 400;
             & span {
                 font-weight: 700;
             }
@@ -60,5 +64,45 @@
             top: -10px;
             left: 30px;
         }
+    }
+}
+
+@media (max-width: 1459px) {
+    .timer_container {
+        width: 96%;
+        max-width: 1202px;
+    }
+}
+
+@media (max-width: 1199px) {
+    .timer {padding-top: 60px;}
+    .timer_container {
+        flex-direction: column;
+        gap: 80px;
+        align-items: flex-start;
+    }
+    .timer_gift {align-self: flex-end};
+    .timer_questions {left: 62%; top: 48%;}
+}
+
+@media (max-width: 575px) {
+    .timer_container {
+        padding: 12px;
+    }
+    .timer_gift {
+        width: 100%;
+    }
+    .timer_gift__description {
+        max-width: 200px;
+        font-size: 22px;
+        font-weight: 400;
+    }
+}
+
+@media (max-width: 399px) {
+    .timer_questions {left: 77%;}
+    .timer_gift__description {
+        max-width: 128px;
+        font-size: 18px;
     }
 }

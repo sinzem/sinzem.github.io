@@ -320,7 +320,7 @@
     }
 }
 
-@media (max-width: 1439px) {
+@media (max-width: 1459px) {
     .format {
         &_column {
             &__first {
@@ -340,6 +340,9 @@
 
 @media (max-width: 575px) {
     .format {
+        &_container {
+            padding: 30px 0 50px;
+        }
         &_wrapper {
             padding: 0 10px;
         }

@@ -6,7 +6,7 @@ fetch('db.json')
     .then((data) => {
         renderFormats(data);
         timers.forEach(timer => setClock(timer, data.deadline.date));
-        // setPromotionPeriod(data.promotion);
+        setPromotionPeriod(data.promotion);
     })
     .catch((e) => console.log(e));
 
@@ -18,7 +18,6 @@ const observedSections = document.querySelectorAll("[data-section]");
 const hamburger = document.querySelector(".hamburger");
 
 if (windowWidth > 991) menu.classList.add("active");
-console.log(windowWidth);
 
 class HideMenu {
     scrollPrev = 0;
@@ -57,8 +56,8 @@ const observer = new IntersectionObserver((entries) => {
         }
     });
 }, {
-    rootMargin: `0px 0px 0px 0px`,
-    threshold: 0.51,
+    rootMargin: `-50% 0px -49% 0px`,
+    threshold: 0,
 });
 
 observedSections.forEach(section => observer.observe(section));
@@ -75,7 +74,8 @@ hamburger.addEventListener("click", () => {
 
 menuBtn.addEventListener("click", () => windowWidth < 992 ? hideMenu() : null);
 
-menuItems.forEach(item => item.addEventListener("click", () => windowWidth < 992 ? hideMenu() : null))
+menuItems.forEach(item => item.addEventListener("click", () => windowWidth < 992 ? hideMenu() : null));
+
 // speakers=========================================
 const speakers = document.querySelectorAll(".header_grid__speakers div");
 
@@ -130,7 +130,6 @@ function setPromotionPeriod(obj) {
 }
 
 // format-block=====================================
-const timers = document.querySelectorAll(".clock_body");
 const formatHeaders = document.querySelectorAll(".format_grid__plan");
 const rows = document.querySelector(".format_grid__rows");
 const prices = document.querySelectorAll(".format_price");
@@ -221,6 +220,7 @@ function priceBuilder(obj, deadline) {
 }
 
 // timer=============================================
+const timers = document.querySelectorAll(".clock_body"); 
 
 function getTimeRemaining(endtime) { 
     let days, hours, minutes, seconds;
