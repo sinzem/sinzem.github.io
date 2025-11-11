@@ -12,13 +12,17 @@
     <meta property="og:description" content="Тестове завдання для LeadBoost">
     <meta property="og:image" content="./assets/img/logo.png">
 
+    <script defer src="https://cdn.tailwindcss.com"></script>
+    <script defer src="./tailwind.config.js"></script>
+    <script defer src="./js/main.js"></script>
+
     <link rel="stylesheet" href="./css/main.css">
 
     <title>Test task for LeadBoost</title>
 </head>
 <body>
-    <aside id="aside" class="aside pl-3 pr-8 py-6 absolute top-0 2xl:left-[calc(50%-720px)] w-[273px] min-h-[100vh] flex flex-col bg-r_white z-10">
-        <div class="aside_opener w-12 h-12 absolute top-2 right-[-28px] border-2 border-gray-400 rounded-md cursor-pointer xl:hidden">
+    <aside id="aside" class="aside pl-3 pr-8 py-6 fixed 2xl:absolute top-0 w-[273px] min-h-[100vh] flex flex-col bg-r_white z-10">
+        <div class="aside_opener w-12 h-12 absolute bottom-4 right-[-52px] border-2 border-gray-400 rounded-md 2xl:hidden cursor-pointer">
             <img class="w-full" src="./assets/img/chevron-right.svg" alt="open">
         </div>
         <div class="logo ml-3 h-6 w-[58px]">
@@ -26,7 +30,7 @@
         </div>
 
         <ul class="menu aside_menu mt-8 flex flex-col gap-3">
-            <li data-nav="main" class="menu_item w-full duration-1000 cursor-pointer overflow-hidden active">
+            <li data-nav="main" class="menu_item w-full cursor-pointer overflow-hidden active">
                 <a class="p-3 w-full h-full flex gap-2 items-center" href="#">
                     <svg width="20" height="22" viewBox="0 0 20 22" fill="none">
                         <path d="M2 17.5V8.5C2 8.18333 2.071 7.88333 2.213 7.6C2.355 7.31667 2.55067 7.08333 2.8 6.9L8.8 2.4C9.15 2.13333 9.55 2 10 2C10.45 2 10.85 2.13333 11.2 2.4L17.2 6.9C17.45 7.08333 17.646 7.31667 17.788 7.6C17.93 7.88333 18.0007 8.18333 18 8.5V17.5C18 18.05 17.804 18.521 17.412 18.913C17.02 19.305 16.5493 19.5007 16 19.5H13C12.7167 19.5 12.4793 19.404 12.288 19.212C12.0967 19.02 12.0007 18.7827 12 18.5V13.5C12 13.2167 11.904 12.9793 11.712 12.788C11.52 12.5967 11.2827 12.5007 11 12.5H9C8.71667 12.5 8.47933 12.596 8.288 12.788C8.09667 12.98 8.00067 13.2173 8 13.5V18.5C8 18.7833 7.904 19.021 7.712 19.213C7.52 19.405 7.28267 19.5007 7 19.5H4C3.45 19.5 2.97933 19.3043 2.588 18.913C2.19667 18.5217 2.00067 18.0507 2 17.5Z" fill="black"/>
@@ -37,7 +41,7 @@
                     </svg>
                 </a>
             </li>
-             <li data-nav="accounts" class="menu_item w-full duration-1000 cursor-pointer overflow-hidden">
+             <li data-nav="accounts" class="menu_item w-full cursor-pointer overflow-hidden">
                 <a class="p-3 w-full h-full flex gap-2 items-center" href="#">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M6 5C6 3.93913 6.42143 2.92172 7.17157 2.17157C7.92172 1.42143 8.93913 1 10 1C11.0609 1 12.0783 1.42143 12.8284 2.17157C13.5786 2.92172 14 3.93913 14 5C14 6.06087 13.5786 7.07828 12.8284 7.82843C12.0783 8.57857 11.0609 9 10 9C8.93913 9 7.92172 8.57857 7.17157 7.82843C6.42143 7.07828 6 6.06087 6 5ZM6 11C4.67392 11 3.40215 11.5268 2.46447 12.4645C1.52678 13.4021 1 14.6739 1 16C1 16.7956 1.31607 17.5587 1.87868 18.1213C2.44129 18.6839 3.20435 19 4 19H16C16.7956 19 17.5587 18.6839 18.1213 18.1213C18.6839 17.5587 19 16.7956 19 16C19 14.6739 18.4732 13.4021 17.5355 12.4645C16.5979 11.5268 15.3261 11 14 11H6Z" fill="black"/>
@@ -48,7 +52,7 @@
                     </svg>
                 </a>
             </li>
-            <li data-nav="transfers" class="menu_item w-full duration-1000 cursor-pointer overflow-hidden">
+            <li data-nav="transfers" class="menu_item w-full cursor-pointer overflow-hidden">
                 <a class="p-3 w-full h-full flex gap-2 items-center" href="#">
                     <svg width="20" height="22" viewBox="0 0 20 22" fill="none">
                         <path d="M6.12091 2.464C6.78591 1.798 7.90491 2.224 7.99291 3.126L7.99891 3.241V19C7.99863 19.2549 7.90103 19.5 7.72606 19.6854C7.55109 19.8707 7.31195 19.9822 7.05751 19.9972C6.80307 20.0121 6.55253 19.9293 6.35708 19.7657C6.16162 19.6021 6.03601 19.3701 6.00591 19.117L5.99891 19V5.414L3.70591 7.707C3.52595 7.88635 3.28447 7.99047 3.03052 7.99823C2.77657 8.00598 2.52919 7.91679 2.33863 7.74875C2.14806 7.58072 2.0286 7.34645 2.00451 7.09353C1.98042 6.8406 2.0535 6.58799 2.20891 6.387L2.29191 6.293L6.12191 2.463L6.12091 2.464ZM12.9989 2C13.2438 2.00003 13.4802 2.08996 13.6633 2.25272C13.8463 2.41547 13.9633 2.63975 13.9919 2.883L13.9989 3V16.586L16.2919 14.293C16.4719 14.1137 16.7133 14.0095 16.9673 14.0018C17.2212 13.994 17.4686 14.0832 17.6592 14.2512C17.8498 14.4193 17.9692 14.6536 17.9933 14.9065C18.0174 15.1594 17.9443 15.412 17.7889 15.613L17.7059 15.707L13.8759 19.537C13.2119 20.202 12.0929 19.776 12.0049 18.874L11.9989 18.759V3C11.9989 2.73478 12.1043 2.48043 12.2918 2.29289C12.4793 2.10536 12.7337 2 12.9989 2Z" fill="black"/>
@@ -59,7 +63,7 @@
                     </svg>
                 </a>
             </li>
-            <li data-nav="tickets" class="menu_item w-full duration-1000 cursor-pointer overflow-hidden">
+            <li data-nav="tickets" class="menu_item w-full cursor-pointer overflow-hidden">
                 <a class="p-3 w-full h-full flex gap-2 items-center" href="#">
                     <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M3.25 5.64218L12.772 1.0882C12.8799 1.03653 12.9971 1.00691 13.1166 1.00107C13.2362 0.995233 13.3557 1.01329 13.4681 1.05419C13.5806 1.09508 13.6838 1.158 13.7716 1.23925C13.8595 1.3205 13.9303 1.41846 13.9798 1.52739L15.85 5.64218M4.6 7.44218V5.64218M4.6 11.0422V11.9422M4.6 15.5422V17.3421" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -71,7 +75,7 @@
                     </svg>
                 </a>
             </li>
-            <li data-nav="analytics" class="menu_item w-full duration-1000 cursor-pointer overflow-hidden">
+            <li data-nav="analytics" class="menu_item w-full cursor-pointer overflow-hidden">
                 <a class="p-3 w-full h-full flex gap-2 items-center" href="#">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                         <path d="M2 2V17.2941C2 19.8931 4.1069 22 6.70588 22H22V19.6471H6.70588C5.40639 19.6471 4.35294 18.5936 4.35294 17.2941V2H2Z" fill="black"/>
@@ -87,9 +91,10 @@
             </li>
         </ul>
 
-        <div class="aside_info mt-auto flex flex-col gap-[10vh]">
+        <div class="aside_info mt-auto flex flex-col gap-[10vh] overflow-hidden">
             <div class="aside_info__top">
-                <div class="aside_info_title ml-3 font-normal text-[13px] text-r_d_gray">Information block</div>
+                <div class="h-[1px] w-full bg-r_gray_divider"></div>
+                <div class="aside_info_title mt-3 ml-3 font-normal text-[13px] text-r_d_gray">Information block</div>
                 <button data-download="trader" type="button" class="mt-4 p-3 w-full text-center bg-r_black text-r_white rounded-3xl text-sm font-normal cursor-pointer">Download desktop trader</button>
             </div>
             <div class="aside_info__bottom">
@@ -105,18 +110,18 @@
         </div>
     </aside>
 
-    <header id="header" class="header container p-6 flex items-center justify-between">
+    <header id="header" class="header container px-3 py-6 sm:px-6 flex items-center justify-between">
         <div class="logo h-6 w-[58px]">
             <img class="w-full h-full object-cover" src="./assets/img/logo.png" alt="logo">
         </div>
-        <div class="info flex gap-[30px] items-center">
+        <div class="info flex gap-3 sm:gap-[30px] items-center">
             <div class="lang flex items-center justify-center" >
                 <div class="lang_item w-9 h-9 rounded-full bg-slate-200 flex items-center justify-center uppercase cursor-pointer">en</div>
                 <div class="lang_item w-9 h-9 rounded-full bg-slate-200 hidden items-center justify-center uppercase cursor-pointer">ru</div>
             </div>
             <div class="user flex gap-1">
-                <h2 class="user_name">Alex Hall</h2>
-                <div class="user_triangle w-0 h-0 mt-1 cursor-pointer"></div>
+                <h2 class="user_name max-w-24 overflow-hidden">Alex Hall</h2>
+                <div class="user_triangle w-0 h-0 mt-1 border-solid [border-width:6px_3px_0_3px] [border-color:black_transparent_transparent_transparent] cursor-pointer"></div>
             </div>
             <div class="photo  w-[46px] h-[46px] flex justify-center items-center relative rounded-full bg-slate-200">
                 <div class="instead_img text-4xl">A</div>
@@ -127,9 +132,9 @@
 
     <section id="dashboard" class="dashboard">
         <div class="container 2xl:pl-[273px]">
-            <h1 class="text-2xl font-normal">Dashboard</h1>
-            <div class="cards mt-12 px-7 flex gap-5 text-r_white">
-                <div class="card w-[442px] px-[30px] pt-[26px] bg-gr_orange rounded-[20px]">
+            <h1 class="ml-3 sm:ml-6 2xl:ml-0 text-2xl font-normal">Dashboard</h1>
+            <div class="cards mt-12 px-3 sm:px-7 flex flex-wrap justify-center 2xl:justify-start gap-5 text-r_white">
+                <div class="card h-[64vw] max-h-[266px] w-full max-w-[442px] relative bg-gr_orange rounded-[20px] px-[30px] pt-[26px]">
                     <div class="bank flex items-center">
                         <div class="circles flex">
                             <div class="ml-[-7px] w-9 h-9 rounded-full bg-r_white opacity-50"></div>
@@ -140,14 +145,14 @@
                             <img src="./assets/img/Chip_Card_white.png" alt="chip on credit card">
                         </div>
                     </div>
-                    <h2 class="balance mt-11 text-[28px] font-bold">40 054. 10 USD</h2>
-                    <div class="profit py-[7px] px-[10px] mt-[18px] ml-auto w-fit text-xs text-r_black font-normal bg-r_white border border-r_orange rounded-xl">Profit: 13.10 USD</div>
-                    <button class="deposit mt-[17px] ml-[-30px] py-[30px] w-[442px] flex items-center justify-center gap-5 text-xl rounded-xl bg-white/15">
+                    <h2 class="balance mt-3 sm:mt-8 text-2xl sm:text-[28px] font-bold">40 054. 10 USD</h2>
+                    <div class="profit py-1 px-[10px] mt-2 ml-auto w-fit text-xs text-r_black font-normal bg-r_white border border-r_orange rounded-xl">Profit: 13.10 USD</div>
+                    <button class="deposit w-full h-16 sm:h-20 absolute left-0 bottom-0 flex items-center justify-center gap-5 text-2xl sm:text-[28px] rounded-xl bg-white/15">
                         Deposit
                         <img src="./assets/img/left_arrow.png" alt="arrow right">
                     </button>
                 </div>
-                <div class="card w-[442px] px-[30px] pt-[26px] relative rounded-[20px] border border-r_gray cursor-pointer">
+                <div class="card px-[30px] pt-[26px] h-[64vw] max-h-[266px] w-full max-w-[442px] relative rounded-[20px] border border-r_gray cursor-pointer">
                     <div class="bank flex items-center">
                         <div class="circles flex">
                             <div class="ml-[-7px] w-9 h-9 rounded-full border border-r_gray"></div>
@@ -161,58 +166,66 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> 
 
-    <section id="transfers" class="transfers pt-[50px] pb-[30px]">
-        <div class="container 2xl:pl-[311px]">
-            <h2 class="text-2xl font-normal">Transfers</h2>
-            <div class="transfers_block mt-[38px] font-medium leading-[1.2] text-r_gray_text items-center">
-                <div class="transfer_img py-5"></div>
-                <div class="transfer_number py-5 flex items-center gap-2">Number <img class="opacity-40 cursor-pointer" src="/assets/img/Polygon.png" alt="arrow down"></div>
-                <div class="transfer_date py-5">Date</div>
-                <div class="transfer_from py-5">Where from</div>
-                <div class="transfer_to py-5">Where to</div>
-                <div class="transfer_amount py-5">Amount</div>
-                <div class="transfer_status py-5">Status</div>
+    <section id="transfers" class="transfers pt-[50px] pb-9">
+        <div class="container 2xl:pl-[311px] overflow-hidden">
+            <h2 class="ml-3 sm:ml-6 2xl:ml-0 text-2xl font-normal">Transfers</h2>
+            <div data-leaf="transfers" class="transfers_wrapper flex justify-start lg:justify-center">
+                <div class="transfers_block w-fit mt-[38px] grid justify-center 2xl:justify-start font-medium leading-[1.2] text-r_gray_text items-center grid-cols-[36px_100px_120px_164px_178px_164px_auto] lg:grid-cols-[57px_142px_129px_192px_191px_174px_186px]">
+                    <div class="transfer_img transfer_title py-5 relative">
+                        <div class="h-[1px] w-[860px] xl:w-[1060px] absolute left-0 bottom-0 bg-r_gray_divider"></div>
+                    </div>
+                    <div class="transfer_number transfer_title py-5 flex items-center gap-2">
+                        Number 
+                        <img class="opacity-40 cursor-pointer" src="/assets/img/Polygon.png" alt="arrow down">
+                    </div>
+                    <div class="transfer_date transfer_title py-5">Date</div>
+                    <div class="transfer_from transfer_title py-5">Where from</div>
+                    <div class="transfer_to transfer_title py-5">Where to</div>
+                    <div class="transfer_amount transfer_title py-5">Amount</div>
+                    <div class="transfer_status transfer_title py-5 relative">Status</div>
 
-                <div class="transfer_img py-5">
-                    <img src="./assets/img/Vector-red.png" alt="arrow down">
+                    <div class="transfer_img py-5">
+                        <img src="./assets/img/Vector-red.png" alt="arrow down">
+                    </div>
+                    <div class="transfer_number py-5 flex items-center gap-2 text-r_red">416953</div>
+                    <div class="transfer_date py-5 text-r_black font-medium">31.03.2025<br> <span class="text-r_gray_text font-normal">11:30</span></div>
+                    <div class="transfer_from py-5">SkyPay</div>
+                    <div class="transfer_to py-5">Trading account<br>  <span class="text-r_red font-normal">749859 Real</span></div>
+                    <div class="transfer_amount py-5 text-r_black" >100.00 USD</div>
+                    <div class="transfer_status py-5 text-r_red">Rejected</div>
+
+                    <div class="transfer_img py-5">
+                        <img src="./assets/img/Vector-green.png" alt="arrow down">
+                    </div>
+                    <div class="transfer_number py-5 flex items-center gap-2 text-r_red">417337</div>
+                    <div class="transfer_date py-5 text-r_black font-medium">30.05.2025<br>  <span class="text-r_gray_text font-normal">10:27</span></div>
+                    <div class="transfer_from py-5">NOWPayments</div>
+                    <div class="transfer_to py-5">Trading account<br>  <span class="text-r_red font-normal">749859 Real</span></div>
+                    <div class="transfer_amount py-5 text-r_black">21.00 USD</div>
+                    <div class="transfer_status py-5 text-r_green">Completed</div>
+
+                    <div class="transfer_img py-5">
+                        <img src="./assets/img/Vector-gray.png" alt="arrow down">
+                    </div>
+                    <div class="transfer_number py-5 flex items-center gap-2 text-r_red">417336</div>
+                    <div class="transfer_date py-5 text-r_black font-medium">30.05.2025<br>  <span class="text-r_gray_text font-normal">09:37</span></div>
+                    <div class="transfer_from py-5">NOWPayments</div>
+                    <div class="transfer_to py-5">Trading account<br>  <span class="text-r_red font-normal">749859 Real</span></div>
+                    <div class="transfer_amount py-5 text-r_black">30.00 USD</div>
+                    <div class="transfer_status py-5 text-r_green">Pending</div>
                 </div>
-                <div class="transfer_number py-5 flex items-center gap-2 text-r_red">416953</div>
-                <div class="transfer_date py-5 text-r_black font-medium">31.03.2025<br> <span class="text-r_gray_text font-normal">11:30</span></div>
-                <div class="transfer_from py-5">SkyPay</div>
-                <div class="transfer_to py-5">Trading account<br>  <span class="text-r_red font-normal">749859 Real</span></div>
-                <div class="transfer_amount py-5 text-r_black" >100.00 USD</div>
-                <div class="transfer_status py-5 text-r_red">Rejected</div>
-
-                <div class="transfer_img py-5">
-                    <img src="./assets/img/Vector-green.png" alt="arrow down">
-                </div>
-                <div class="transfer_number py-5 flex items-center gap-2 text-r_red">417337</div>
-                <div class="transfer_date py-5 text-r_black font-medium">30.05.2025<br>  <span class="text-r_gray_text font-normal">10:27</span></div>
-                <div class="transfer_from py-5">NOWPayments</div>
-                <div class="transfer_to py-5">Trading account<br>  <span class="text-r_red font-normal">749859 Real</span></div>
-                <div class="transfer_amount py-5 text-r_black">21.00 USD</div>
-                <div class="transfer_status py-5 text-r_green">Completed</div>
-
-                <div class="transfer_img py-5">
-                    <img src="./assets/img/Vector-gray.png" alt="arrow down">
-                </div>
-                <div class="transfer_number py-5 flex items-center gap-2 text-r_red">417336</div>
-                <div class="transfer_date py-5 text-r_black font-medium">30.05.2025<br>  <span class="text-r_gray_text font-normal">09:37</span></div>
-                <div class="transfer_from py-5">NOWPayments</div>
-                <div class="transfer_to py-5">Trading account<br>  <span class="text-r_red font-normal">749859 Real</span></div>
-                <div class="transfer_amount py-5 text-r_black">30.00 USD</div>
-                <div class="transfer_status py-5 text-r_green">Pending</div>
             </div>
-            <button class="block mt-[14px] mx-auto text-r_gray_text font-normal text-sm">See more <span>8</span></button>
+            
+            <button class="block mt-6 mx-auto text-r_gray_text font-normal text-sm">See more <span>8</span></button>
         </div>
-    </section>
+    </section> 
 
     <section id="graph" class="graph">
-        <div class="container 2xl:pl-[311px] flex justify-between">
-            <div data-graph="currencies" class="graph w-[362px] text-r_gray_text">
-                <div class="graph_title mt-3 text-2xl font-400">Currencies</div>
+        <div class="container w-fit 2xl:w-auto 2xl:pl-[311px] flex flex-wrap gap-9 justify-center xl:justify-between overflow-hidden">
+            <div data-graph="currencies" class="graph w-[322px] text-r_gray_text">
+                <div class="graph_title mt-3 text-2xl font-400 text-r_black">Currencies</div>
                 <div class="graph_period mt-6 flex items-center justify-between">
                     <button data-time="day" class="flex-1 text-[11px]">1 Days</button>
                     <button data-time="week" class="flex-1 text-[11px]">7 Days</button>
@@ -220,7 +233,7 @@
                     <button data-time="year" class="flex-1 text-[11px]">1 Year</button>
                 </div>
 
-                <div class="graph_curve px-5">
+                <div class="graph_curve">
                     <div class="graph_curve__top mt-8 flex gap-3">
                         <div class="graph_img w-[276px] h-[112px] relative">
                             <img class="absolute top-0 left-0" src="./assets/img/Vector_currencies.png" alt="graph">
@@ -235,38 +248,394 @@
                             <h4 class="text-xs">0.115</h4>
                         </div>
                     </div>
-                    <div class="graph_curve__bottom">
-                        <h4>05.06.25</h4>
-                        <h4>06.06.25</h4>
+                    <div class="graph_curve__bottom mt-6 w-[276px] h-3 relative text-xs">
+                        <h4 class="absolute top-0 left-[20%] translate-x-[-50%]">05.06.25</h4>
+                        <h4 class="absolute top-0 left-3/4 translate-x-[-50%]">06.06.25</h4>
                     </div>
-                    <button class="grah_curve__btn text-[11px] font-normal">More about EURUSD</button>
+                    <button class="grah_curve__btn mt-5 mx-auto block text-[11px] font-normal">More about EURUSD</button>
                 </div>
+                <div class="graph_table mt-8 grid grid-cols-[179px_73px_auto] overflow-hidden">
+                    <div class="graph_symbol graph_title py-4 relative text-xs font-semibold">
+                        <div class="h-[1px] w-[400px] absolute top-0 left-0 bg-r_gray_divider"></div>
+                        Symbol
+                    </div>
+                    <div class="graph_bid graph_title py-4 flex gap-1.5 items-center text-xs font-semibold">
+                        Bid
+                        <div class="flex flex-col gap-0.5">
+                            <button class="block">
+                                <img class="rotate-180" src="./assets/img/arrow_down.png" alt="arrow up">
+                            </button>
+                            <button class="block">
+                                <img src="./assets/img/arrow_down.png" alt="arrow up">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="graph_chng graph_title py-4 flex gap-1.5 items-center text-xs font-semibold">
+                        Chng. %
+                        <div class="flex flex-col gap-0.5">
+                            <button class="block">
+                                <img class="rotate-180" src="./assets/img/arrow_down.png" alt="arrow up">
+                            </button>
+                            <button class="block">
+                                <img src="./assets/img/arrow_down.png" alt="arrow up">
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="graph_symbol py-4 text-xs font-normal text-r_black relative">
+                        <div class="h-[1px] w-[400px] absolute top-0 left-0 bg-r_gray_divider"></div>
+                        USDCAD
+                    </div>
+                    <div class="graph_bid py-4 text-xs font-normal text-r_black">0.089499</div>
+                    <div class="graph_chng py-4 text-xs font-normal text-r_green">+0.39%</div>
+
+                    <div class="graph_symbol py-4 text-xs font-normal text-r_black relative">
+                        <div class="h-[1px] w-[400px] absolute top-0 left-0 bg-r_gray_divider"></div>
+                        USDCHF
+                    </div>
+                    <div class="graph_bid py-4 text-xs font-normal text-r_black">0.52356</div>
+                    <div class="graph_chng py-4 text-xs font-normal text-r_green">+0.01%</div>
+
+                    <div class="graph_symbol py-4 text-xs font-normal text-r_black relative">
+                        <div class="h-[1px] w-[400px] absolute top-0 left-0 bg-r_gray_divider"></div>
+                        USDCNY
+                    </div>
+                    <div class="graph_bid py-4 text-xs font-normal text-r_black">0.99101</div>
+                    <div class="graph_chng py-4 text-xs font-normal text-r_red">-0.45%</div>
+
+                    <div class="graph_symbol py-4 text-xs font-normal text-r_black relative">
+                        <div class="h-[1px] w-[400px] absolute top-0 left-0 bg-r_gray_divider"></div>
+                        USDRUB
+                    </div>
+                    <div class="graph_bid py-4 text-xs font-normal text-r_black">1.07898</div>
+                    <div class="graph_chng py-4 text-xs font-normal text-r_green">+0.10%</div>
+                </div>
+
+                <button class="block mt-5 mx-auto text-sm text-r_gray_text font-normal">Show more</button>
             </div>
 
-             <div data-graph="currencies" class="graph w-[362px]">
-                <div class="graph_title mt-3 text-2xl font-400">US Stocks</div>
+            <div data-graph="stocks" class="graph w-[322px] text-r_gray_text ">
+                <div class="graph_title mt-3 text-2xl font-400 text-r_black">US Stocks</div>
                 <div class="graph_period mt-6 flex items-center justify-between">
-                    <button data-time="day" class="flex-1 text-r_gray_text text-[11px]">1 Days</button>
-                    <button data-time="week" class="flex-1 text-r_gray_text text-[11px]">7 Days</button>
-                    <button data-time="month" class="flex-1 text-r_gray_text text-[11px] active">3 Days</button>
-                    <button data-time="year" class="flex-1 text-r_gray_text text-[11px]">1 Year</button>
+                    <button data-time="day" class="flex-1 text-[11px]">1 Days</button>
+                    <button data-time="week" class="flex-1 text-[11px]">7 Days</button>
+                    <button data-time="month" class="flex-1 text-[11px] active">3 Days</button>
+                    <button data-time="year" class="flex-1 text-[11px]">1 Year</button>
                 </div>
+
+                <div class="graph_curve">
+                    <div class="graph_curve__top mt-8 flex gap-3">
+                        <div class="graph_img w-[276px] h-[112px] relative">
+                            <img class="absolute top-0 left-0" src="./assets/img/Vector_indices.png" alt="graph">
+                            <img class="absolute top-0 left-0" src="./assets/img/shadow_red.png" alt="graph shadow">
+                            <img class="absolute top-0 left-[20%]" src="./assets/img/line_red.png" alt="line">
+                            <img class="absolute top-0 left-3/4" src="./assets//img/line_red.png" alt="line">
+                        </div>
+                        <div class="graph_marks flex flex-col justify-between">
+                            <h4 class="text-xs">5.999</h4>
+                            <h4 class="text-xs">5.897</h4>
+                            <h4 class="text-xs">5.765</h4>
+                            <h4 class="text-xs">5.115</h4>
+                        </div>
+                    </div>
+                    <div class="graph_curve__bottom mt-6 w-[276px] h-3 relative text-xs">
+                        <h4 class="absolute top-0 left-[20%] translate-x-[-50%]">05.06.25</h4>
+                        <h4 class="absolute top-0 left-3/4 translate-x-[-50%]">15.06.25</h4>
+                    </div>
+                    <button class="grah_curve__btn mt-5 mx-auto block text-[11px] font-normal">More about Alfabet</button>
+                </div>
+                <div class="graph_table mt-8 grid grid-cols-[179px_73px_auto] overflow-hidden">
+                    <div class="graph_symbol graph_title py-4 text-xs font-semibold relative"> 
+                        <div class="h-[1px] w-[400px] absolute top-0 left-0 bg-r_gray_divider"></div>
+                        Symbol
+                    </div>
+                    <div class="graph_bid graph_title py-4 flex gap-1.5 items-center text-xs font-semibold">
+                        Bid
+                        <div class="flex flex-col gap-0.5">
+                            <button class="block">
+                                <img class="rotate-180" src="./assets/img/arrow_down.png" alt="arrow up">
+                            </button>
+                            <button class="block">
+                                <img src="./assets/img/arrow_down.png" alt="arrow up">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="graph_chng graph_title py-4 flex gap-1.5 items-center text-xs font-semibold">
+                        Chng. %
+                        <div class="flex flex-col gap-0.5">
+                            <button class="block">
+                                <img class="rotate-180" src="./assets/img/arrow_down.png" alt="arrow up">
+                            </button>
+                            <button class="block">
+                                <img src="./assets/img/arrow_down.png" alt="arrow up">
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="graph_symbol py-4 text-xs font-normal text-r_black relative">
+                        <div class="h-[1px] w-[400px] absolute top-0 left-0 bg-r_gray_divider"></div>
+                        AUDCAD
+                    </div>
+                    <div class="graph_bid py-4 text-xs font-normal text-r_black">0.089499</div>
+                    <div class="graph_chng py-4 text-xs font-normal text-r_green">+0.39%</div>
+
+                    <div class="graph_symbol py-4 text-xs font-normal text-r_black relative">
+                        <div class="h-[1px] w-[400px] absolute top-0 left-0 bg-r_gray_divider"></div>
+                        AUDCHF
+                    </div>
+                    <div class="graph_bid py-4 text-xs font-normal text-r_black">0.52356</div>
+                    <div class="graph_chng py-4 text-xs font-normal text-r_green">+0.01%</div>
+
+                    <div class="graph_symbol py-4 text-xs font-normal text-r_black relative">
+                        <div class="h-[1px] w-[400px] absolute top-0 left-0 bg-r_gray_divider"></div>
+                        AUDJPY
+                    </div>
+                    <div class="graph_bid py-4 text-xs font-normal text-r_black">0.99101</div>
+                    <div class="graph_chng py-4 text-xs font-normal text-r_red">-0.45%</div>
+
+                    <div class="graph_symbol py-4 text-xs font-normal text-r_black relative">
+                        <div class="h-[1px] w-[400px] absolute top-0 left-0 bg-r_gray_divider"></div>
+                        AUDNZD
+                    </div>
+                    <div class="graph_bid py-4 text-xs font-normal text-r_black">1.07898</div>
+                    <div class="graph_chng py-4 text-xs font-normal text-r_green">+0.10%</div>
+                </div>
+
+                <button class="block mt-5 mx-auto text-sm text-r_gray_text font-normal">Show more</button>
             </div>
 
-             <div data-graph="currencies" class="graph w-[362px]">
-                <div class="graph_title mt-3 text-2xl font-400">Indices</div>
+            <div data-graph="currencies" class="graph w-[322px] text-r_gray_text">
+                <div class="graph_title mt-3 text-2xl font-400 text-r_black">Indices</div>
                 <div class="graph_period mt-6 flex items-center justify-between">
-                    <button data-time="day" class="flex-1 text-r_gray_text text-[11px]">1 Days</button>
-                    <button data-time="week" class="flex-1 text-r_gray_text text-[11px]">7 Days</button>
-                    <button data-time="month" class="flex-1 text-r_gray_text text-[11px] active">3 Days</button>
-                    <button data-time="year" class="flex-1 text-r_gray_text text-[11px]">1 Year</button>
+                    <button data-time="day" class="flex-1 text-[11px]">1 Days</button>
+                    <button data-time="week" class="flex-1 text-[11px]">7 Days</button>
+                    <button data-time="month" class="flex-1 text-[11px] active">3 Days</button>
+                    <button data-time="year" class="flex-1 text-[11px]">1 Year</button>
                 </div>
+
+                <div class="graph_curve">
+                    <div class="graph_curve__top mt-8 flex gap-3">
+                        <div class="graph_img w-[276px] h-[112px] relative">
+                            <img class="absolute top-0 left-0" src="./assets/img/Vector_indices.png" alt="graph">
+                            <img class="absolute top-0 left-0" src="./assets/img/shadow_red.png" alt="graph shadow">
+                            <img class="absolute top-0 left-[20%]" src="./assets/img/line_red.png" alt="line">
+                            <img class="absolute top-0 left-3/4" src="./assets//img/line_red.png" alt="line">
+                        </div>
+                        <div class="graph_marks flex flex-col justify-between">
+                            <h4 class="text-xs">7.422</h4>
+                            <h4 class="text-xs">6.223</h4>
+                            <h4 class="text-xs">5.643</h4>
+                            <h4 class="text-xs">4.543</h4>
+                        </div>
+                    </div>
+                    <div class="graph_curve__bottom mt-6 w-[276px] h-3 relative text-xs">
+                        <h4 class="absolute top-0 left-[20%] translate-x-[-50%]">05.06.25</h4>
+                        <h4 class="absolute top-0 left-3/4 translate-x-[-50%]">16.06.25</h4>
+                    </div>
+                    <button class="grah_curve__btn mt-5 mx-auto block text-[11px] font-normal">More about DAX</button>
+                </div>
+                <div class="graph_table mt-8 grid grid-cols-[179px_73px_auto] overflow-hidden">
+                    <div class="graph_symbol graph_title py-4 text-xs font-semibold relative">
+                        <div class="h-[1px] w-[400px] absolute top-0 left-0 bg-r_gray_divider"></div>
+                        Symbol
+                    </div>
+                    <div class="graph_bid graph_title py-4 flex gap-1.5 items-center text-xs font-semibold">
+                        Bid
+                        <div class="flex flex-col gap-0.5">
+                            <button class="block">
+                                <img class="rotate-180" src="./assets/img/arrow_down.png" alt="arrow up">
+                            </button>
+                            <button class="block">
+                                <img src="./assets/img/arrow_down.png" alt="arrow up">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="graph_chng graph_title py-4 flex gap-1.5 items-center text-xs font-semibold">
+                        Chng. %
+                        <div class="flex flex-col gap-0.5">
+                            <button class="block">
+                                <img class="rotate-180" src="./assets/img/arrow_down.png" alt="arrow up">
+                            </button>
+                            <button class="block">
+                                <img src="./assets/img/arrow_down.png" alt="arrow up">
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="graph_symbol py-4 text-xs font-normal text-r_black relative">
+                        <div class="h-[1px] w-[400px] absolute top-0 left-0 bg-r_gray_divider"></div>
+                        DAX
+                    </div>
+                    <div class="graph_bid py-4 text-xs font-normal text-r_black">0.089499</div>
+                    <div class="graph_chng py-4 text-xs font-normal text-r_green">+0.39%</div>
+
+                    <div class="graph_symbol py-4 text-xs font-normal text-r_black relative">
+                        <div class="h-[1px] w-[400px] absolute top-0 left-0 bg-r_gray_divider"></div>
+                        CAC 40
+                    </div>
+                    <div class="graph_bid py-4 text-xs font-normal text-r_black">0.52356</div>
+                    <div class="graph_chng py-4 text-xs font-normal text-r_green">+0.01%</div>
+
+                    <div class="graph_symbol py-4 text-xs font-normal text-r_black relative">
+                        <div class="h-[1px] w-[400px] absolute top-0 left-0 bg-r_gray_divider"></div>
+                        UK100
+                    </div>
+                    <div class="graph_bid py-4 text-xs font-normal text-r_black">0.99101</div>
+                    <div class="graph_chng py-4 text-xs font-normal text-r_red">-0.45%</div>
+
+                    <div class="graph_symbol py-4 text-xs font-normal text-r_black relative">
+                        <div class="h-[1px] w-[400px] absolute top-0 left-0 bg-r_gray_divider"></div>
+                        SAP 500
+                    </div>
+                    <div class="graph_bid py-4 text-xs font-normal text-r_black">1.07898</div>
+                    <div class="graph_chng py-4 text-xs font-normal text-r_green">+0.10%</div>
+                </div>
+
+                <button class="block mt-5 mx-auto text-sm text-r_gray_text font-normal">Show more</button>
             </div>
         </div>
     </section>
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="./tailwind.config.js"></script>
-    <script src="./js/main.js"></script>
+    <section id="calendar" class="calendar">
+        <div class="container py-16 w-auto xl:w-[1040px] 2xl:w-auto 2xl:pl-[311px] overflow-hidden">
+            <div class="calendar_top w-full flex flex-col items-center gap-5 sm:flex-row sm:items-center sm:justify-between">
+                <h2 class="calendar_title block text-2xl font-normal">Economic calendar</h2>
+                <form class="calendar_search flex gap-4 items-center">
+                    <div class="calendar_input w-[185px] h-7 relative">
+                        <button class="absolute top-0 left-0 h-full flex items-center justify-center" type="submit">
+                            <img class="px-2 h-[70%] opacity-60" src="./assets/img/search_Pixel_perfect_flaticon_com.png" alt="search button">
+                        </button>
+                        <label class="hidden" for="search">Search</label>
+                        <input id="search" class="pl-8 py-1 w-full rounded-xl border border-r_gray_border text-sm focus:outline-none focus:border-2" name="search" type="text" required >
+                    </div>
+                    <div class="calendar_filters flex gap-2 items-center">
+                        <div data-filter="funnel" class="calendar_filter w-7 h-7 flex items-center justify-center bg-r_gray_bg rounded-sm cursor-pointer">
+                            <img src="./assets/img/funnel.png" alt="funnel">
+                        </div>
+                        <div data-filter="gear" class="calendar_filter w-7 h-7 flex items-center justify-center bg-r_gray_bg rounded-sm cursor-pointer">
+                            <img src="./assets/img/gear.png" alt="gear">
+                        </div>
+                        <div data-filter="folder" class="calendar_filter w-7 h-7 flex items-center justify-center bg-r_gray_bg rounded-sm cursor-pointer">
+                            <img src="./assets/img/folder.png" alt="folder">
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div data-leaf="calendar" class="calendar_wrapper">
+                
+                <div class="calendar_grid w-fit calendar_headline grid py-8 text-r_gray_text font-semibold grid-cols-[68px_82px_148px_320px_80px_90px_80px] lg:grid-cols-[78px_103px_173px_368px_133px_99px_auto]">
+                    <div class="calendar_time calendar_head relative py-4">
+                        <div class="h-[1px] w-[880px] lg:w-[2000px] absolute left-0 bottom-0 bg-r_gray_divider"></div>
+                        Time
+                    </div>
+                    <div class="calendar_timeleft calendar_head py-4">Time left</div>
+                    <div class="calendar_country calendar_head py-4">Country</div>
+                    <div class="calendar_event calendar_head py-4">Event</div>
+                    <div class="calendar_actual calendar_head py-4">Actual</div>
+                    <div class="calendar_forecast calendar_head py-4">Forecast</div>
+                    <div class="calendar_previous calendar_head py-4">Previous</div>
+                </div> 
+
+                <div class="calendar_date text-sm font-normal text-r_gray_text text-center"><i>Tuesday 24 June</i></div>
+
+                <div class="calendar_grid calendar_headline grid items-center py-8 text-r_black font-medium grid-cols-[68px_82px_148px_320px_80px_90px_80px] lg:grid-cols-[78px_103px_173px_368px_133px_99px_auto]">
+                    <div class="calendar_time calendar_head py-4 relative">
+                        <div class="h-[1px] w-[880px] lg:w-[2000px] absolute left-0 bottom-0 bg-r_gray_divider"></div>
+                        07:30
+                    </div>
+                    <div class="calendar_timeleft calendar_head py-4">
+                        <img src="./assets/img/double_arrows.svg" alt="double arrow">
+                    </div>
+                    <div class="calendar_country calendar_head py-4">Netherlands</div>
+                    <div class="calendar_event calendar_head py-4">Dutch GDP (QoQ)</div>
+                    <div class="calendar_actual calendar_head py-4">0,4%</div>
+                    <div class="calendar_forecast calendar_head py-4">0,1%</div>
+                    <div class="calendar_previous calendar_head py-4">0,1%</div>
+            
+                    <div class="calendar_time calendar_head py-4 relative">
+                        <div class="h-[1px] w-[880px] lg:w-[2000px] absolute left-0 bottom-0 bg-r_gray_divider"></div>
+                        08:00
+                    </div>
+                    <div class="calendar_timeleft calendar_head py-4">
+                        <img src="./assets/img/double_arrows.svg" alt="double arrow">
+                    </div>
+                    <div class="calendar_country calendar_head py-4">Japan</div>
+                    <div class="calendar_event calendar_head py-4">BoJ Core CPI (YoY)</div>
+                    <div class="calendar_actual calendar_head py-4">2,5%</div>
+                    <div class="calendar_forecast calendar_head py-4">2,5%</div>
+                    <div class="calendar_previous calendar_head py-4">2,4%</div>
+
+                    <div class="calendar_time calendar_head py-4 relative">
+                        <div class="h-[1px] w-[880px] lg:w-[2000px] absolute left-0 bottom-0 bg-r_gray_divider"></div>
+                        10:00
+                    </div>
+                    <div class="calendar_timeleft calendar_head py-4">
+                        <img src="./assets/img/double_arrows.svg" alt="double arrow">
+                    </div>
+                    <div class="calendar_country calendar_head py-4">Turkey</div>
+                    <div class="calendar_event calendar_head py-4">Capacity Utilization</div>
+                    <div class="calendar_actual calendar_head py-4">74,6%</div>
+                    <div class="calendar_forecast calendar_head py-4"></div>
+                    <div class="calendar_previous calendar_head py-4">75%</div>
+
+                    <div class="calendar_time calendar_head py-4 relative">
+                        <div class="h-[1px] w-[880px] lg:w-[2000px] absolute left-0 bottom-0 bg-r_gray_divider"></div>
+                        11:00
+                    </div>
+                    <div class="calendar_timeleft calendar_head py-4">
+                        <img src="./assets/img/double_arrows.svg" alt="double arrow">
+                    </div>
+                    <div class="calendar_country calendar_head py-4">Germany</div>
+                    <div class="calendar_event calendar_head py-4">German Business Expectations</div>
+                    <div class="calendar_actual calendar_head py-4">90,7%</div>
+                    <div class="calendar_forecast calendar_head py-4">90%</div>
+                    <div class="calendar_previous calendar_head py-4">89%</div>
+
+                    <div class="calendar_time calendar_head py-4 relative">
+                        <div class="h-[1px] w-[880px] lg:w-[2000px] absolute left-0 bottom-0 bg-r_gray_divider"></div>
+                        11:00
+                    </div>
+                    <div class="calendar_timeleft calendar_head py-4">
+                        <img src="./assets/img/double_arrows.svg" alt="double arrow">
+                    </div>
+                    <div class="calendar_country calendar_head py-4">Germany</div>
+                    <div class="calendar_event calendar_head py-4">German Current Assessment</div>
+                    <div class="calendar_actual calendar_head py-4">85%</div>
+                    <div class="calendar_forecast calendar_head py-4">86,5%</div>
+                    <div class="calendar_previous calendar_head py-4">86,5%</div>
+
+                    <div class="calendar_time calendar_head py-4 relative">
+                        <div class="h-[1px] w-[880px] lg:w-[2000px] absolute left-0 bottom-0 bg-r_gray_divider"></div>
+                        11:00
+                    </div>
+                    <div class="calendar_timeleft calendar_head py-4">
+                        <img src="./assets/img/double_arrows.svg" alt="double arrow">
+                    </div>
+                    <div class="calendar_country calendar_head py-4">Germany</div>
+                    <div class="calendar_event calendar_head py-4">German Ifo Business Climate Index</div>
+                    <div class="calendar_actual calendar_head py-4">88,4%</div>
+                    <div class="calendar_forecast calendar_head py-4">88,1%</div>
+                    <div class="calendar_previous calendar_head py-4">87,5%</div>
+
+                    <div class="calendar_time calendar_head py-4">11:00</div>
+                    <div class="calendar_timeleft calendar_head py-4">
+                        <img src="./assets/img/double_arrows.svg" alt="double arrow">
+                    </div>
+                    <div class="calendar_country calendar_head py-4">Poland</div>
+                    <div class="calendar_event calendar_head py-4">Retail Sales (YoY)</div>
+                    <div class="calendar_actual calendar_head py-4">4,3%</div>
+                    <div class="calendar_forecast calendar_head py-4">4,4%</div>
+                    <div class="calendar_previous calendar_head py-4">7,9%</div>
+                </div> 
+            </div> 
+
+            <button class="calendar_more block mx-auto font-normal text-sm text-r_gray_text">
+                See more <span>(8)</span>
+            </button>
+        </div>
+    </section> 
+
+    
 </body>
 </html>
